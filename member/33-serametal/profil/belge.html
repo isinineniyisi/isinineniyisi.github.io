@@ -1,0 +1,206 @@
+<!doctype html><html lang="tr"><head><meta charset="utf-8">
+<title>#33 · seraMetal — Üye İş Profili</title>
+<style>
+@page{size:A4;margin:0}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#e6e9f0;font-family:Georgia,"Times New Roman",serif;display:flex;
+justify-content:center;padding:0;color:#16203a}
+/* A4 sayfa: belge 1024x1448 kurgulanır, 210x297mm'ye ölçeklenir */
+.page{width:794px;height:1123px;overflow:hidden;background:#fff;
+box-shadow:0 6px 26px rgba(13,27,62,.18)}
+svg{display:block}
+.fi,.mi,.ni,.cb{display:block;flex-shrink:0}
+.fi svg,.mi svg,.ni svg,.cb svg{width:100%;height:100%}
+.sheet{width:1024px;height:1448px;background:#fff;position:relative;overflow:hidden;
+display:flex;flex-direction:column;transform:scale(0.775390625);transform-origin:top left}
+
+/* ── LACİVERT KAVİSLİ ÜST BLOK ── */
+.hero{background:#0d1b3e;padding:34px 0 116px;text-align:center;position:relative;
+flex:0 0 auto;z-index:4}
+.hero .curve{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:84px;display:block}
+.hero .pat{position:absolute;inset:0;opacity:.07;overflow:hidden;
+background-image:repeating-linear-gradient(45deg,#fff 0 1px,transparent 1px 15px)}
+.hero .in{position:relative;z-index:2}
+.hero .plat{font-size:26px;letter-spacing:.3em;color:#fff;font-weight:700}
+.hero .sub{font-size:11.5px;letter-spacing:.26em;color:#c9a227;margin-top:10px;font-weight:700;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}
+.hero .kick{font-size:9.5px;letter-spacing:.36em;color:#c9a227;font-weight:700;
+margin-top:16px;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}
+.hero .name{font-size:30px;letter-spacing:.06em;color:#fff;font-weight:400;
+margin-top:12px;line-height:1.1;padding:0 60px}
+/* --- üst blok süslemeleri --- */
+.hero .hr{height:1.5px;background:#c9a227;margin:0 auto}
+.hero .namerow{display:flex;align-items:center;justify-content:center;gap:22px;
+margin-top:26px;padding:0 54px}
+.hero .namerow .ln{flex:1;height:1.5px;background:#c9a227;position:relative;max-width:190px}
+.hero .namerow .ln:before{content:"";position:absolute;top:-3px;width:7px;height:7px;
+background:#c9a227;transform:rotate(45deg)}
+.hero .namerow .ln.l:before{left:0} .hero .namerow .ln.r:before{right:0}
+.hero .namerow .name{margin:0;padding:0;white-space:nowrap}
+.hero .toprow{display:flex;align-items:center;justify-content:space-between;
+padding:0 58px;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}
+.hero .toprow span{font-size:9.5px;letter-spacing:.28em;color:#c9a227;font-weight:700}
+.hero .toprow b{font-size:12.5px;letter-spacing:.32em;color:#fff;font-weight:700}
+.hero .divider{margin:13px 58px 0;height:1px;background:rgba(255,255,255,.22)}
+.hero .ribbon{position:absolute;top:0;right:64px;width:66px;height:76px;z-index:5;
+filter:drop-shadow(0 4px 10px rgba(0,0,0,.28))}
+.hero .ribbon .rb{position:absolute;inset:0;width:100%;height:100%}
+.hero .ribbon .no{position:absolute;left:0;right:0;top:17px;text-align:center;
+font-size:25px;font-weight:700;color:#0d1b3e;line-height:1;
+/* Georgia eski stil rakam kullanıyor (0 kısa, 4 uzun) — Times lining rakam verir */
+font-family:"Times New Roman",Times,serif;font-variant-numeric:lining-nums}
+.hero .wm{position:absolute;left:50%;top:52%;transform:translate(-50%,-50%);
+width:250px;height:250px;opacity:.075;color:#fff;z-index:1}
+.hero .wm svg{width:100%;height:100%}
+
+/* ── DEFNE DALLI MÜHÜR MADALYASI ── */
+.medalrow{position:relative;display:flex;align-items:center;justify-content:center;
+margin:-92px auto 0;z-index:6;flex:0 0 auto;padding:0 52px;gap:48px}
+.medal{position:relative;width:150px;height:150px;flex:0 0 150px}
+.medal .disc{width:150px;height:150px}
+/* m2 — yanlarda altın çizgi + baklava */
+.mrule{flex:1;height:1.5px;background:#c9a227;position:relative;max-width:250px;margin-top:14px}
+.mrule:before{content:"";position:absolute;top:-3px;width:7px;height:7px;background:#c9a227;
+transform:rotate(45deg)}
+.mrule.l:before{left:0} .mrule.r:before{right:0}
+/* m3 — yanlarda bilgi bloğu */
+.mfact{flex:1;max-width:250px;text-align:center;margin-top:34px;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}
+.mfact s{display:block;text-decoration:none;font-size:9.8px;letter-spacing:.26em;
+color:#c9a227;font-weight:700}
+.mfact b{display:block;font-size:15.6px;color:#0d1b3e;font-weight:700;margin-top:6px;line-height:1.35;
+overflow-wrap:anywhere}
+.mfact i{display:block;height:1px;background:#e3d6b2;margin:9px auto 0;width:74%}
+/* m3 + logo — solda firma logosu, sağda sektör|şehir */
+.medalrow.logolu{padding:0 16px;gap:24px}
+.mlogo{flex:1;max-width:300px;display:flex;align-items:center;justify-content:center;
+margin-top:30px;padding:0 4px}
+.mlogo img{display:block;width:100%;height:74px;object-fit:contain}
+.mfact2{flex:1;max-width:300px;margin-top:36px;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;display:flex;
+align-items:stretch;justify-content:center;gap:13px;flex-wrap:wrap}
+.mfact2 .mf{flex:1 1 0;min-width:0;text-align:center}
+.mfact2 s{display:block;text-decoration:none;font-size:8.6px;letter-spacing:.22em;
+color:#c9a227;font-weight:700}
+.mfact2 b{display:block;font-size:12.4px;color:#0d1b3e;font-weight:700;margin-top:5px;line-height:1.3;
+overflow-wrap:anywhere;hyphens:auto}
+.msep{width:1px;background:#e3d6b2;flex:0 0 1px}
+.mfact2 i{flex:0 0 100%;height:1px;background:#e3d6b2;margin:9px auto 0;width:78%}
+/* m4 — yanlarda başak */
+.msprig{flex:1;max-width:250px;display:flex;margin-top:16px}
+.msprig svg{width:110px;height:46px;color:#c9a227}
+.msprig.l{justify-content:flex-end} .msprig.r{justify-content:flex-start}
+
+/* ── KLASİK ALTIN ÇERÇEVE (üst bloğun altında) ── */
+.frameSvg{position:absolute;top:342px;left:22px;pointer-events:none;z-index:2}
+.pat2{position:absolute;top:351px;left:31px;width:962px;height:1066px;opacity:.038;
+pointer-events:none;z-index:0;overflow:hidden;
+background-image:repeating-linear-gradient(45deg,#0d1b3e 0 1px,transparent 1px 14px),
+repeating-linear-gradient(-45deg,#0d1b3e 0 1px,transparent 1px 14px)}
+
+/* ── İÇERİK ── */
+.ct{position:relative;z-index:3;flex:1;padding:52px 74px 76px;text-align:center;
+display:flex;flex-direction:column;align-items:center}
+.nrule{height:3px;width:132px;background:#2e7d4f;margin:13px auto 12px;border-radius:2px;opacity:.9}
+.unvan{font-size:21px;color:#5f6b85;margin-top:0;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}
+.yetkili{font-size:27.5px;color:#0d1b3e;margin-top:0}
+.tanitim{font-size:16.6px;line-height:1.78;color:#3f4a66;margin:18px auto 0;
+max-width:770px;text-align:center}
+.sec{display:flex;align-items:center;gap:14px;margin:0 0 14px;width:100%}
+.sec i{flex:1;height:1px;background:#e3d8b8}
+.sec span{font-size:13px;font-weight:700;letter-spacing:.28em;color:#c9a227;white-space:nowrap;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}
+.fagrid{display:grid;grid-template-columns:repeat(4,1fr);width:100%}
+.fa{padding:0 15px;border-right:1px solid #ece4cd;text-align:center}
+.fa:last-child{border-right:none}
+.fa .fi{width:40px;height:40px;margin:0 auto 12px}
+.fa b{font-size:15px;font-weight:700;letter-spacing:.03em;line-height:1.3;display:block;
+margin-bottom:6px;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;color:#0d1b3e}
+.fa p{font-size:13.6px;line-height:1.52;color:#5f6b85;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}
+.mggrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px 8px;width:100%}
+.mg{text-align:center;min-width:0;padding:0 2px}
+.mg .mi{width:34px;height:34px;margin:0 auto 8px;color:#0d1b3e}
+.mg span:last-child{font-size:11.2px;font-weight:700;color:#0d1b3e;line-height:1.22;display:block;
+text-transform:uppercase;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;letter-spacing:0;
+overflow-wrap:normal;word-break:keep-all}
+.ndgrid{display:grid;grid-template-columns:repeat(4,1fr);width:100%}
+.nd{padding:0 14px;border-right:1px solid #ece4cd;display:flex;gap:10px;align-items:flex-start}
+.nd:last-child{border-right:none}
+.nd .ni{width:32px;height:32px;margin-top:1px}
+.nd p{font-size:13.6px;font-weight:700;line-height:1.4;color:#0d1b3e;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;text-align:left}
+.contact{display:grid;grid-template-columns:repeat(4,1fr);width:100%}
+.ci{display:flex;align-items:center;justify-content:center;gap:11px;
+padding:0 10px;border-right:1px solid #ece4cd;min-width:0}
+.ci:last-child{border-right:none}
+.ci b{min-width:0}
+.ci .cb{width:35px;height:35px;background:#0d1b3e;color:#fff;border-radius:50%;padding:7px}
+.ci b{font-size:13.6px;color:#22304f;font-weight:600;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+line-height:1.35;text-align:left;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.grow{flex:1;min-height:10px}
+.gap{flex:1 1 auto;min-height:14px;max-height:88px}
+.gap1{flex-grow:1.15}
+.blk{width:100%;flex:0 0 auto}
+/* ── ALT ŞERİT (imza yok) ── */
+.foot{width:100%;border-top:1px solid #ece4cd;padding:20px 34px 0;display:flex;
+justify-content:center;align-items:center;font-size:11.8px;letter-spacing:.2em;
+color:#98a1b6;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}
+.foot .mid{color:#0d1b3e;font-weight:700;letter-spacing:.2em}
+@media print{
+ @page{size:A4;margin:0}
+ body{background:#fff;padding:0}
+ .page{box-shadow:none;width:794px;height:1123px}
+ *{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+</style></head><body><div class="page"><div class="sheet">
+ <div class="hero"><div class="pat"></div><div class="ribbon">
+ <svg class="rb" viewBox="0 0 66 76" aria-hidden="true">
+  <defs><linearGradient id="rg33" x1="0" y1="0" x2="0" y2="1">
+   <stop offset="0" stop-color="#e3c05a"/><stop offset="1" stop-color="#c9a227"/></linearGradient></defs>
+  <path d="M0.00,0.00 L66.00,0.00 L66.00,76.00 L33.00,62.00 L0.00,76.00 Z" fill="url(#rg33)"/>
+  <path d="M4.20,4.20 L61.80,4.20 L61.80,69.66 L33.00,57.44 L4.20,69.66 Z"
+        fill="none" stroke="#ffffff" stroke-width="1.9" stroke-linejoin="round" stroke-linecap="round"/>
+ </svg>
+ <span class="no">33</span></div><div class="in"><div class="plat">İŞİNİN EN İYİSİ PLATFORMU</div><div class="sub">GÜÇLÜ İŞBİRLİĞİ, GÜÇLÜ GELECEK</div><div class="namerow"><span class="ln l"></span><div class="name">SERAMETAL</div><span class="ln r"></span></div></div><svg class="curve" viewBox="0 0 1024 84" preserveAspectRatio="none" aria-hidden="true"><path d="M0,85 L0,44 Q512,-12 1024,44 L1024,85 Z" fill="#fff"/></svg></div>
+ <div class="medalrow logolu"><div class="mlogo"><img src="data:image/png;base64,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" alt=""></div><div class="medal"><div class="disc"><svg viewBox="0 0 200 200" style="width:150px;height:150px">
+<circle cx="100" cy="100" r="95" fill="#fdfdfa" stroke="#0d1b3e" stroke-width="3.2"/>
+<circle cx="100" cy="100" r="74" fill="none" stroke="#c9a227" stroke-width="1.3"/>
+<circle cx="100" cy="100" r="70" fill="none" stroke="#0d1b3e" stroke-width="3"/>
+<path id="t33" d="M100,100 m-79,0 a79,79 0 0,1 158,0" fill="none"/>
+<path id="b33" d="M100,100 m-86,0 a86,86 0 0,0 172,0" fill="none"/>
+<text font-size="12" font-weight="600" fill="#0d1b3e" letter-spacing="3.6" font-family="Times New Roman, Times, serif">
+<textPath href="#t33" startOffset="50%" text-anchor="middle">SINCE 2011</textPath></text>
+<text font-size="9.4" font-weight="700" fill="#0d1b3e" letter-spacing="0.4">
+<textPath href="#b33" startOffset="50%" text-anchor="middle">GÜÇLÜ İŞBİRLİĞİ, GÜÇLÜ GELECEK</textPath></text>
+<text x="100" y="59" text-anchor="middle" font-size="14" font-weight="700" fill="#0d1b3e" letter-spacing=".3">İŞİNİN EN</text>
+<path d="M56,71 h13 M131,71 h13" stroke="#c9a227" stroke-width="1.1" stroke-linecap="round"/>
+<text x="100" y="76" text-anchor="middle" font-size="14" font-weight="700" fill="#0d1b3e" letter-spacing=".3">İYİSİ</text>
+<g transform="translate(43.00,86.19) scale(0.16248)" fill="#0d1b3e"><path d="M232.94,156.71c0,65.1,52.77,117.87,117.87,117.87s117.87-52.77,117.87-117.87v-38.84C468.68,52.77,415.91,0,350.81,0s-117.87,52.77-117.87,117.87v38.84Z"/><path d="M575.59,412.56c-63.88,50.04-143.32,77.5-224.78,77.5-73.4,0-144.16-21.7-204.63-62.74-6.85-4.66-13.51-9.51-19.99-14.59,18.37-69.22,65.66-125.99,127.53-155.47,25.18,24.32,59.42,39.3,97.1,39.3s71.99-15,97.17-39.37c61.88,29.46,109.18,86.18,127.61,155.36Z"/><path d="M511.58,129.12c0,49.6,40.2,89.8,89.8,89.8s89.8-40.2,89.8-89.8v-29.59c0-49.6-40.2-89.8-89.8-89.8s-89.8,40.2-89.8,89.8v29.59Z"/><path d="M701.62,225.48c-18.69,65.66-55.67,125.2-107.62,171.68-19.42-63.42-61.47-117.09-117.95-149.95,14.76-15.31,32.14-27.92,51.36-37.08,19.18,18.52,45.25,29.94,73.97,29.94s54.83-11.45,74.03-30.01c9.18,4.37,17.95,9.53,26.21,15.42Z"/><path d="M190.04,129.12c0,49.6-40.2,89.8-89.8,89.8S10.44,178.71,10.44,129.12v-29.59c0-49.6,40.2-89.8,89.8-89.8,49.6,0,89.8,40.2,89.8,89.8v29.59Z"/><path d="M0,225.48c18.69,65.66,55.67,125.2,107.62,171.68,19.42-63.42,61.47-117.09,117.95-149.95-14.76-15.31-32.14-27.92-51.36-37.08-19.18,18.52-45.25,29.94-73.97,29.94-28.73,0-54.83-11.45-74.03-30.01-9.18,4.37-17.95,9.53-26.21,15.42Z"/></g>
+</svg></div></div><div class="mfact2"><div class="mf"><s>SEKTÖR</s><b>Sera Teknolojileri</b></div><span class="msep"></span><div class="mf"><s>ŞEHİR</s><b>Adana / Türkiye</b></div><i></i></div></div>
+ <div class="pat2"></div><svg class="frameSvg" width="980" height="1084" viewBox="0 0 980 1084">
+<rect x="2.0" y="2.0" width="976.0" height="1080.0" fill="none" stroke="#c9a227" stroke-width="2.6"/>
+<rect x="9.0" y="9.0" width="962.0" height="1066.0" fill="none" stroke="#c9a227" stroke-width="0.9"/>
+<circle cx="15.0" cy="15.0" r="8.5" fill="#fdfdfa" stroke="#c9a227" stroke-width="2.1"/><circle cx="15.0" cy="15.0" r="3.1" fill="#c9a227"/><circle cx="965.0" cy="15.0" r="8.5" fill="#fdfdfa" stroke="#c9a227" stroke-width="2.1"/><circle cx="965.0" cy="15.0" r="3.1" fill="#c9a227"/><circle cx="965.0" cy="1069.0" r="8.5" fill="#fdfdfa" stroke="#c9a227" stroke-width="2.1"/><circle cx="965.0" cy="1069.0" r="3.1" fill="#c9a227"/><circle cx="15.0" cy="1069.0" r="8.5" fill="#fdfdfa" stroke="#c9a227" stroke-width="2.1"/><circle cx="15.0" cy="1069.0" r="3.1" fill="#c9a227"/></svg>
+ <div class="ct">
+  <div class="blk">
+   <div class="unvan">Serametal Hazar Hidrofor San. Tic. Ltd. Şti.</div>
+   <div class="nrule"></div>
+   <div class="yetkili">Engin HAZAR</div>
+   <p class="tanitim">seraMetal, projeden anahtar teslim kuruluma kadar modern sera, tünel sera, bahçe ve muz serası kurar. Sulama, gübreleme, ısı perdesi ve havalandırma sistemlerini Netafim, Rivulis ve Eurodrip çözüm ortaklığıyla sunar.</p></div>
+  <div class="gap gap1"></div>
+  <div class="blk"><div class="sec"><i></i><span>FAALİYET ALANLARI</span><i></i></div>
+   <div class="fagrid"><div class="fa"><span class="fi" style="color:#2e7d4f"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M240,192h-8V130.57l1.49,2.08a8,8,0,1,0,13-9.3l-40-56a8,8,0,0,0-2-1.94L137,18.77l-.1-.07a16,16,0,0,0-17.76,0l-.1.07L51.45,65.42a8,8,0,0,0-2,1.94l-40,56a8,8,0,1,0,13,9.3L24,130.57V192H16a8,8,0,0,0,0,16H240a8,8,0,0,0,0-16ZM112,80h32a8,8,0,1,1,0,16H112a8,8,0,1,1,0-16Zm52.64,40L128,146.17,91.36,120ZM72,125.83,114.24,156,72,186.17ZM91.36,192,128,165.83,164.64,192ZM184,186.17,141.76,156,184,125.83Z"/></svg></span>
+<b>ANAHTAR TESLİM SERA</b><p>Modern, tünel, bahçe ve muz serası — projeden kuruluma tam kapsam</p></div><div class="fa"><span class="fi" style="color:#2e7d4f"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M174,47.75a254.19,254.19,0,0,0-41.45-38.3,8,8,0,0,0-9.18,0A254.19,254.19,0,0,0,82,47.75C54.51,79.32,40,112.6,40,144a88,88,0,0,0,176,0C216,112.6,201.49,79.32,174,47.75Zm9.85,105.59a57.6,57.6,0,0,1-46.56,46.55A8.75,8.75,0,0,1,136,200a8,8,0,0,1-1.32-15.89c16.57-2.79,30.63-16.85,33.44-33.45a8,8,0,0,1,15.78,2.68Z"/></svg></span>
+<b>SULAMA &amp; GÜBRELEME</b><p>Netafim, Rivulis ve Eurodrip çözüm ortaklığıyla damla sulama ve gübreleme sistemleri</p></div><div class="fa"><span class="fi" style="color:#2e7d4f"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M120,104H24a8,8,0,0,1-8-8.53A8.17,8.17,0,0,1,24.27,88H112a8,8,0,0,0,8-8.53A8.17,8.17,0,0,0,111.73,72H92.29a4,4,0,0,1-4-4.58A32,32,0,1,1,120,104Zm119.92-2.29a32,32,0,0,0-63.59-2.29,4,4,0,0,0,4,4.58h19.44a8.17,8.17,0,0,1,8.25,7.47,8,8,0,0,1-8,8.53H32.27A8.17,8.17,0,0,0,24,127.47,8,8,0,0,0,32,136H208A32,32,0,0,0,239.92,101.71ZM152,152H40.27A8.17,8.17,0,0,0,32,159.47,8,8,0,0,0,40,168H143.73a8.17,8.17,0,0,1,8.25,7.47,8,8,0,0,1-8,8.53H124.29a4,4,0,0,0-4,4.58A32,32,0,1,0,152,152Z"/></svg></span>
+<b>İKLİM KONTROL</b><p>Isı perdesi, sirkülasyon fanı ve kremayer havalandırma mekanizmaları</p></div><div class="fa"><span class="fi" style="color:#2e7d4f"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M224,64H176V56a24,24,0,0,0-24-24H104A24,24,0,0,0,80,56v8H32A16,16,0,0,0,16,80v28a4,4,0,0,0,4,4H64V96.27A8.17,8.17,0,0,1,71.47,88,8,8,0,0,1,80,96v16h96V96.27A8.17,8.17,0,0,1,183.47,88,8,8,0,0,1,192,96v16h44a4,4,0,0,0,4-4V80A16,16,0,0,0,224,64Zm-64,0H96V56a8,8,0,0,1,8-8h48a8,8,0,0,1,8,8Zm80,68v60a16,16,0,0,1-16,16H32a16,16,0,0,1-16-16V132a4,4,0,0,1,4-4H64v16a8,8,0,0,0,8.53,8A8.17,8.17,0,0,0,80,143.73V128h96v16a8,8,0,0,0,8.53,8,8.17,8.17,0,0,0,7.47-8.25V128h44A4,4,0,0,1,240,132Z"/></svg></span>
+<b>SERA EKİPMANLARI</b><p>Kelepçe, bağlantı parçası, boru-profil, sera plastiği ve modüler su tankı</p></div></div></div>
+  <div class="gap"></div>
+  <div class="blk"><div class="sec"><i></i><span>MÜŞTERİ GRUBU</span><i></i></div>
+   <div class="mggrid"><div class="mg"><span class="mi"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M80,172a12,12,0,1,1-12-12A12,12,0,0,1,80,172Zm40,0a52,52,0,1,1-52-52A52.06,52.06,0,0,1,120,172Zm-24,0a28,28,0,1,0-28,28A28,28,0,0,0,96,172Zm152,16a36,36,0,0,1-71.77,4H144a8,8,0,0,1-8-8V172a68.07,68.07,0,0,0-68-68H40a8,8,0,0,1,0-16h8V56H40a8,8,0,0,1,0-16H160a8,8,0,0,1,0,16h-8V97.88l24,6.5V72a8,8,0,0,1,16,0v36.71l36.39,9.86.21.06A15.89,15.89,0,0,1,240,134v31.46A35.8,35.8,0,0,1,248,188Zm-20,0a16,16,0,1,0-16,16A16,16,0,0,0,228,188Z"/></svg></span><span>Çiftçiler</span></div><div class="mg"><span class="mi"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M240,192h-8V130.57l1.49,2.08a8,8,0,1,0,13-9.3l-40-56a8,8,0,0,0-2-1.94L137,18.77l-.1-.07a16,16,0,0,0-17.76,0l-.1.07L51.45,65.42a8,8,0,0,0-2,1.94l-40,56a8,8,0,1,0,13,9.3L24,130.57V192H16a8,8,0,0,0,0,16H240a8,8,0,0,0,0-16ZM112,80h32a8,8,0,1,1,0,16H112a8,8,0,1,1,0-16Zm52.64,40L128,146.17,91.36,120ZM72,125.83,114.24,156,72,186.17ZM91.36,192,128,165.83,164.64,192ZM184,186.17,141.76,156,184,125.83Z"/></svg></span><span>Sera Yatırımcıları</span></div><div class="mg"><span class="mi"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M80,172a12,12,0,1,1-12-12A12,12,0,0,1,80,172Zm40,0a52,52,0,1,1-52-52A52.06,52.06,0,0,1,120,172Zm-24,0a28,28,0,1,0-28,28A28,28,0,0,0,96,172Zm152,16a36,36,0,0,1-71.77,4H144a8,8,0,0,1-8-8V172a68.07,68.07,0,0,0-68-68H40a8,8,0,0,1,0-16h8V56H40a8,8,0,0,1,0-16H160a8,8,0,0,1,0,16h-8V97.88l24,6.5V72a8,8,0,0,1,16,0v36.71l36.39,9.86.21.06A15.89,15.89,0,0,1,240,134v31.46A35.8,35.8,0,0,1,248,188Zm-20,0a16,16,0,1,0-16,16A16,16,0,0,0,228,188Z"/></svg></span><span>Tarım İşletmeleri</span></div><div class="mg"><span class="mi"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M254.3,107.91,228.78,56.85a16,16,0,0,0-21.47-7.15L182.44,62.13,130.05,48.27a8.14,8.14,0,0,0-4.1,0L73.56,62.13,48.69,49.7a16,16,0,0,0-21.47,7.15L1.7,107.9a16,16,0,0,0,7.15,21.47l27,13.51,55.49,39.63a8.06,8.06,0,0,0,2.71,1.25l64,16a8,8,0,0,0,7.6-2.1l40-40,15.08-15.08,26.42-13.21a16,16,0,0,0,7.15-21.46Zm-54.89,33.37L165,113.72a8,8,0,0,0-10.68.61C136.51,132.27,116.66,130,104,122L147.24,80h31.81l27.21,54.41Zm-41.87,41.86L99.42,168.61l-49.2-35.14,28-56L128,64.28l9.8,2.59-45,43.68-.08.09a16,16,0,0,0,2.72,24.81c20.56,13.13,45.37,11,64.91-5L188,152.66Zm-25.72,34.8a8,8,0,0,1-7.75,6.06,8.13,8.13,0,0,1-1.95-.24L80.41,213.33a7.89,7.89,0,0,1-2.71-1.25L51.35,193.26a8,8,0,0,1,9.3-13l25.11,17.94L126,208.24A8,8,0,0,1,131.82,217.94Z"/></svg></span><span>Kooperatifler</span></div><div class="mg"><span class="mi"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M248,208a8,8,0,0,1-8,8H16a8,8,0,0,1,0-16H240A8,8,0,0,1,248,208ZM16.3,98.18a8,8,0,0,1,3.51-9l104-64a8,8,0,0,1,8.38,0l104,64A8,8,0,0,1,232,104H208v64h16a8,8,0,0,1,0,16H32a8,8,0,0,1,0-16H48V104H24A8,8,0,0,1,16.3,98.18ZM144,160a8,8,0,0,0,16,0V112a8,8,0,0,0-16,0Zm-48,0a8,8,0,0,0,16,0V112a8,8,0,0,0-16,0Z"/></svg></span><span>Belediyeler</span></div><div class="mg"><span class="mi"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M239.43,133l-32-80A8,8,0,0,0,200,48a8.27,8.27,0,0,0-1.73.21L136,62V40a8,8,0,0,0-16,0V65.58L54.27,80.21A8,8,0,0,0,48.57,85l-32,80a7.92,7.92,0,0,0-.57,3c0,23.31,24.54,32,40,32s40-8.69,40-32a7.92,7.92,0,0,0-.57-3L66.92,93.77,120,82V208H104a8,8,0,0,0,0,16h48a8,8,0,0,0,0-16H136V78.42L187,67.1,160.57,133a7.92,7.92,0,0,0-.57,3c0,23.31,24.54,32,40,32s40-8.69,40-32A7.92,7.92,0,0,0,239.43,133Zm-160,35H32.62L56,109.54Zm97.24-32L200,77.54,223.38,136Z"/></svg></span><span>Ziraat Odaları</span></div><div class="mg"><span class="mi"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M176,216a8,8,0,0,1-8,8H24a8,8,0,0,1,0-16H168A8,8,0,0,1,176,216ZM246.31,86.76,227.67,62.87l-.12-.15a39.82,39.82,0,0,0-51.28-9.12L124.7,84.38,70.76,64.54a8,8,0,0,0-5.59,0L58,67.27l-.32.13a16,16,0,0,0-4.53,26.47L75,115.06l-20.17,12.2-28.26-9.54a8,8,0,0,0-6.08.4l-3,1.47A16,16,0,0,0,13,145.8l36,35.27.12.12a39.78,39.78,0,0,0,27.28,10.87,40.18,40.18,0,0,0,20.26-5.52l147.41-88a8,8,0,0,0,2.21-11.78Z"/></svg></span><span>İhracatçılar</span></div></div></div>
+  <div class="gap"></div>
+  <div class="blk"><div class="sec"><i></i><span>NEDEN SERAMETAL?</span><i></i></div>
+   <div class="ndgrid"><div class="nd"><span class="ni" style="color:#2e7d4f"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M224,48V208a16,16,0,0,1-16,16H160a16,16,0,0,1-16-16V180a4,4,0,0,1,4-4h36a8,8,0,0,0,8-8.53,8.18,8.18,0,0,0-8.25-7.47H148a4,4,0,0,1-4-4V140a4,4,0,0,1,4-4h36a8,8,0,0,0,8-8.53,8.18,8.18,0,0,0-8.25-7.47H148a4,4,0,0,1-4-4V100a4,4,0,0,1,4-4h36a8,8,0,0,0,8-8.53A8.18,8.18,0,0,0,183.73,80H148a4,4,0,0,1-4-4V48a16,16,0,0,1,16-16h48A16,16,0,0,1,224,48ZM109.66,58.34A8,8,0,0,1,112,64V208a16,16,0,0,1-16,16H48a16,16,0,0,1-16-16V64a8,8,0,0,1,2.34-5.66l32-32a8,8,0,0,1,11.32,0ZM48,80V184H64V80Zm32,0V184H96V80ZM51.31,64H92.69L72,43.31Z"/></svg></span>
+<p>Projeden anahtar teslime tek muhatap</p></div><div class="nd"><span class="ni" style="color:#2e7d4f"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M254.3,107.91,228.78,56.85a16,16,0,0,0-21.47-7.15L182.44,62.13,130.05,48.27a8.14,8.14,0,0,0-4.1,0L73.56,62.13,48.69,49.7a16,16,0,0,0-21.47,7.15L1.7,107.9a16,16,0,0,0,7.15,21.47l27,13.51,55.49,39.63a8.06,8.06,0,0,0,2.71,1.25l64,16a8,8,0,0,0,7.6-2.1l40-40,15.08-15.08,26.42-13.21a16,16,0,0,0,7.15-21.46Zm-54.89,33.37L165,113.72a8,8,0,0,0-10.68.61C136.51,132.27,116.66,130,104,122L147.24,80h31.81l27.21,54.41Zm-41.87,41.86L99.42,168.61l-49.2-35.14,28-56L128,64.28l9.8,2.59-45,43.68-.08.09a16,16,0,0,0,2.72,24.81c20.56,13.13,45.37,11,64.91-5L188,152.66Zm-25.72,34.8a8,8,0,0,1-7.75,6.06,8.13,8.13,0,0,1-1.95-.24L80.41,213.33a7.89,7.89,0,0,1-2.71-1.25L51.35,193.26a8,8,0,0,1,9.3-13l25.11,17.94L126,208.24A8,8,0,0,1,131.82,217.94Z"/></svg></span>
+<p>Netafim, Rivulis ve Eurodrip ile çözüm ortaklığı</p></div><div class="nd"><span class="ni" style="color:#2e7d4f"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M216,40H40A16,16,0,0,0,24,56V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40ZM200,192H56a8,8,0,0,1-8-8V72a8,8,0,0,1,16,0v76.69l34.34-34.35a8,8,0,0,1,11.32,0L128,132.69,172.69,88H144a8,8,0,0,1,0-16h48a8,8,0,0,1,8,8v48a8,8,0,0,1-16,0V99.31l-50.34,50.35a8,8,0,0,1-11.32,0L104,131.31l-40,40V176H200a8,8,0,0,1,0,16Z"/></svg></span>
+<p>TKDK ve IPARD destekli yatırımlarda uygulama tecrübesi</p></div><div class="nd"><span class="ni" style="color:#2e7d4f"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M224,64H176V56a24,24,0,0,0-24-24H104A24,24,0,0,0,80,56v8H32A16,16,0,0,0,16,80v28a4,4,0,0,0,4,4H64V96.27A8.17,8.17,0,0,1,71.47,88,8,8,0,0,1,80,96v16h96V96.27A8.17,8.17,0,0,1,183.47,88,8,8,0,0,1,192,96v16h44a4,4,0,0,0,4-4V80A16,16,0,0,0,224,64Zm-64,0H96V56a8,8,0,0,1,8-8h48a8,8,0,0,1,8,8Zm80,68v60a16,16,0,0,1-16,16H32a16,16,0,0,1-16-16V132a4,4,0,0,1,4-4H64v16a8,8,0,0,0,8.53,8A8.17,8.17,0,0,0,80,143.73V128h96v16a8,8,0,0,0,8.53,8,8.17,8.17,0,0,0,7.47-8.25V128h44A4,4,0,0,1,240,132Z"/></svg></span>
+<p>Sera ekipmanlarını kendi ürün ağacından tedarik</p></div></div></div>
+  <div class="gap"></div>
+  <div class="blk"><div class="sec"><i></i><span>İLETİŞİM BİLGİLERİ</span><i></i></div>
+   <div class="contact"><div class="ci"><span class="cb"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M231.88,175.08A56.26,56.26,0,0,1,176,224C96.6,224,32,159.4,32,80A56.26,56.26,0,0,1,80.92,24.12a16,16,0,0,1,16.62,9.52l21.12,47.15,0,.12A16,16,0,0,1,117.39,96c-.18.27-.37.52-.57.77L96,121.45c7.49,15.22,23.41,31,38.83,38.51l24.34-20.71a8.12,8.12,0,0,1,.75-.56,16,16,0,0,1,15.17-1.4l.13.06,47.11,21.11A16,16,0,0,1,231.88,175.08Z"/></svg></span><b style="font-size:13.6px">0322 429 40 80</b></div><div class="ci"><span class="cb"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M128,24h0A104,104,0,1,0,232,128,104.12,104.12,0,0,0,128,24Zm87.62,96H175.79C174,83.49,159.94,57.67,148.41,42.4A88.19,88.19,0,0,1,215.63,120ZM96.23,136h63.54c-2.31,41.61-22.23,67.11-31.77,77C118.45,203.1,98.54,177.6,96.23,136Zm0-16C98.54,78.39,118.46,52.89,128,43c9.55,9.93,29.46,35.43,31.77,77Zm52.18,93.6c11.53-15.27,25.56-41.09,27.38-77.6h39.84A88.19,88.19,0,0,1,148.41,213.6Z"/></svg></span><b style="font-size:13.6px">serametal.com.tr</b></div><div class="ci"><span class="cb"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48Zm-8,144H40V74.19l82.59,75.71a8,8,0,0,0,10.82,0L216,74.19V192Z"/></svg></span><b style="font-size:11.7px">info@serametal.com.tr</b></div><div class="ci"><span class="cb"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M128,16a88.1,88.1,0,0,0-88,88c0,75.3,80,132.17,83.41,134.55a8,8,0,0,0,9.18,0C136,236.17,216,179.3,216,104A88.1,88.1,0,0,0,128,16Zm0,56a32,32,0,1,1-32,32A32,32,0,0,1,128,72Z"/></svg></span><b style="font-size:13.6px">Adana / Türkiye</b></div></div></div>
+  <div class="gap"></div>
+  <div class="foot"><span class="mid">İŞİNİN EN İYİSİ PLATFORMU ÜYESİDİR</span></div>
+ </div></div></div></body></html>

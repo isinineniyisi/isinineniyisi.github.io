@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="tr"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Krom Metal — Kartvizit</title>
+<meta name="description" content="Krommetal Mühendislik için kartvizit — 85 × 55 mm · ön ve arka yüz.">
+<meta property="og:title" content="Krom Metal — Kartvizit">
+<meta property="og:description" content="Krommetal Mühendislik için kartvizit — 85 × 55 mm · ön ve arka yüz.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0d1b3e">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&family=Public+Sans:wght@400;500;600&display=swap">
+<style>
+:root{
+  --murekkep:#0d1b3e; --murekkep-2:#22304f; --murekkep-3:#3d4a68;
+  --kagit:#ecedf0; --yuzey:#ffffff; --yuzey-2:#f5f6f8;
+  --altin:#c9a227; --altin-metin:#7e6212;
+  --soluk:#5c6780; --cizgi:#d3d6dd; --cizgi-koyu:#b9bec9;
+  --serif:"EB Garamond",Garamond,Georgia,"Times New Roman",serif;
+  --grotesk:"Public Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+  --olcu:1180px;
+  color-scheme:light;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--kagit);color:var(--murekkep);font-family:var(--grotesk);
+  font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--altin);outline-offset:3px}
+.kap{max-width:var(--olcu);margin:0 auto;padding-inline:20px}
+
+/* ---------------------------------------------------- künye çubuğu */
+.mast{background:var(--murekkep);color:var(--kagit);
+  border-bottom:1px solid rgba(201,162,39,.4)}
+.mast .kap{display:flex;align-items:center;justify-content:space-between;
+  gap:16px;padding-block:13px}
+.arma{display:flex;align-items:center;gap:12px;text-decoration:none}
+.arma .muhur{width:46px;flex:none}
+.arma .muhur img{display:block;width:100%;height:auto}
+.arma .ad{font-family:var(--grotesk);font-size:12.5px;font-weight:600;
+  letter-spacing:.24em;line-height:1.25}
+.arma .ad em{display:block;font-style:normal;font-size:9.5px;font-weight:400;
+  letter-spacing:.3em;color:var(--altin);margin-top:3px}
+.mast .est{font-size:10px;letter-spacing:.26em;color:#8d97b0;white-space:nowrap}
+.mast a.geri{font-size:10.5px;letter-spacing:.2em;text-decoration:none;
+  color:#aeb7cc;border-bottom:1px solid transparent;padding-bottom:2px}
+.mast a.geri:hover{border-bottom-color:var(--altin);color:#fff}
+
+/* ---------------------------------------------------- ortak başlık */
+.ust-etiket{font-size:10px;font-weight:600;letter-spacing:.28em;
+  color:var(--altin-metin)}
+h2.bolum{font-family:var(--grotesk);font-size:10.5px;font-weight:600;
+  letter-spacing:.26em;color:var(--soluk);padding-bottom:9px;
+  border-bottom:1px solid var(--cizgi-koyu);margin-bottom:20px}
+h3.ray-baslik{font-family:var(--grotesk);font-size:9.5px;font-weight:600;
+  letter-spacing:.24em;color:var(--soluk);padding-bottom:7px;
+  border-bottom:1px solid var(--cizgi);margin-bottom:14px}
+
+/* ---------------------------------------------------- kütük (dizin) */
+.giris{background:var(--yuzey);border-bottom:1px solid var(--cizgi);
+  position:relative;overflow:hidden}
+.giris .hayalet{position:absolute;right:-80px;top:50%;width:430px;
+  transform:translateY(-50%);opacity:.055;pointer-events:none}
+.giris .hayalet img{display:block;width:100%;height:auto}
+.giris .kap{position:relative;padding-block:64px 54px;max-width:var(--olcu)}
+.giris h1{font-family:var(--serif);font-weight:500;font-size:clamp(40px,7.4vw,68px);
+  line-height:1.04;letter-spacing:-.015em;margin:16px 0 0;text-wrap:balance;
+  max-width:15ch}
+.giris .lede{font-family:var(--serif);font-weight:400;font-size:19.5px;
+  line-height:1.6;color:var(--murekkep-2);max-width:56ch;margin-top:20px}
+.giris .rakam{display:flex;gap:40px;margin-top:34px;padding-top:22px;
+  border-top:1px solid var(--cizgi);max-width:560px;flex-wrap:wrap}
+.giris .rakam div{display:flex;flex-direction:column;gap:4px}
+.giris .rakam b{font-family:var(--serif);font-weight:500;font-size:36px;
+  line-height:1;font-variant-numeric:tabular-nums}
+.giris .rakam span{font-size:9.5px;letter-spacing:.2em;color:var(--soluk)}
+
+.arac{padding-block:22px 0}
+.arac input{width:100%;max-width:420px;font:inherit;font-size:15px;
+  padding:11px 2px;border:0;border-bottom:1px solid var(--cizgi-koyu);
+  background:transparent;color:var(--murekkep)}
+.arac input::placeholder{color:var(--soluk)}
+.arac input:focus{outline:0;border-bottom-color:var(--altin)}
+.sayac{font-size:10px;letter-spacing:.18em;color:var(--soluk);margin-top:10px;
+  font-variant-numeric:tabular-nums}
+
+.kutuk{list-style:none;margin:26px 0 0;border-top:1px solid var(--cizgi-koyu)}
+.kutuk .basliklar,.kutuk a{display:grid;
+  grid-template-columns:52px minmax(0,1.15fr) minmax(0,1fr) 92px;
+  gap:18px;align-items:baseline}
+.kutuk .basliklar{font-size:9px;letter-spacing:.2em;color:var(--soluk);
+  padding:9px 2px;border-bottom:1px solid var(--cizgi)}
+.kutuk li{border-bottom:1px solid var(--cizgi)}
+.kutuk a{text-decoration:none;padding:15px 2px;transition:background .12s}
+.kutuk a:hover{background:var(--yuzey)}
+.kutuk .no{font-variant-numeric:tabular-nums;font-size:12px;color:var(--soluk);
+  letter-spacing:.06em}
+.kutuk .ad{font-family:var(--serif);font-size:21.5px;font-weight:500;
+  line-height:1.2}
+.kutuk a:hover .ad{color:var(--altin-metin)}
+.kutuk .dal{font-size:13px;color:var(--soluk);line-height:1.35}
+.kutuk .yer{font-size:10.5px;letter-spacing:.14em;color:var(--soluk);
+  text-align:right}
+.bos{padding:40px 2px;color:var(--soluk);font-family:var(--serif);font-size:17px}
+
+/* ---------------------------------------------------- üye dosyası */
+.kunye{background:var(--yuzey);border-bottom:1px solid var(--cizgi)}
+.kunye .kap{padding-block:46px 34px}
+.kunye .logo{max-width:180px;max-height:60px;object-fit:contain;
+  object-position:left center;display:block;margin-bottom:22px}
+.kunye h1{font-family:var(--serif);font-weight:500;
+  font-size:clamp(36px,6.8vw,62px);line-height:1.03;letter-spacing:-.018em;
+  margin-top:14px;text-wrap:balance}
+.kunye .unvan{font-family:var(--serif);font-weight:400;font-size:18px;
+  color:var(--murekkep-2);margin-top:14px;max-width:62ch;line-height:1.5}
+.kunye dl{display:flex;flex-wrap:wrap;gap:0 46px;margin-top:30px;
+  padding-top:20px;border-top:1px solid var(--cizgi)}
+.kunye dl>div{display:flex;flex-direction:column;gap:5px;padding-block:6px}
+.kunye dt{font-size:9px;letter-spacing:.2em;color:var(--soluk)}
+.kunye dd{font-size:14.5px;font-weight:500}
+
+.ikili{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:56px;
+  padding-block:48px 64px;align-items:start}
+.ana>*+*{margin-top:46px}
+.lede{font-family:var(--serif);font-weight:400;font-size:22.5px;line-height:1.55;
+  color:var(--murekkep);max-width:64ch}
+
+/* faaliyet alanları — kenar boşluğunda numara, yanında tanım */
+.fa{display:grid;gap:0}
+.fa .oge{display:grid;grid-template-columns:34px minmax(0,1fr) 26px;gap:16px;
+  padding-block:17px;border-bottom:1px solid var(--cizgi);align-items:start}
+.fa .oge:first-child{border-top:1px solid var(--cizgi)}
+.fa .sira{font-variant-numeric:tabular-nums;font-size:11px;color:var(--soluk);
+  letter-spacing:.08em;padding-top:4px}
+.fa dt{font-size:12.5px;font-weight:600;letter-spacing:.1em;
+  color:var(--murekkep)}
+.fa dd{font-family:var(--serif);font-weight:400;font-size:17.5px;
+  color:var(--murekkep-2);margin-top:5px;line-height:1.5}
+.fa .im{width:22px;color:var(--soluk);opacity:.5;padding-top:2px}
+.fa .im svg{display:block;width:100%;height:auto}
+
+/* müşteri grubu — rozet değil, çizgiyle ayrılmış terim dizisi */
+.terimler{list-style:none;display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(168px,1fr));
+  column-gap:28px;border-top:1px solid var(--cizgi)}
+.terimler li{font-family:var(--serif);font-weight:400;font-size:17.5px;
+  padding:10px 0;color:var(--murekkep-2);border-bottom:1px solid var(--cizgi)}
+
+.neden{list-style:none;counter-reset:n}
+.neden li{counter-increment:n;display:grid;grid-template-columns:34px 1fr;
+  gap:16px;padding-block:15px;border-bottom:1px solid var(--cizgi);
+  font-family:var(--serif);font-weight:400;font-size:18px;
+  color:var(--murekkep-2);line-height:1.5}
+.neden li:first-child{border-top:1px solid var(--cizgi)}
+.neden li::before{content:counter(n,upper-roman);font-family:var(--grotesk);
+  font-size:10.5px;letter-spacing:.1em;color:var(--soluk);padding-top:5px}
+
+/* ---------------------------------------------------- yan ray */
+.ray{position:sticky;top:26px;display:flex;flex-direction:column;gap:34px}
+.eylem{display:flex;flex-direction:column;gap:0;border-top:1px solid var(--cizgi-koyu)}
+.eylem a{display:flex;align-items:center;gap:11px;text-decoration:none;
+  font-size:13px;font-weight:500;letter-spacing:.06em;padding:13px 2px;
+  border-bottom:1px solid var(--cizgi);color:var(--murekkep)}
+.eylem a svg{width:16px;height:16px;flex:none;color:var(--altin-metin)}
+.eylem a .ok{margin-left:auto;font-size:14px;color:var(--soluk)}
+.eylem a:hover{color:var(--altin-metin)}
+.eylem a:hover .ok{color:var(--altin-metin)}
+
+.ile{display:flex;flex-direction:column}
+.ile div{padding-block:11px;border-bottom:1px solid var(--cizgi)}
+.ile div:first-child{padding-top:0}
+.ile dt{font-size:9px;letter-spacing:.2em;color:var(--soluk);margin-bottom:4px}
+.ile dd{font-size:14.5px;font-weight:500;word-break:break-word}
+.ile dd a{text-decoration:none;border-bottom:1px solid var(--cizgi-koyu)}
+.ile dd a:hover{border-bottom-color:var(--altin)}
+
+.qr-blok{display:flex;flex-direction:column;gap:11px}
+.qr-blok .cerceve{background:#fff;border:1px solid var(--cizgi-koyu);
+  padding:10px;width:138px}
+.qr-blok svg{display:block;width:100%;height:auto}
+.qr-blok p{font-size:10.5px;color:var(--soluk);line-height:1.45;
+  word-break:break-all}
+
+/* ---------------------------------------------------- belge görüntüleyici */
+.eylem.yatay{flex-direction:row;flex-wrap:wrap;gap:0 26px;border-top:0;
+  border-bottom:1px solid var(--cizgi-koyu);margin-top:24px}
+.eylem.yatay a{border-bottom:0;padding:12px 0}
+
+/* A4 belge ve kartvizit kendi sabit ölçüsünde çizilir; kap genişliğine göre
+   ölçeklenir. Yükseklik en-boy oranından gelir, satır içi JS yalnız ölçeği yazar. */
+.kagit{position:relative;width:100%;
+  max-width:calc(var(--en) * var(--kat, 1) * 1px);
+  margin:30px auto 60px;background:#fff;border:1px solid var(--cizgi-koyu);
+  overflow:hidden}
+.kagit::before{content:"";display:block;
+  padding-top:calc(var(--boy) / var(--en) * 100%)}
+.kagit iframe{position:absolute;left:0;top:0;border:0;transform-origin:0 0;
+  width:calc(var(--en) * 1px);height:calc(var(--boy) * 1px)}
+.kagit-not{text-align:center;font-size:11px;letter-spacing:.16em;
+  color:var(--soluk);margin-top:-44px;margin-bottom:54px}
+
+/* ---------------------------------------------------- QR dizini */
+.qr-izgara{list-style:none;display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:1px;
+  background:var(--cizgi);border:1px solid var(--cizgi);margin-block:30px 60px}
+.qr-izgara li{background:var(--yuzey);padding:20px 18px;display:flex;
+  flex-direction:column;gap:12px}
+.qr-izgara .no{font-size:10px;letter-spacing:.2em;color:var(--soluk);
+  font-variant-numeric:tabular-nums}
+.qr-izgara .ad{font-family:var(--serif);font-size:18.5px;font-weight:500;
+  line-height:1.25}
+.qr-izgara .kod{background:#fff;border:1px solid var(--cizgi);padding:9px}
+.qr-izgara .kod svg{display:block;width:100%;height:auto}
+.qr-izgara a{font-size:10.5px;letter-spacing:.14em;color:var(--altin-metin);
+  text-decoration:none;border-bottom:1px solid var(--cizgi-koyu);
+  align-self:flex-start;padding-bottom:2px}
+
+/* ---------------------------------------------------- alt bilgi */
+.alt{border-top:1px solid var(--cizgi-koyu);margin-top:20px}
+.alt .kap{display:flex;flex-wrap:wrap;gap:14px 34px;align-items:baseline;
+  justify-content:space-between;padding-block:26px 40px}
+.alt .slogan{font-size:10px;letter-spacing:.22em;color:var(--soluk)}
+.alt a{font-size:11px;letter-spacing:.16em;color:var(--murekkep-2);
+  text-decoration:none;border-bottom:1px solid var(--cizgi-koyu);
+  padding-bottom:2px}
+.alt a:hover{border-bottom-color:var(--altin)}
+
+@media (max-width:920px){
+  .ikili{grid-template-columns:minmax(0,1fr);gap:42px;padding-block:36px 48px}
+  .ray{position:static}
+  .giris .hayalet{display:none}
+}
+@media (max-width:640px){
+  .kutuk .basliklar{display:none}
+  .kutuk a{grid-template-columns:44px minmax(0,1fr);gap:6px 14px;
+    padding-block:14px}
+  .kutuk .no{grid-row:1/3;padding-top:5px}
+  .kutuk .dal{grid-column:2}
+  .kutuk .yer{display:none}
+  .giris .kap{padding-block:44px 38px}
+  .kunye .kap{padding-block:34px 26px}
+  .kunye dl{gap:0 30px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+@media print{.arac,.eylem,.mast a.geri{display:none}body{background:#fff}}
+</style></head>
+<body><header class="mast"><div class="kap">
+ <a class="arma" href="../../../"><span class="muhur"><img src="../../../assets/logo-platform.png"
+   alt="İŞİNİN EN İYİSİ Platformu mührü" width="640" height="640"></span>
+  <span class="ad">İŞİNİN EN İYİSİ<em>PLATFORMU</em></span></a>
+ <a class="geri" href="../../../">← ÜYE KÜTÜĞÜ</a>
+</div></header>
+<section class="kunye"><div class="kap">
+ <div class="ust-etiket">BELGE &nbsp;/&nbsp; No. 02</div>
+ <h1>Kartvizit</h1>
+ <p class="unvan">Krom Metal &nbsp;·&nbsp; 85 × 55 mm · ön ve arka yüz</p>
+ <div class="eylem yatay">
+  <a href="krommetal-kartvizit.pdf" download><svg viewBox="0 0 256 256" fill="currentColor"><path d="M176,216a8,8,0,0,1-8,8H24a8,8,0,0,1,0-16H168A8,8,0,0,1,176,216ZM246.31,86.76,227.67,62.87l-.12-.15a39.82,39.82,0,0,0-51.28-9.12L124.7,84.38,70.76,64.54a8,8,0,0,0-5.59,0L58,67.27l-.32.13a16,16,0,0,0-4.53,26.47L75,115.06l-20.17,12.2-28.26-9.54a8,8,0,0,0-6.08.4l-3,1.47A16,16,0,0,0,13,145.8l36,35.27.12.12a39.78,39.78,0,0,0,27.28,10.87,40.18,40.18,0,0,0,20.26-5.52l147.41-88a8,8,0,0,0,2.21-11.78Z"/></svg><span>PDF indir</span>
+   <span class="ok">↓</span></a>
+  <a href="kart.html" target="_blank" rel="noopener"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M200,32H163.74a47.92,47.92,0,0,0-71.48,0H56A16,16,0,0,0,40,48V216a16,16,0,0,0,16,16H200a16,16,0,0,0,16-16V48A16,16,0,0,0,200,32Zm-72,0a32,32,0,0,1,32,32H96A32,32,0,0,1,128,32Zm32,128H96a8,8,0,0,1,0-16h64a8,8,0,0,1,0,16Zm0-32H96a8,8,0,0,1,0-16h64a8,8,0,0,1,0,16Z"/></svg>
+   <span>Yeni sekmede aç</span><span class="ok">↗</span></a>
+  <a href="../"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M216,40H40A16,16,0,0,0,24,56V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40ZM88,192H56a8,8,0,0,1-8-8V152a8,8,0,0,1,16,0v24H88a8,8,0,0,1,0,16Zm120-88a8,8,0,0,1-16,0V80H168a8,8,0,0,1,0-16h32a8,8,0,0,1,8,8Z"/></svg><span>Üye sayfasına dön</span>
+   <span class="ok">→</span></a>
+ </div>
+</div></section>
+<main class="kap">
+ <div class="kagit" style="--en:321.26;--boy:415.75">
+  <iframe src="kart.html" title="Krom Metal — Kartvizit"
+   loading="lazy"></iframe>
+ </div>
+ <p class="kagit-not">Üstte ön yüz, altta arka yüz. Baskı dosyası iki sayfalıdır.</p>
+</main>
+<footer class="alt"><div class="kap">
+ <span class="slogan">GÜÇLÜ İŞBİRLİĞİ, GÜÇLÜ GELECEK</span>
+ <a href="../../../">ÜYE KÜTÜĞÜNE DÖN</a>
+</div></footer>
+<script>
+(function(){
+ function olcekle(){
+  document.querySelectorAll('.kagit').forEach(function(k){
+   var en=parseFloat(getComputedStyle(k).getPropertyValue('--en'));
+   var c=k.querySelector('iframe');
+   if(en>0&&c) c.style.transform='scale('+(k.clientWidth/en)+')';
+  });
+ }
+ addEventListener('resize',olcekle);
+ addEventListener('load',olcekle);
+ olcekle();
+})();
+</script></body></html>

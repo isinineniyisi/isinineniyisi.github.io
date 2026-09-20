@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="tr"><head><meta charset="utf-8">
+<title>PEKA Peyzaj — kartvizit</title>
+<style>@page{size:85.0mm 55.0mm;margin:0}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-print-color-adjust:exact;
+ print-color-adjust:exact}
+body{background:#8a8a8a;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+ color:#0d1b3e}
+.sayfa{position:relative;width:85.0mm;height:55.0mm;overflow:hidden;
+ background:#fff;page-break-after:always;break-after:page}
+.sayfa:last-child{page-break-after:auto;break-after:auto}
+.kesim i{position:absolute;background:#999;z-index:9}
+/* kart yüzeyi taşma payının içinde başlar; zemin taşmaya kadar uzar */
+.yuz{position:absolute;left:0;top:0;width:85.0mm;height:55.0mm}
+.ic{position:absolute;left:0.0mm;top:0.0mm;width:85.0mm;height:55.0mm}
+
+/* ---------------- ÖN YÜZ ---------------- */
+.on{background:#fdfdfa}
+.cerceve{position:absolute;left:2.6mm;top:2.6mm;
+ width:79.8mm;height:49.8mm;border:0.28mm solid #c9a227}
+/* genişlik mührün sol kenarında biter (85 - 5.6 sağ - 13 mühür - 3 boşluk - 6.4 sol) */
+.govde{position:absolute;left:6.4mm;top:6.2mm;width:57.0mm}
+.logo{max-width:34mm;max-height:9.2mm;object-fit:contain;
+ object-position:left center;display:block;margin-bottom:2.4mm}
+.marka{font-size:15.5pt;font-weight:800;letter-spacing:.005em;line-height:1.06;
+ color:#0d1b3e}
+.unvan{font-size:5.5pt;line-height:1.38;color:#6a7183;margin-top:1.5mm;
+ letter-spacing:.012em}
+.cizgi{width:13mm;height:0.42mm;background:#c9a227;margin:2.6mm 0 2.4mm}
+.kisi{font-size:8.6pt;font-weight:800;color:#0d1b3e;letter-spacing:.015em}
+.sektor{font-size:6.1pt;color:#8d7015;font-weight:700;letter-spacing:.11em;
+ margin-top:0.9mm}
+.muhur{position:absolute;right:5.6mm;bottom:5.2mm;width:13mm;
+ text-align:center}
+.muhur svg{display:block}   /* ölçü seal(49) ile satır içinde: 49px = 13mm */
+.muhur b{display:block;font-size:4.8pt;letter-spacing:.14em;color:#8d7015;
+ margin-top:0.7mm;font-weight:800}
+
+/* ---------------- ARKA YÜZ ---------------- */
+.arka{background:#0d1b3e}
+.ic{color:#fff}
+.plat{position:absolute;left:6.4mm;top:5.6mm;width:44mm}
+.plat .ad{font-size:6.6pt;font-weight:800;letter-spacing:.16em;color:#fff;
+ line-height:1.4}
+.plat .slogan{font-size:4.6pt;letter-spacing:.13em;color:#c9a227;
+ margin-top:0.8mm}
+.ayrac{position:absolute;left:6.4mm;top:13.6mm;width:11mm;height:0.4mm;
+ background:#c9a227}
+.ile{position:absolute;left:6.4mm;top:17.4mm;width:47mm}
+.ile .sat{display:flex;align-items:flex-start;gap:1.7mm;margin-bottom:1.9mm}
+.ile .sat svg{width:2.9mm;height:2.9mm;flex:none;margin-top:0.25mm;fill:#c9a227}
+.ile .sat span{font-size:6.3pt;line-height:1.28;color:#eef1f8;
+ word-break:break-word;letter-spacing:.006em}
+.qr{position:absolute;right:6.2mm;top:50%;transform:translateY(-50%);
+ width:21.5mm;text-align:center}
+.qr .kutu{background:#fff;border-radius:1.2mm;padding:1.1mm}
+.qr svg{display:block;width:19.3mm;height:19.3mm}
+.qr b{display:block;font-size:4.4pt;letter-spacing:.1em;color:#aeb8d0;
+ margin-top:1.1mm;font-weight:700}
+.uyeno{position:absolute;left:6.4mm;bottom:5.2mm;font-size:4.9pt;
+ letter-spacing:.15em;color:#8e9ab8;font-weight:700}
+</style></head>
+<body><div class="sayfa">
+ <div class="yuz on"></div><div class="cerceve"></div>
+ <div class="govde">
+  <div class="marka" style="font-size:15.5pt">PEKA PEYZAJ</div>
+  <div class="unvan">PEKA Peyzaj Mimarlık ve Mühendislik</div>
+  <div class="cizgi"></div>
+  <div class="kisi">Kader BALTA — Çağla PERÇİN</div>
+  <div class="sektor">PEYZAJ MİMARLIĞI</div>
+ </div>
+ <div class="muhur"><svg viewBox="0 0 200 200" style="width:49px;height:49px">
+<circle cx="100" cy="100" r="95" fill="#fdfdfa" stroke="#0d1b3e" stroke-width="3.2"/>
+<circle cx="100" cy="100" r="74" fill="none" stroke="#c9a227" stroke-width="1.3"/>
+<circle cx="100" cy="100" r="70" fill="none" stroke="#0d1b3e" stroke-width="3"/>
+<path id="tk31" d="M100,100 m-79,0 a79,79 0 0,1 158,0" fill="none"/>
+<path id="bk31" d="M100,100 m-86,0 a86,86 0 0,0 172,0" fill="none"/>
+<text font-size="12" font-weight="600" fill="#0d1b3e" letter-spacing="3.6" font-family="Times New Roman, Times, serif">
+<textPath href="#tk31" startOffset="50%" text-anchor="middle">SINCE 2011</textPath></text>
+<text font-size="9.4" font-weight="700" fill="#0d1b3e" letter-spacing="0.4">
+<textPath href="#bk31" startOffset="50%" text-anchor="middle">GÜÇLÜ İŞBİRLİĞİ, GÜÇLÜ GELECEK</textPath></text>
+<text x="100" y="59" text-anchor="middle" font-size="14" font-weight="700" fill="#0d1b3e" letter-spacing=".3">İŞİNİN EN</text>
+<path d="M56,71 h13 M131,71 h13" stroke="#c9a227" stroke-width="1.1" stroke-linecap="round"/>
+<text x="100" y="76" text-anchor="middle" font-size="14" font-weight="700" fill="#0d1b3e" letter-spacing=".3">İYİSİ</text>
+<g transform="translate(43.00,86.19) scale(0.16248)" fill="#0d1b3e"><path d="M232.94,156.71c0,65.1,52.77,117.87,117.87,117.87s117.87-52.77,117.87-117.87v-38.84C468.68,52.77,415.91,0,350.81,0s-117.87,52.77-117.87,117.87v38.84Z"/><path d="M575.59,412.56c-63.88,50.04-143.32,77.5-224.78,77.5-73.4,0-144.16-21.7-204.63-62.74-6.85-4.66-13.51-9.51-19.99-14.59,18.37-69.22,65.66-125.99,127.53-155.47,25.18,24.32,59.42,39.3,97.1,39.3s71.99-15,97.17-39.37c61.88,29.46,109.18,86.18,127.61,155.36Z"/><path d="M511.58,129.12c0,49.6,40.2,89.8,89.8,89.8s89.8-40.2,89.8-89.8v-29.59c0-49.6-40.2-89.8-89.8-89.8s-89.8,40.2-89.8,89.8v29.59Z"/><path d="M701.62,225.48c-18.69,65.66-55.67,125.2-107.62,171.68-19.42-63.42-61.47-117.09-117.95-149.95,14.76-15.31,32.14-27.92,51.36-37.08,19.18,18.52,45.25,29.94,73.97,29.94s54.83-11.45,74.03-30.01c9.18,4.37,17.95,9.53,26.21,15.42Z"/><path d="M190.04,129.12c0,49.6-40.2,89.8-89.8,89.8S10.44,178.71,10.44,129.12v-29.59c0-49.6,40.2-89.8,89.8-89.8,49.6,0,89.8,40.2,89.8,89.8v29.59Z"/><path d="M0,225.48c18.69,65.66,55.67,125.2,107.62,171.68,19.42-63.42,61.47-117.09,117.95-149.95-14.76-15.31-32.14-27.92-51.36-37.08-19.18,18.52-45.25,29.94-73.97,29.94-28.73,0-54.83-11.45-74.03-30.01-9.18,4.37-17.95,9.53-26.21,15.42Z"/></g>
+</svg><b>ÜYE NO 31</b></div>
+</div><div class="sayfa">
+ <div class="yuz arka"></div>
+ <div class="ic">
+  <div class="plat"><div class="ad">İŞİNİN EN İYİSİ PLATFORMU</div>
+   <div class="slogan">GÜÇLÜ İŞBİRLİĞİ, GÜÇLÜ GELECEK</div></div>
+  <div class="ayrac"></div>
+  <div class="ile"><div class="sat"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M231.88,175.08A56.26,56.26,0,0,1,176,224C96.6,224,32,159.4,32,80A56.26,56.26,0,0,1,80.92,24.12a16,16,0,0,1,16.62,9.52l21.12,47.15,0,.12A16,16,0,0,1,117.39,96c-.18.27-.37.52-.57.77L96,121.45c7.49,15.22,23.41,31,38.83,38.51l24.34-20.71a8.12,8.12,0,0,1,.75-.56,16,16,0,0,1,15.17-1.4l.13.06,47.11,21.11A16,16,0,0,1,231.88,175.08Z"/></svg><span>0535 582 52 57</span></div><div class="sat"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M231.88,175.08A56.26,56.26,0,0,1,176,224C96.6,224,32,159.4,32,80A56.26,56.26,0,0,1,80.92,24.12a16,16,0,0,1,16.62,9.52l21.12,47.15,0,.12A16,16,0,0,1,117.39,96c-.18.27-.37.52-.57.77L96,121.45c7.49,15.22,23.41,31,38.83,38.51l24.34-20.71a8.12,8.12,0,0,1,.75-.56,16,16,0,0,1,15.17-1.4l.13.06,47.11,21.11A16,16,0,0,1,231.88,175.08Z"/></svg><span>0545 281 05 13</span></div><div class="sat"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48Zm-8,144H40V74.19l82.59,75.71a8,8,0,0,0,10.82,0L216,74.19V192Z"/></svg><span>pekapeyzaj@gmail.com</span></div><div class="sat"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M128,16a88.1,88.1,0,0,0-88,88c0,75.3,80,132.17,83.41,134.55a8,8,0,0,0,9.18,0C136,236.17,216,179.3,216,104A88.1,88.1,0,0,0,128,16Zm0,56a32,32,0,1,1-32,32A32,32,0,0,1,128,72Z"/></svg><span>Adana / Türkiye</span></div></div>
+  <div class="qr"><div class="kutu"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 33" shape-rendering="crispEdges" role="img" aria-label="QR kod"><rect width="33" height="33" fill="#fff"/><path fill="#0d1b3e" d="M2,2h7v1h-7zM11,2h1v1h-1zM13,2h6v1h-6zM20,2h2v1h-2zM24,2h7v1h-7zM2,3h1v1h-1zM8,3h1v1h-1zM12,3h6v1h-6zM20,3h1v1h-1zM24,3h1v1h-1zM30,3h1v1h-1zM2,4h1v1h-1zM4,4h3v1h-3zM8,4h1v1h-1zM11,4h2v1h-2zM14,4h1v1h-1zM16,4h1v1h-1zM18,4h2v1h-2zM21,4h2v1h-2zM24,4h1v1h-1zM26,4h3v1h-3zM30,4h1v1h-1zM2,5h1v1h-1zM4,5h3v1h-3zM8,5h1v1h-1zM11,5h3v1h-3zM15,5h1v1h-1zM17,5h2v1h-2zM20,5h1v1h-1zM24,5h1v1h-1zM26,5h3v1h-3zM30,5h1v1h-1zM2,6h1v1h-1zM4,6h3v1h-3zM8,6h1v1h-1zM11,6h7v1h-7zM19,6h2v1h-2zM22,6h1v1h-1zM24,6h1v1h-1zM26,6h3v1h-3zM30,6h1v1h-1zM2,7h1v1h-1zM8,7h1v1h-1zM10,7h2v1h-2zM15,7h4v1h-4zM21,7h1v1h-1zM24,7h1v1h-1zM30,7h1v1h-1zM2,8h7v1h-7zM10,8h1v1h-1zM12,8h1v1h-1zM14,8h1v1h-1zM16,8h1v1h-1zM18,8h1v1h-1zM20,8h1v1h-1zM22,8h1v1h-1zM24,8h7v1h-7zM13,9h2v1h-2zM18,9h3v1h-3zM2,10h1v1h-1zM5,10h1v1h-1zM7,10h2v1h-2zM10,10h2v1h-2zM13,10h2v1h-2zM21,10h1v1h-1zM23,10h1v1h-1zM25,10h1v1h-1zM2,11h1v1h-1zM4,11h2v1h-2zM9,11h2v1h-2zM14,11h1v1h-1zM19,11h2v1h-2zM22,11h3v1h-3zM27,11h1v1h-1zM30,11h1v1h-1zM2,12h1v1h-1zM5,12h2v1h-2zM8,12h4v1h-4zM13,12h1v1h-1zM18,12h1v1h-1zM21,12h1v1h-1zM24,12h1v1h-1zM27,12h3v1h-3zM2,13h4v1h-4zM7,13h1v1h-1zM9,13h1v1h-1zM11,13h2v1h-2zM16,13h1v1h-1zM18,13h1v1h-1zM22,13h1v1h-1zM25,13h2v1h-2zM28,13h2v1h-2zM3,14h8v1h-8zM13,14h2v1h-2zM17,14h3v1h-3zM23,14h2v1h-2zM27,14h1v1h-1zM29,14h2v1h-2zM3,15h2v1h-2zM6,15h1v1h-1zM9,15h2v1h-2zM12,15h3v1h-3zM18,15h1v1h-1zM21,15h3v1h-3zM2,16h1v1h-1zM4,16h2v1h-2zM8,16h1v1h-1zM10,16h1v1h-1zM12,16h2v1h-2zM19,16h2v1h-2zM22,16h2v1h-2zM26,16h5v1h-5zM4,17h1v1h-1zM6,17h2v1h-2zM9,17h2v1h-2zM12,17h1v1h-1zM14,17h6v1h-6zM21,17h1v1h-1zM23,17h5v1h-5zM29,17h1v1h-1zM2,18h4v1h-4zM8,18h1v1h-1zM11,18h1v1h-1zM15,18h2v1h-2zM18,18h2v1h-2zM22,18h2v1h-2zM29,18h1v1h-1zM3,19h1v1h-1zM6,19h1v1h-1zM14,19h1v1h-1zM18,19h1v1h-1zM20,19h1v1h-1zM23,19h3v1h-3zM27,19h1v1h-1zM30,19h1v1h-1zM2,20h1v1h-1zM6,20h1v1h-1zM8,20h4v1h-4zM13,20h3v1h-3zM23,20h3v1h-3zM29,20h2v1h-2zM4,21h2v1h-2zM7,21h1v1h-1zM10,21h4v1h-4zM15,21h1v1h-1zM19,21h2v1h-2zM24,21h2v1h-2zM29,21h2v1h-2zM2,22h1v1h-1zM4,22h2v1h-2zM7,22h2v1h-2zM10,22h1v1h-1zM12,22h1v1h-1zM16,22h3v1h-3zM21,22h6v1h-6zM28,22h1v1h-1zM10,23h6v1h-6zM19,23h1v1h-1zM22,23h1v1h-1zM26,23h1v1h-1zM28,23h3v1h-3zM2,24h7v1h-7zM12,24h1v1h-1zM15,24h2v1h-2zM18,24h3v1h-3zM22,24h1v1h-1zM24,24h1v1h-1zM26,24h1v1h-1zM29,24h1v1h-1zM2,25h1v1h-1zM8,25h1v1h-1zM10,25h1v1h-1zM13,25h3v1h-3zM18,25h1v1h-1zM22,25h1v1h-1zM26,25h3v1h-3zM2,26h1v1h-1zM4,26h3v1h-3zM8,26h1v1h-1zM11,26h3v1h-3zM16,26h5v1h-5zM22,26h5v1h-5zM29,26h2v1h-2zM2,27h1v1h-1zM4,27h3v1h-3zM8,27h1v1h-1zM10,27h3v1h-3zM15,27h2v1h-2zM21,27h1v1h-1zM24,27h1v1h-1zM26,27h4v1h-4zM2,28h1v1h-1zM4,28h3v1h-3zM8,28h1v1h-1zM11,28h2v1h-2zM22,28h1v1h-1zM26,28h3v1h-3zM30,28h1v1h-1zM2,29h1v1h-1zM8,29h1v1h-1zM11,29h1v1h-1zM14,29h2v1h-2zM17,29h1v1h-1zM19,29h1v1h-1zM21,29h2v1h-2zM24,29h1v1h-1zM29,29h1v1h-1zM2,30h7v1h-7zM10,30h2v1h-2zM13,30h2v1h-2zM17,30h1v1h-1zM19,30h1v1h-1zM22,30h1v1h-1zM24,30h1v1h-1zM27,30h1v1h-1zM29,30h1v1h-1z"/></svg></div>
+   <b>PROFİLİ AÇ</b></div>
+  <div class="uyeno">ÜYE NO 31</div>
+ </div>
+</div></body></html>

@@ -1,0 +1,206 @@
+<!doctype html><html lang="tr"><head><meta charset="utf-8">
+<title>#37 · Kanal A — Üye İş Profili</title>
+<style>
+@page{size:A4;margin:0}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#e6e9f0;font-family:Georgia,"Times New Roman",serif;display:flex;
+justify-content:center;padding:0;color:#16203a}
+/* A4 sayfa: belge 1024x1448 kurgulanır, 210x297mm'ye ölçeklenir */
+.page{width:794px;height:1123px;overflow:hidden;background:#fff;
+box-shadow:0 6px 26px rgba(13,27,62,.18)}
+svg{display:block}
+.fi,.mi,.ni,.cb{display:block;flex-shrink:0}
+.fi svg,.mi svg,.ni svg,.cb svg{width:100%;height:100%}
+.sheet{width:1024px;height:1448px;background:#fff;position:relative;overflow:hidden;
+display:flex;flex-direction:column;transform:scale(0.775390625);transform-origin:top left}
+
+/* ── LACİVERT KAVİSLİ ÜST BLOK ── */
+.hero{background:#0d1b3e;padding:34px 0 116px;text-align:center;position:relative;
+flex:0 0 auto;z-index:4}
+.hero .curve{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:84px;display:block}
+.hero .pat{position:absolute;inset:0;opacity:.07;overflow:hidden;
+background-image:repeating-linear-gradient(45deg,#fff 0 1px,transparent 1px 15px)}
+.hero .in{position:relative;z-index:2}
+.hero .plat{font-size:26px;letter-spacing:.3em;color:#fff;font-weight:700}
+.hero .sub{font-size:11.5px;letter-spacing:.26em;color:#c9a227;margin-top:10px;font-weight:700;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}
+.hero .kick{font-size:9.5px;letter-spacing:.36em;color:#c9a227;font-weight:700;
+margin-top:16px;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}
+.hero .name{font-size:30px;letter-spacing:.06em;color:#fff;font-weight:400;
+margin-top:12px;line-height:1.1;padding:0 60px}
+/* --- üst blok süslemeleri --- */
+.hero .hr{height:1.5px;background:#c9a227;margin:0 auto}
+.hero .namerow{display:flex;align-items:center;justify-content:center;gap:22px;
+margin-top:26px;padding:0 54px}
+.hero .namerow .ln{flex:1;height:1.5px;background:#c9a227;position:relative;max-width:190px}
+.hero .namerow .ln:before{content:"";position:absolute;top:-3px;width:7px;height:7px;
+background:#c9a227;transform:rotate(45deg)}
+.hero .namerow .ln.l:before{left:0} .hero .namerow .ln.r:before{right:0}
+.hero .namerow .name{margin:0;padding:0;white-space:nowrap}
+.hero .toprow{display:flex;align-items:center;justify-content:space-between;
+padding:0 58px;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}
+.hero .toprow span{font-size:9.5px;letter-spacing:.28em;color:#c9a227;font-weight:700}
+.hero .toprow b{font-size:12.5px;letter-spacing:.32em;color:#fff;font-weight:700}
+.hero .divider{margin:13px 58px 0;height:1px;background:rgba(255,255,255,.22)}
+.hero .ribbon{position:absolute;top:0;right:64px;width:66px;height:76px;z-index:5;
+filter:drop-shadow(0 4px 10px rgba(0,0,0,.28))}
+.hero .ribbon .rb{position:absolute;inset:0;width:100%;height:100%}
+.hero .ribbon .no{position:absolute;left:0;right:0;top:17px;text-align:center;
+font-size:25px;font-weight:700;color:#0d1b3e;line-height:1;
+/* Georgia eski stil rakam kullanıyor (0 kısa, 4 uzun) — Times lining rakam verir */
+font-family:"Times New Roman",Times,serif;font-variant-numeric:lining-nums}
+.hero .wm{position:absolute;left:50%;top:52%;transform:translate(-50%,-50%);
+width:250px;height:250px;opacity:.075;color:#fff;z-index:1}
+.hero .wm svg{width:100%;height:100%}
+
+/* ── DEFNE DALLI MÜHÜR MADALYASI ── */
+.medalrow{position:relative;display:flex;align-items:center;justify-content:center;
+margin:-92px auto 0;z-index:6;flex:0 0 auto;padding:0 52px;gap:48px}
+.medal{position:relative;width:150px;height:150px;flex:0 0 150px}
+.medal .disc{width:150px;height:150px}
+/* m2 — yanlarda altın çizgi + baklava */
+.mrule{flex:1;height:1.5px;background:#c9a227;position:relative;max-width:250px;margin-top:14px}
+.mrule:before{content:"";position:absolute;top:-3px;width:7px;height:7px;background:#c9a227;
+transform:rotate(45deg)}
+.mrule.l:before{left:0} .mrule.r:before{right:0}
+/* m3 — yanlarda bilgi bloğu */
+.mfact{flex:1;max-width:250px;text-align:center;margin-top:34px;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}
+.mfact s{display:block;text-decoration:none;font-size:9.8px;letter-spacing:.26em;
+color:#c9a227;font-weight:700}
+.mfact b{display:block;font-size:15.6px;color:#0d1b3e;font-weight:700;margin-top:6px;line-height:1.35;
+overflow-wrap:anywhere}
+.mfact i{display:block;height:1px;background:#e3d6b2;margin:9px auto 0;width:74%}
+/* m3 + logo — solda firma logosu, sağda sektör|şehir */
+.medalrow.logolu{padding:0 16px;gap:24px}
+.mlogo{flex:1;max-width:300px;display:flex;align-items:center;justify-content:center;
+margin-top:30px;padding:0 4px}
+.mlogo img{display:block;width:100%;height:74px;object-fit:contain}
+.mfact2{flex:1;max-width:300px;margin-top:36px;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;display:flex;
+align-items:stretch;justify-content:center;gap:13px;flex-wrap:wrap}
+.mfact2 .mf{flex:1 1 0;min-width:0;text-align:center}
+.mfact2 s{display:block;text-decoration:none;font-size:8.6px;letter-spacing:.22em;
+color:#c9a227;font-weight:700}
+.mfact2 b{display:block;font-size:12.4px;color:#0d1b3e;font-weight:700;margin-top:5px;line-height:1.3;
+overflow-wrap:anywhere;hyphens:auto}
+.msep{width:1px;background:#e3d6b2;flex:0 0 1px}
+.mfact2 i{flex:0 0 100%;height:1px;background:#e3d6b2;margin:9px auto 0;width:78%}
+/* m4 — yanlarda başak */
+.msprig{flex:1;max-width:250px;display:flex;margin-top:16px}
+.msprig svg{width:110px;height:46px;color:#c9a227}
+.msprig.l{justify-content:flex-end} .msprig.r{justify-content:flex-start}
+
+/* ── KLASİK ALTIN ÇERÇEVE (üst bloğun altında) ── */
+.frameSvg{position:absolute;top:342px;left:22px;pointer-events:none;z-index:2}
+.pat2{position:absolute;top:351px;left:31px;width:962px;height:1066px;opacity:.038;
+pointer-events:none;z-index:0;overflow:hidden;
+background-image:repeating-linear-gradient(45deg,#0d1b3e 0 1px,transparent 1px 14px),
+repeating-linear-gradient(-45deg,#0d1b3e 0 1px,transparent 1px 14px)}
+
+/* ── İÇERİK ── */
+.ct{position:relative;z-index:3;flex:1;padding:52px 74px 76px;text-align:center;
+display:flex;flex-direction:column;align-items:center}
+.nrule{height:3px;width:132px;background:#8c1f1f;margin:13px auto 12px;border-radius:2px;opacity:.9}
+.unvan{font-size:21px;color:#5f6b85;margin-top:0;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}
+.yetkili{font-size:27.5px;color:#0d1b3e;margin-top:0}
+.tanitim{font-size:16.6px;line-height:1.78;color:#3f4a66;margin:18px auto 0;
+max-width:770px;text-align:center}
+.sec{display:flex;align-items:center;gap:14px;margin:0 0 14px;width:100%}
+.sec i{flex:1;height:1px;background:#e3d8b8}
+.sec span{font-size:13px;font-weight:700;letter-spacing:.28em;color:#c9a227;white-space:nowrap;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}
+.fagrid{display:grid;grid-template-columns:repeat(4,1fr);width:100%}
+.fa{padding:0 15px;border-right:1px solid #ece4cd;text-align:center}
+.fa:last-child{border-right:none}
+.fa .fi{width:40px;height:40px;margin:0 auto 12px}
+.fa b{font-size:15px;font-weight:700;letter-spacing:.03em;line-height:1.3;display:block;
+margin-bottom:6px;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;color:#0d1b3e}
+.fa p{font-size:13.6px;line-height:1.52;color:#5f6b85;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}
+.mggrid{display:grid;grid-template-columns:repeat(6,1fr);gap:14px 8px;width:100%}
+.mg{text-align:center;min-width:0;padding:0 2px}
+.mg .mi{width:34px;height:34px;margin:0 auto 8px;color:#0d1b3e}
+.mg span:last-child{font-size:11.2px;font-weight:700;color:#0d1b3e;line-height:1.22;display:block;
+text-transform:uppercase;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;letter-spacing:0;
+overflow-wrap:normal;word-break:keep-all}
+.ndgrid{display:grid;grid-template-columns:repeat(4,1fr);width:100%}
+.nd{padding:0 14px;border-right:1px solid #ece4cd;display:flex;gap:10px;align-items:flex-start}
+.nd:last-child{border-right:none}
+.nd .ni{width:32px;height:32px;margin-top:1px}
+.nd p{font-size:13.6px;font-weight:700;line-height:1.4;color:#0d1b3e;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;text-align:left}
+.contact{display:grid;grid-template-columns:repeat(2,1fr);width:100%}
+.ci{display:flex;align-items:center;justify-content:center;gap:11px;
+padding:0 10px;border-right:1px solid #ece4cd;min-width:0}
+.ci:last-child{border-right:none}
+.ci b{min-width:0}
+.ci .cb{width:35px;height:35px;background:#0d1b3e;color:#fff;border-radius:50%;padding:7px}
+.ci b{font-size:13.6px;color:#22304f;font-weight:600;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+line-height:1.35;text-align:left;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.grow{flex:1;min-height:10px}
+.gap{flex:1 1 auto;min-height:14px;max-height:88px}
+.gap1{flex-grow:1.15}
+.blk{width:100%;flex:0 0 auto}
+/* ── ALT ŞERİT (imza yok) ── */
+.foot{width:100%;border-top:1px solid #ece4cd;padding:20px 34px 0;display:flex;
+justify-content:center;align-items:center;font-size:11.8px;letter-spacing:.2em;
+color:#98a1b6;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}
+.foot .mid{color:#0d1b3e;font-weight:700;letter-spacing:.2em}
+@media print{
+ @page{size:A4;margin:0}
+ body{background:#fff;padding:0}
+ .page{box-shadow:none;width:794px;height:1123px}
+ *{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+</style></head><body><div class="page"><div class="sheet">
+ <div class="hero"><div class="pat"></div><div class="ribbon">
+ <svg class="rb" viewBox="0 0 66 76" aria-hidden="true">
+  <defs><linearGradient id="rg37" x1="0" y1="0" x2="0" y2="1">
+   <stop offset="0" stop-color="#e3c05a"/><stop offset="1" stop-color="#c9a227"/></linearGradient></defs>
+  <path d="M0.00,0.00 L66.00,0.00 L66.00,76.00 L33.00,62.00 L0.00,76.00 Z" fill="url(#rg37)"/>
+  <path d="M4.20,4.20 L61.80,4.20 L61.80,69.66 L33.00,57.44 L4.20,69.66 Z"
+        fill="none" stroke="#ffffff" stroke-width="1.9" stroke-linejoin="round" stroke-linecap="round"/>
+ </svg>
+ <span class="no">37</span></div><div class="in"><div class="plat">İŞİNİN EN İYİSİ PLATFORMU</div><div class="sub">GÜÇLÜ İŞBİRLİĞİ, GÜÇLÜ GELECEK</div><div class="namerow"><span class="ln l"></span><div class="name">KANAL A</div><span class="ln r"></span></div></div><svg class="curve" viewBox="0 0 1024 84" preserveAspectRatio="none" aria-hidden="true"><path d="M0,85 L0,44 Q512,-12 1024,44 L1024,85 Z" fill="#fff"/></svg></div>
+ <div class="medalrow"><div class="mfact"><s>SEKTÖR</s><b>Medya &amp; Yayıncılık</b><i></i></div><div class="medal"><div class="disc"><svg viewBox="0 0 200 200" style="width:150px;height:150px">
+<circle cx="100" cy="100" r="95" fill="#fdfdfa" stroke="#0d1b3e" stroke-width="3.2"/>
+<circle cx="100" cy="100" r="74" fill="none" stroke="#c9a227" stroke-width="1.3"/>
+<circle cx="100" cy="100" r="70" fill="none" stroke="#0d1b3e" stroke-width="3"/>
+<path id="t37" d="M100,100 m-79,0 a79,79 0 0,1 158,0" fill="none"/>
+<path id="b37" d="M100,100 m-86,0 a86,86 0 0,0 172,0" fill="none"/>
+<text font-size="12" font-weight="600" fill="#0d1b3e" letter-spacing="3.6" font-family="Times New Roman, Times, serif">
+<textPath href="#t37" startOffset="50%" text-anchor="middle">SINCE 2011</textPath></text>
+<text font-size="9.4" font-weight="700" fill="#0d1b3e" letter-spacing="0.4">
+<textPath href="#b37" startOffset="50%" text-anchor="middle">GÜÇLÜ İŞBİRLİĞİ, GÜÇLÜ GELECEK</textPath></text>
+<text x="100" y="59" text-anchor="middle" font-size="14" font-weight="700" fill="#0d1b3e" letter-spacing=".3">İŞİNİN EN</text>
+<path d="M56,71 h13 M131,71 h13" stroke="#c9a227" stroke-width="1.1" stroke-linecap="round"/>
+<text x="100" y="76" text-anchor="middle" font-size="14" font-weight="700" fill="#0d1b3e" letter-spacing=".3">İYİSİ</text>
+<g transform="translate(43.00,86.19) scale(0.16248)" fill="#0d1b3e"><path d="M232.94,156.71c0,65.1,52.77,117.87,117.87,117.87s117.87-52.77,117.87-117.87v-38.84C468.68,52.77,415.91,0,350.81,0s-117.87,52.77-117.87,117.87v38.84Z"/><path d="M575.59,412.56c-63.88,50.04-143.32,77.5-224.78,77.5-73.4,0-144.16-21.7-204.63-62.74-6.85-4.66-13.51-9.51-19.99-14.59,18.37-69.22,65.66-125.99,127.53-155.47,25.18,24.32,59.42,39.3,97.1,39.3s71.99-15,97.17-39.37c61.88,29.46,109.18,86.18,127.61,155.36Z"/><path d="M511.58,129.12c0,49.6,40.2,89.8,89.8,89.8s89.8-40.2,89.8-89.8v-29.59c0-49.6-40.2-89.8-89.8-89.8s-89.8,40.2-89.8,89.8v29.59Z"/><path d="M701.62,225.48c-18.69,65.66-55.67,125.2-107.62,171.68-19.42-63.42-61.47-117.09-117.95-149.95,14.76-15.31,32.14-27.92,51.36-37.08,19.18,18.52,45.25,29.94,73.97,29.94s54.83-11.45,74.03-30.01c9.18,4.37,17.95,9.53,26.21,15.42Z"/><path d="M190.04,129.12c0,49.6-40.2,89.8-89.8,89.8S10.44,178.71,10.44,129.12v-29.59c0-49.6,40.2-89.8,89.8-89.8,49.6,0,89.8,40.2,89.8,89.8v29.59Z"/><path d="M0,225.48c18.69,65.66,55.67,125.2,107.62,171.68,19.42-63.42,61.47-117.09,117.95-149.95-14.76-15.31-32.14-27.92-51.36-37.08-19.18,18.52-45.25,29.94-73.97,29.94-28.73,0-54.83-11.45-74.03-30.01-9.18,4.37-17.95,9.53-26.21,15.42Z"/></g>
+</svg></div></div><div class="mfact"><s>ŞEHİR</s><b>Adana / Türkiye</b><i></i></div></div>
+ <div class="pat2"></div><svg class="frameSvg" width="980" height="1084" viewBox="0 0 980 1084">
+<rect x="2.0" y="2.0" width="976.0" height="1080.0" fill="none" stroke="#c9a227" stroke-width="2.6"/>
+<rect x="9.0" y="9.0" width="962.0" height="1066.0" fill="none" stroke="#c9a227" stroke-width="0.9"/>
+<circle cx="15.0" cy="15.0" r="8.5" fill="#fdfdfa" stroke="#c9a227" stroke-width="2.1"/><circle cx="15.0" cy="15.0" r="3.1" fill="#c9a227"/><circle cx="965.0" cy="15.0" r="8.5" fill="#fdfdfa" stroke="#c9a227" stroke-width="2.1"/><circle cx="965.0" cy="15.0" r="3.1" fill="#c9a227"/><circle cx="965.0" cy="1069.0" r="8.5" fill="#fdfdfa" stroke="#c9a227" stroke-width="2.1"/><circle cx="965.0" cy="1069.0" r="3.1" fill="#c9a227"/><circle cx="15.0" cy="1069.0" r="8.5" fill="#fdfdfa" stroke="#c9a227" stroke-width="2.1"/><circle cx="15.0" cy="1069.0" r="3.1" fill="#c9a227"/></svg>
+ <div class="ct">
+  <div class="blk">
+   <div class="unvan">Kanal A (TV A)</div>
+   <div class="nrule"></div>
+   <div class="yetkili">Yavuz YILMAZ</div>
+   <p class="tanitim">Kanal A (TV A), 1994’te Adana’nın ilk özel televizyonu olarak yayına başladı ve 2016’dan bu yana ulusal yayın yapıyor. Türksat 4A üzerinden Türkiye ve Avrupa’ya ulaşarak reklam ve kurumsal tanıtım imkânı sunuyor.</p></div>
+  <div class="gap gap1"></div>
+  <div class="blk"><div class="sec"><i></i><span>FAALİYET ALANLARI</span><i></i></div>
+   <div class="fagrid"><div class="fa"><span class="fi" style="color:#8c1f1f"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M216,64H147.31l34.35-34.34a8,8,0,1,0-11.32-11.32L128,60.69,85.66,18.34A8,8,0,0,0,74.34,29.66L108.69,64H40A16,16,0,0,0,24,80V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V80A16,16,0,0,0,216,64Zm0,136H160V80h56V200Zm-16-84a12,12,0,1,1-12-12A12,12,0,0,1,200,116Zm0,48a12,12,0,1,1-12-12A12,12,0,0,1,200,164Z"/></svg></span>
+<b>TELEVİZYON YAYINCILIĞI</b><p>1994’ten beri yayında; 2016’dan bu yana ulusal yayın</p></div><div class="fa"><span class="fi" style="color:#8c1f1f"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M135.16,84.42a8,8,0,0,0-14.32,0l-72,144a8,8,0,0,0,14.31,7.16L77,208h102.1l13.79,27.58A8,8,0,0,0,200,240a8,8,0,0,0,7.15-11.58ZM128,105.89,155.06,160H100.94Zm31.49-12.15a32,32,0,1,0-63,0,8,8,0,1,1-15.74,2.85,48,48,0,1,1,94.46,0,8,8,0,0,1-7.86,6.58,8.74,8.74,0,0,1-1.43-.13A8,8,0,0,1,159.49,93.74ZM64.15,136.21a80,80,0,1,1,127.7,0,8,8,0,0,1-12.76-9.65,64,64,0,1,0-102.18,0,8,8,0,0,1-12.76,9.65Z"/></svg></span>
+<b>UYDU YAYINI</b><p>Türksat 4A üzerinden Türkiye ve Avrupa’ya erişim</p></div><div class="fa"><span class="fi" style="color:#8c1f1f"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M200,72H160.2c-2.91-.17-53.62-3.74-101.91-44.24A16,16,0,0,0,32,40V200a16,16,0,0,0,26.29,12.25c37.77-31.68,77-40.76,93.71-43.3v31.72A16,16,0,0,0,159.12,214l11,7.33A16,16,0,0,0,194.5,212l11.77-44.36A48,48,0,0,0,200,72ZM179,207.89l0,.11-11-7.33V168h21.6ZM200,152H168V88h32a32,32,0,1,1,0,64Z"/></svg></span>
+<b>REKLAM &amp; TANITIM</b><p>Firmalara televizyon üzerinden kurumsal tanıtım</p></div><div class="fa"><span class="fi" style="color:#8c1f1f"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M232,64V176a24,24,0,0,1-24,24H48a24,24,0,0,1-24-24V64A24,24,0,0,1,48,40H208A24,24,0,0,1,232,64ZM160,216H96a8,8,0,0,0,0,16h64a8,8,0,0,0,0-16Z"/></svg></span>
+<b>HABER &amp; PROGRAM</b><p>Bölgesel haber ve program yapımcılığı</p></div></div></div>
+  <div class="gap"></div>
+  <div class="blk"><div class="sec"><i></i><span>MÜŞTERİ GRUBU</span><i></i></div>
+   <div class="mggrid"><div class="mg"><span class="mi"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M200,72H160.2c-2.91-.17-53.62-3.74-101.91-44.24A16,16,0,0,0,32,40V200a16,16,0,0,0,26.29,12.25c37.77-31.68,77-40.76,93.71-43.3v31.72A16,16,0,0,0,159.12,214l11,7.33A16,16,0,0,0,194.5,212l11.77-44.36A48,48,0,0,0,200,72ZM179,207.89l0,.11-11-7.33V168h21.6ZM200,152H168V88h32a32,32,0,1,1,0,64Z"/></svg></span><span>Reklamverenler</span></div><div class="mg"><span class="mi"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M248,208a8,8,0,0,1-8,8H16a8,8,0,0,1,0-16H240A8,8,0,0,1,248,208ZM16.3,98.18a8,8,0,0,1,3.51-9l104-64a8,8,0,0,1,8.38,0l104,64A8,8,0,0,1,232,104H208v64h16a8,8,0,0,1,0,16H32a8,8,0,0,1,0-16H48V104H24A8,8,0,0,1,16.3,98.18ZM144,160a8,8,0,0,0,16,0V112a8,8,0,0,0-16,0Zm-48,0a8,8,0,0,0,16,0V112a8,8,0,0,0-16,0Z"/></svg></span><span>Kurumlar</span></div><div class="mg"><span class="mi"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M248,208a8,8,0,0,1-8,8H16a8,8,0,0,1,0-16H240A8,8,0,0,1,248,208ZM16.3,98.18a8,8,0,0,1,3.51-9l104-64a8,8,0,0,1,8.38,0l104,64A8,8,0,0,1,232,104H208v64h16a8,8,0,0,1,0,16H32a8,8,0,0,1,0-16H48V104H24A8,8,0,0,1,16.3,98.18ZM144,160a8,8,0,0,0,16,0V112a8,8,0,0,0-16,0Zm-48,0a8,8,0,0,0,16,0V112a8,8,0,0,0-16,0Z"/></svg></span><span>Belediyeler</span></div><div class="mg"><span class="mi"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M231.69,93.81,217.35,43.6A16.07,16.07,0,0,0,202,32H54A16.07,16.07,0,0,0,38.65,43.6L24.31,93.81A7.94,7.94,0,0,0,24,96v16a40,40,0,0,0,16,32v72a8,8,0,0,0,8,8H208a8,8,0,0,0,8-8V144a40,40,0,0,0,16-32V96A7.94,7.94,0,0,0,231.69,93.81ZM88,112a24,24,0,0,1-35.12,21.26,7.88,7.88,0,0,0-1.82-1.06A24,24,0,0,1,40,112v-8H88Zm64,0a24,24,0,0,1-48,0v-8h48Zm64,0a24,24,0,0,1-11.07,20.2,8.08,8.08,0,0,0-1.8,1.05A24,24,0,0,1,168,112v-8h48Z"/></svg></span><span>Esnaf</span></div><div class="mg"><span class="mi"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M164.47,195.63a8,8,0,0,1-6.7,12.37H10.23a8,8,0,0,1-6.7-12.37,95.83,95.83,0,0,1,47.22-37.71,60,60,0,1,1,66.5,0A95.83,95.83,0,0,1,164.47,195.63Zm87.91-.15a95.87,95.87,0,0,0-47.13-37.56A60,60,0,0,0,144.7,54.59a4,4,0,0,0-1.33,6A75.83,75.83,0,0,1,147,150.53a4,4,0,0,0,1.07,5.53,112.32,112.32,0,0,1,29.85,30.83,23.92,23.92,0,0,1,3.65,16.47,4,4,0,0,0,3.95,4.64h60.3a8,8,0,0,0,7.73-5.93A8.22,8.22,0,0,0,252.38,195.48Z"/></svg></span><span>Herkes</span></div><div class="mg"><span class="mi"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M216,40H40A16,16,0,0,0,24,56V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40ZM200,192H56a8,8,0,0,1-8-8V72a8,8,0,0,1,16,0v76.69l34.34-34.35a8,8,0,0,1,11.32,0L128,132.69,172.69,88H144a8,8,0,0,1,0-16h48a8,8,0,0,1,8,8v48a8,8,0,0,1-16,0V99.31l-50.34,50.35a8,8,0,0,1-11.32,0L104,131.31l-40,40V176H200a8,8,0,0,1,0,16Z"/></svg></span><span>Yatırımcılar</span></div></div></div>
+  <div class="gap"></div>
+  <div class="blk"><div class="sec"><i></i><span>NEDEN KANAL A?</span><i></i></div>
+   <div class="ndgrid"><div class="nd"><span class="ni" style="color:#8c1f1f"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M216,64H147.31l34.35-34.34a8,8,0,1,0-11.32-11.32L128,60.69,85.66,18.34A8,8,0,0,0,74.34,29.66L108.69,64H40A16,16,0,0,0,24,80V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V80A16,16,0,0,0,216,64Zm0,136H160V80h56V200Zm-16-84a12,12,0,1,1-12-12A12,12,0,0,1,200,116Zm0,48a12,12,0,1,1-12-12A12,12,0,0,1,200,164Z"/></svg></span>
+<p>Adana’nın 1994’ten beri yayında olan ilk özel televizyonu</p></div><div class="nd"><span class="ni" style="color:#8c1f1f"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M128,16a88.1,88.1,0,0,0-88,88c0,75.3,80,132.17,83.41,134.55a8,8,0,0,0,9.18,0C136,236.17,216,179.3,216,104A88.1,88.1,0,0,0,128,16Zm0,56a32,32,0,1,1-32,32A32,32,0,0,1,128,72Z"/></svg></span>
+<p>Türksat 4A ile Türkiye ve Avrupa’ya erişim</p></div><div class="nd"><span class="ni" style="color:#8c1f1f"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M216,64H147.31l34.35-34.34a8,8,0,1,0-11.32-11.32L128,60.69,85.66,18.34A8,8,0,0,0,74.34,29.66L108.69,64H40A16,16,0,0,0,24,80V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V80A16,16,0,0,0,216,64Zm0,136H160V80h56V200Zm-16-84a12,12,0,1,1-12-12A12,12,0,0,1,200,116Zm0,48a12,12,0,1,1-12-12A12,12,0,0,1,200,164Z"/></svg></span>
+<p>Platform üyelerine ortak tanıtım kanalı imkânı</p></div><div class="nd"><span class="ni" style="color:#8c1f1f"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M248,208a8,8,0,0,1-8,8H16a8,8,0,0,1,0-16H240A8,8,0,0,1,248,208ZM16.3,98.18a8,8,0,0,1,3.51-9l104-64a8,8,0,0,1,8.38,0l104,64A8,8,0,0,1,232,104H208v64h16a8,8,0,0,1,0,16H32a8,8,0,0,1,0-16H48V104H24A8,8,0,0,1,16.3,98.18ZM144,160a8,8,0,0,0,16,0V112a8,8,0,0,0-16,0Zm-48,0a8,8,0,0,0,16,0V112a8,8,0,0,0-16,0Z"/></svg></span>
+<p>Yerel kamuoyunda yerleşik marka</p></div></div></div>
+  <div class="gap"></div>
+  <div class="blk"><div class="sec"><i></i><span>İLETİŞİM BİLGİLERİ</span><i></i></div>
+   <div class="contact"><div class="ci"><span class="cb"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M231.88,175.08A56.26,56.26,0,0,1,176,224C96.6,224,32,159.4,32,80A56.26,56.26,0,0,1,80.92,24.12a16,16,0,0,1,16.62,9.52l21.12,47.15,0,.12A16,16,0,0,1,117.39,96c-.18.27-.37.52-.57.77L96,121.45c7.49,15.22,23.41,31,38.83,38.51l24.34-20.71a8.12,8.12,0,0,1,.75-.56,16,16,0,0,1,15.17-1.4l.13.06,47.11,21.11A16,16,0,0,1,231.88,175.08Z"/></svg></span><b style="font-size:13.6px">0532 060 40 13</b></div><div class="ci"><span class="cb"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M128,16a88.1,88.1,0,0,0-88,88c0,75.3,80,132.17,83.41,134.55a8,8,0,0,0,9.18,0C136,236.17,216,179.3,216,104A88.1,88.1,0,0,0,128,16Zm0,56a32,32,0,1,1-32,32A32,32,0,0,1,128,72Z"/></svg></span><b style="font-size:13.6px">Adana / Türkiye</b></div></div></div>
+  <div class="gap"></div>
+  <div class="foot"><span class="mid">İŞİNİN EN İYİSİ PLATFORMU ÜYESİDİR</span></div>
+ </div></div></div></body></html>

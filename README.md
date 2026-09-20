@@ -42,7 +42,7 @@ rengi kurum kimliğiyle yarışıyordu; tek vurgu altın ve yalnız çizgi olara
 
 ## Yayınlama
 
-Depo kuruldu ve site yayında: **https://isinin-en-iyisi.github.io/**
+Depo kuruldu ve site yayında: **https://isinineniyisi.github.io/**
 (`github.com/isinin-en-iyisi/isinin-en-iyisi.github.io`, dal `main`, kök klasör, HTTPS zorunlu.)
 
 `08-site/` hem üretim çıktısı hem deponun çalışma kopyası. Güncellemek tek komut:

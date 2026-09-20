@@ -1,0 +1,206 @@
+<!doctype html><html lang="tr"><head><meta charset="utf-8">
+<title>#04 · Günsa Gaz Makina — Üye İş Profili</title>
+<style>
+@page{size:A4;margin:0}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#e6e9f0;font-family:Georgia,"Times New Roman",serif;display:flex;
+justify-content:center;padding:0;color:#16203a}
+/* A4 sayfa: belge 1024x1448 kurgulanır, 210x297mm'ye ölçeklenir */
+.page{width:794px;height:1123px;overflow:hidden;background:#fff;
+box-shadow:0 6px 26px rgba(13,27,62,.18)}
+svg{display:block}
+.fi,.mi,.ni,.cb{display:block;flex-shrink:0}
+.fi svg,.mi svg,.ni svg,.cb svg{width:100%;height:100%}
+.sheet{width:1024px;height:1448px;background:#fff;position:relative;overflow:hidden;
+display:flex;flex-direction:column;transform:scale(0.775390625);transform-origin:top left}
+
+/* ── LACİVERT KAVİSLİ ÜST BLOK ── */
+.hero{background:#0d1b3e;padding:34px 0 116px;text-align:center;position:relative;
+flex:0 0 auto;z-index:4}
+.hero .curve{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:84px;display:block}
+.hero .pat{position:absolute;inset:0;opacity:.07;overflow:hidden;
+background-image:repeating-linear-gradient(45deg,#fff 0 1px,transparent 1px 15px)}
+.hero .in{position:relative;z-index:2}
+.hero .plat{font-size:26px;letter-spacing:.3em;color:#fff;font-weight:700}
+.hero .sub{font-size:11.5px;letter-spacing:.26em;color:#c9a227;margin-top:10px;font-weight:700;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}
+.hero .kick{font-size:9.5px;letter-spacing:.36em;color:#c9a227;font-weight:700;
+margin-top:16px;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}
+.hero .name{font-size:30px;letter-spacing:.06em;color:#fff;font-weight:400;
+margin-top:12px;line-height:1.1;padding:0 60px}
+/* --- üst blok süslemeleri --- */
+.hero .hr{height:1.5px;background:#c9a227;margin:0 auto}
+.hero .namerow{display:flex;align-items:center;justify-content:center;gap:22px;
+margin-top:26px;padding:0 54px}
+.hero .namerow .ln{flex:1;height:1.5px;background:#c9a227;position:relative;max-width:190px}
+.hero .namerow .ln:before{content:"";position:absolute;top:-3px;width:7px;height:7px;
+background:#c9a227;transform:rotate(45deg)}
+.hero .namerow .ln.l:before{left:0} .hero .namerow .ln.r:before{right:0}
+.hero .namerow .name{margin:0;padding:0;white-space:nowrap}
+.hero .toprow{display:flex;align-items:center;justify-content:space-between;
+padding:0 58px;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}
+.hero .toprow span{font-size:9.5px;letter-spacing:.28em;color:#c9a227;font-weight:700}
+.hero .toprow b{font-size:12.5px;letter-spacing:.32em;color:#fff;font-weight:700}
+.hero .divider{margin:13px 58px 0;height:1px;background:rgba(255,255,255,.22)}
+.hero .ribbon{position:absolute;top:0;right:64px;width:66px;height:76px;z-index:5;
+filter:drop-shadow(0 4px 10px rgba(0,0,0,.28))}
+.hero .ribbon .rb{position:absolute;inset:0;width:100%;height:100%}
+.hero .ribbon .no{position:absolute;left:0;right:0;top:17px;text-align:center;
+font-size:25px;font-weight:700;color:#0d1b3e;line-height:1;
+/* Georgia eski stil rakam kullanıyor (0 kısa, 4 uzun) — Times lining rakam verir */
+font-family:"Times New Roman",Times,serif;font-variant-numeric:lining-nums}
+.hero .wm{position:absolute;left:50%;top:52%;transform:translate(-50%,-50%);
+width:250px;height:250px;opacity:.075;color:#fff;z-index:1}
+.hero .wm svg{width:100%;height:100%}
+
+/* ── DEFNE DALLI MÜHÜR MADALYASI ── */
+.medalrow{position:relative;display:flex;align-items:center;justify-content:center;
+margin:-92px auto 0;z-index:6;flex:0 0 auto;padding:0 52px;gap:48px}
+.medal{position:relative;width:150px;height:150px;flex:0 0 150px}
+.medal .disc{width:150px;height:150px}
+/* m2 — yanlarda altın çizgi + baklava */
+.mrule{flex:1;height:1.5px;background:#c9a227;position:relative;max-width:250px;margin-top:14px}
+.mrule:before{content:"";position:absolute;top:-3px;width:7px;height:7px;background:#c9a227;
+transform:rotate(45deg)}
+.mrule.l:before{left:0} .mrule.r:before{right:0}
+/* m3 — yanlarda bilgi bloğu */
+.mfact{flex:1;max-width:250px;text-align:center;margin-top:34px;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}
+.mfact s{display:block;text-decoration:none;font-size:9.8px;letter-spacing:.26em;
+color:#c9a227;font-weight:700}
+.mfact b{display:block;font-size:15.6px;color:#0d1b3e;font-weight:700;margin-top:6px;line-height:1.35;
+overflow-wrap:anywhere}
+.mfact i{display:block;height:1px;background:#e3d6b2;margin:9px auto 0;width:74%}
+/* m3 + logo — solda firma logosu, sağda sektör|şehir */
+.medalrow.logolu{padding:0 16px;gap:24px}
+.mlogo{flex:1;max-width:300px;display:flex;align-items:center;justify-content:center;
+margin-top:30px;padding:0 4px}
+.mlogo img{display:block;width:100%;height:74px;object-fit:contain}
+.mfact2{flex:1;max-width:300px;margin-top:36px;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;display:flex;
+align-items:stretch;justify-content:center;gap:13px;flex-wrap:wrap}
+.mfact2 .mf{flex:1 1 0;min-width:0;text-align:center}
+.mfact2 s{display:block;text-decoration:none;font-size:8.6px;letter-spacing:.22em;
+color:#c9a227;font-weight:700}
+.mfact2 b{display:block;font-size:12.4px;color:#0d1b3e;font-weight:700;margin-top:5px;line-height:1.3;
+overflow-wrap:anywhere;hyphens:auto}
+.msep{width:1px;background:#e3d6b2;flex:0 0 1px}
+.mfact2 i{flex:0 0 100%;height:1px;background:#e3d6b2;margin:9px auto 0;width:78%}
+/* m4 — yanlarda başak */
+.msprig{flex:1;max-width:250px;display:flex;margin-top:16px}
+.msprig svg{width:110px;height:46px;color:#c9a227}
+.msprig.l{justify-content:flex-end} .msprig.r{justify-content:flex-start}
+
+/* ── KLASİK ALTIN ÇERÇEVE (üst bloğun altında) ── */
+.frameSvg{position:absolute;top:342px;left:22px;pointer-events:none;z-index:2}
+.pat2{position:absolute;top:351px;left:31px;width:962px;height:1066px;opacity:.038;
+pointer-events:none;z-index:0;overflow:hidden;
+background-image:repeating-linear-gradient(45deg,#0d1b3e 0 1px,transparent 1px 14px),
+repeating-linear-gradient(-45deg,#0d1b3e 0 1px,transparent 1px 14px)}
+
+/* ── İÇERİK ── */
+.ct{position:relative;z-index:3;flex:1;padding:52px 74px 76px;text-align:center;
+display:flex;flex-direction:column;align-items:center}
+.nrule{height:3px;width:132px;background:#8c1f1f;margin:13px auto 12px;border-radius:2px;opacity:.9}
+.unvan{font-size:21px;color:#5f6b85;margin-top:0;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}
+.yetkili{font-size:27.5px;color:#0d1b3e;margin-top:0}
+.tanitim{font-size:16.6px;line-height:1.78;color:#3f4a66;margin:18px auto 0;
+max-width:770px;text-align:center}
+.sec{display:flex;align-items:center;gap:14px;margin:0 0 14px;width:100%}
+.sec i{flex:1;height:1px;background:#e3d8b8}
+.sec span{font-size:13px;font-weight:700;letter-spacing:.28em;color:#c9a227;white-space:nowrap;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}
+.fagrid{display:grid;grid-template-columns:repeat(4,1fr);width:100%}
+.fa{padding:0 15px;border-right:1px solid #ece4cd;text-align:center}
+.fa:last-child{border-right:none}
+.fa .fi{width:40px;height:40px;margin:0 auto 12px}
+.fa b{font-size:15px;font-weight:700;letter-spacing:.03em;line-height:1.3;display:block;
+margin-bottom:6px;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;color:#0d1b3e}
+.fa p{font-size:13.6px;line-height:1.52;color:#5f6b85;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}
+.mggrid{display:grid;grid-template-columns:repeat(6,1fr);gap:14px 8px;width:100%}
+.mg{text-align:center;min-width:0;padding:0 2px}
+.mg .mi{width:34px;height:34px;margin:0 auto 8px;color:#0d1b3e}
+.mg span:last-child{font-size:11.2px;font-weight:700;color:#0d1b3e;line-height:1.22;display:block;
+text-transform:uppercase;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;letter-spacing:0;
+overflow-wrap:normal;word-break:keep-all}
+.ndgrid{display:grid;grid-template-columns:repeat(4,1fr);width:100%}
+.nd{padding:0 14px;border-right:1px solid #ece4cd;display:flex;gap:10px;align-items:flex-start}
+.nd:last-child{border-right:none}
+.nd .ni{width:32px;height:32px;margin-top:1px}
+.nd p{font-size:13.6px;font-weight:700;line-height:1.4;color:#0d1b3e;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;text-align:left}
+.contact{display:grid;grid-template-columns:repeat(4,1fr);width:100%}
+.ci{display:flex;align-items:center;justify-content:center;gap:11px;
+padding:0 10px;border-right:1px solid #ece4cd;min-width:0}
+.ci:last-child{border-right:none}
+.ci b{min-width:0}
+.ci .cb{width:35px;height:35px;background:#0d1b3e;color:#fff;border-radius:50%;padding:7px}
+.ci b{font-size:13.6px;color:#22304f;font-weight:600;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+line-height:1.35;text-align:left;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.grow{flex:1;min-height:10px}
+.gap{flex:1 1 auto;min-height:14px;max-height:88px}
+.gap1{flex-grow:1.15}
+.blk{width:100%;flex:0 0 auto}
+/* ── ALT ŞERİT (imza yok) ── */
+.foot{width:100%;border-top:1px solid #ece4cd;padding:20px 34px 0;display:flex;
+justify-content:center;align-items:center;font-size:11.8px;letter-spacing:.2em;
+color:#98a1b6;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}
+.foot .mid{color:#0d1b3e;font-weight:700;letter-spacing:.2em}
+@media print{
+ @page{size:A4;margin:0}
+ body{background:#fff;padding:0}
+ .page{box-shadow:none;width:794px;height:1123px}
+ *{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+</style></head><body><div class="page"><div class="sheet">
+ <div class="hero"><div class="pat"></div><div class="ribbon">
+ <svg class="rb" viewBox="0 0 66 76" aria-hidden="true">
+  <defs><linearGradient id="rg4" x1="0" y1="0" x2="0" y2="1">
+   <stop offset="0" stop-color="#e3c05a"/><stop offset="1" stop-color="#c9a227"/></linearGradient></defs>
+  <path d="M0.00,0.00 L66.00,0.00 L66.00,76.00 L33.00,62.00 L0.00,76.00 Z" fill="url(#rg4)"/>
+  <path d="M4.20,4.20 L61.80,4.20 L61.80,69.66 L33.00,57.44 L4.20,69.66 Z"
+        fill="none" stroke="#ffffff" stroke-width="1.9" stroke-linejoin="round" stroke-linecap="round"/>
+ </svg>
+ <span class="no">04</span></div><div class="in"><div class="plat">İŞİNİN EN İYİSİ PLATFORMU</div><div class="sub">GÜÇLÜ İŞBİRLİĞİ, GÜÇLÜ GELECEK</div><div class="namerow"><span class="ln l"></span><div class="name">GÜNSA GAZ MAKİNA</div><span class="ln r"></span></div></div><svg class="curve" viewBox="0 0 1024 84" preserveAspectRatio="none" aria-hidden="true"><path d="M0,85 L0,44 Q512,-12 1024,44 L1024,85 Z" fill="#fff"/></svg></div>
+ <div class="medalrow logolu"><div class="mlogo"><img src="data:image/png;base64,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" alt=""></div><div class="medal"><div class="disc"><svg viewBox="0 0 200 200" style="width:150px;height:150px">
+<circle cx="100" cy="100" r="95" fill="#fdfdfa" stroke="#0d1b3e" stroke-width="3.2"/>
+<circle cx="100" cy="100" r="74" fill="none" stroke="#c9a227" stroke-width="1.3"/>
+<circle cx="100" cy="100" r="70" fill="none" stroke="#0d1b3e" stroke-width="3"/>
+<path id="t4" d="M100,100 m-79,0 a79,79 0 0,1 158,0" fill="none"/>
+<path id="b4" d="M100,100 m-86,0 a86,86 0 0,0 172,0" fill="none"/>
+<text font-size="12" font-weight="600" fill="#0d1b3e" letter-spacing="3.6" font-family="Times New Roman, Times, serif">
+<textPath href="#t4" startOffset="50%" text-anchor="middle">SINCE 2011</textPath></text>
+<text font-size="9.4" font-weight="700" fill="#0d1b3e" letter-spacing="0.4">
+<textPath href="#b4" startOffset="50%" text-anchor="middle">GÜÇLÜ İŞBİRLİĞİ, GÜÇLÜ GELECEK</textPath></text>
+<text x="100" y="59" text-anchor="middle" font-size="14" font-weight="700" fill="#0d1b3e" letter-spacing=".3">İŞİNİN EN</text>
+<path d="M56,71 h13 M131,71 h13" stroke="#c9a227" stroke-width="1.1" stroke-linecap="round"/>
+<text x="100" y="76" text-anchor="middle" font-size="14" font-weight="700" fill="#0d1b3e" letter-spacing=".3">İYİSİ</text>
+<g transform="translate(43.00,86.19) scale(0.16248)" fill="#0d1b3e"><path d="M232.94,156.71c0,65.1,52.77,117.87,117.87,117.87s117.87-52.77,117.87-117.87v-38.84C468.68,52.77,415.91,0,350.81,0s-117.87,52.77-117.87,117.87v38.84Z"/><path d="M575.59,412.56c-63.88,50.04-143.32,77.5-224.78,77.5-73.4,0-144.16-21.7-204.63-62.74-6.85-4.66-13.51-9.51-19.99-14.59,18.37-69.22,65.66-125.99,127.53-155.47,25.18,24.32,59.42,39.3,97.1,39.3s71.99-15,97.17-39.37c61.88,29.46,109.18,86.18,127.61,155.36Z"/><path d="M511.58,129.12c0,49.6,40.2,89.8,89.8,89.8s89.8-40.2,89.8-89.8v-29.59c0-49.6-40.2-89.8-89.8-89.8s-89.8,40.2-89.8,89.8v29.59Z"/><path d="M701.62,225.48c-18.69,65.66-55.67,125.2-107.62,171.68-19.42-63.42-61.47-117.09-117.95-149.95,14.76-15.31,32.14-27.92,51.36-37.08,19.18,18.52,45.25,29.94,73.97,29.94s54.83-11.45,74.03-30.01c9.18,4.37,17.95,9.53,26.21,15.42Z"/><path d="M190.04,129.12c0,49.6-40.2,89.8-89.8,89.8S10.44,178.71,10.44,129.12v-29.59c0-49.6,40.2-89.8,89.8-89.8,49.6,0,89.8,40.2,89.8,89.8v29.59Z"/><path d="M0,225.48c18.69,65.66,55.67,125.2,107.62,171.68,19.42-63.42,61.47-117.09,117.95-149.95-14.76-15.31-32.14-27.92-51.36-37.08-19.18,18.52-45.25,29.94-73.97,29.94-28.73,0-54.83-11.45-74.03-30.01-9.18,4.37-17.95,9.53-26.21,15.42Z"/></g>
+</svg></div></div><div class="mfact2"><div class="mf"><s>SEKTÖR</s><b>Mekanik Tesisat / Doğalgaz</b></div><span class="msep"></span><div class="mf"><s>ŞEHİR</s><b>Adana / Türkiye</b></div><i></i></div></div>
+ <div class="pat2"></div><svg class="frameSvg" width="980" height="1084" viewBox="0 0 980 1084">
+<rect x="2.0" y="2.0" width="976.0" height="1080.0" fill="none" stroke="#c9a227" stroke-width="2.6"/>
+<rect x="9.0" y="9.0" width="962.0" height="1066.0" fill="none" stroke="#c9a227" stroke-width="0.9"/>
+<circle cx="15.0" cy="15.0" r="8.5" fill="#fdfdfa" stroke="#c9a227" stroke-width="2.1"/><circle cx="15.0" cy="15.0" r="3.1" fill="#c9a227"/><circle cx="965.0" cy="15.0" r="8.5" fill="#fdfdfa" stroke="#c9a227" stroke-width="2.1"/><circle cx="965.0" cy="15.0" r="3.1" fill="#c9a227"/><circle cx="965.0" cy="1069.0" r="8.5" fill="#fdfdfa" stroke="#c9a227" stroke-width="2.1"/><circle cx="965.0" cy="1069.0" r="3.1" fill="#c9a227"/><circle cx="15.0" cy="1069.0" r="8.5" fill="#fdfdfa" stroke="#c9a227" stroke-width="2.1"/><circle cx="15.0" cy="1069.0" r="3.1" fill="#c9a227"/></svg>
+ <div class="ct">
+  <div class="blk">
+   <div class="unvan">Günsa Gaz Makine Elektrik San. ve Tic. Ltd. Şti.</div>
+   <div class="nrule"></div>
+   <div class="yetkili">Güner YASAVBULAT</div>
+   <p class="tanitim">Günsa Gaz Makina, gaz tesisatı faaliyetleri, endüstriyel doğalgaz, konutlarda merkezi ısıtma ve özel yangın söndürme sistemleri alanlarında güvenli, verimli ve sürdürülebilir çözümler sunar. EPDK lisansı ve 20 yılı aşkın tecrübesiyle projelendirme, uygulama ve satış sonrası destek hizmetlerinde fark yaratır.</p></div>
+  <div class="gap gap1"></div>
+  <div class="blk"><div class="sec"><i></i><span>FAALİYET ALANLARI</span><i></i></div>
+   <div class="fagrid"><div class="fa"><span class="fi" style="color:#8c1f1f"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M143.38,17.85a8,8,0,0,0-12.63,3.41l-22,60.41L84.59,58.26a8,8,0,0,0-11.93.89C51,87.53,40,116.08,40,144a88,88,0,0,0,176,0C216,84.55,165.21,36,143.38,17.85Zm40.51,135.49a57.6,57.6,0,0,1-46.56,46.55A7.65,7.65,0,0,1,136,200a8,8,0,0,1-1.32-15.89c16.57-2.79,30.63-16.85,33.44-33.45a8,8,0,0,1,15.78,2.68Z"/></svg></span>
+<b>GAZ TESİSATI FAALİYETLERİ</b><p>Sanayi tesisleri, fabrikalar, oteller, belediyeler, asfalt şantiyeleri, kafeteryalar ve tüm işletmeler</p></div><div class="fa"><span class="fi" style="color:#8c1f1f"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M237.94,107.21a8,8,0,0,0-3.89-5.4l-29.83-17-.12-33.62a8,8,0,0,0-2.83-6.08,111.91,111.91,0,0,0-36.72-20.67,8,8,0,0,0-6.46.59L128,41.85,97.88,25a8,8,0,0,0-6.47-.6A111.92,111.92,0,0,0,54.73,45.15a8,8,0,0,0-2.83,6.07l-.15,33.65-29.83,17a8,8,0,0,0-3.89,5.4,106.47,106.47,0,0,0,0,41.56,8,8,0,0,0,3.89,5.4l29.83,17,.12,33.63a8,8,0,0,0,2.83,6.08,111.91,111.91,0,0,0,36.72,20.67,8,8,0,0,0,6.46-.59L128,214.15,158.12,231a7.91,7.91,0,0,0,3.9,1,8.09,8.09,0,0,0,2.57-.42,112.1,112.1,0,0,0,36.68-20.73,8,8,0,0,0,2.83-6.07l.15-33.65,29.83-17a8,8,0,0,0,3.89-5.4A106.47,106.47,0,0,0,237.94,107.21ZM128,168a40,40,0,1,1,40-40A40,40,0,0,1,128,168Z"/></svg></span>
+<b>ENDÜSTRİYEL DOĞALGAZ</b><p>Endüstriyel doğalgaz sistemleri, sanayi tesisleri, fabrikalar ve tüm işletmelerde anahtar teslim çözümler</p></div><div class="fa"><span class="fi" style="color:#8c1f1f"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M152,146.08V40a32,32,0,0,0-64,0V146.08a56,56,0,1,0,64,0ZM136,56H104V40a16,16,0,0,1,32,0Zm41.3,24.77a8,8,0,0,1,2.33-11.07c15-9.79,26.87-4.75,35.51-1.06C223,72,227.76,74,235.63,68.89a8,8,0,0,1,8.74,13.41C237.88,86.53,232,88,226.69,88c-7,0-12.92-2.54-17.83-4.63C201,80,196.24,78,188.37,83.11A8,8,0,0,1,177.3,80.77Zm69.4,22.46a8,8,0,0,1-2.33,11.07C237.88,118.53,232,120,226.69,120c-7,0-12.92-2.54-17.83-4.63-7.87-3.36-12.62-5.38-20.49-.25a8,8,0,0,1-8.74-13.41c15-9.79,26.87-4.75,35.51-1.06,7.87,3.36,12.62,5.39,20.49.25A8,8,0,0,1,246.7,103.23Z"/></svg></span>
+<b>KONUTLARDA MERKEZİ ISITMA</b><p>Merkezi ısıtma sistemleri ile konutlarda yüksek konfor ve enerji verimliliği</p></div><div class="fa"><span class="fi" style="color:#8c1f1f"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M218.3,48.34l-60.68-18.2,30-15A8,8,0,0,0,180.42.85L134,24.05a80.08,80.08,0,0,0-78,80V208a8,8,0,0,0,16,0V176H88v56a16,16,0,0,0,16,16h64a16,16,0,0,0,16-16V104a48.07,48.07,0,0,0-40-47.32V42.75l69.7,20.91a8,8,0,1,0,4.6-15.32ZM72,160V104a64.07,64.07,0,0,1,56-63.48V56.68A48.07,48.07,0,0,0,88,104v56Zm96-56v56H104V104a32,32,0,0,1,64,0Z"/></svg></span>
+<b>ÖZEL YANGIN SÖNDÜRME SİSTEMLERİ</b><p>Projelendirme, uygulama ve bakım hizmetleri ile güvenli yangın söndürme çözümleri</p></div></div></div>
+  <div class="gap"></div>
+  <div class="blk"><div class="sec"><i></i><span>MÜŞTERİ GRUBU</span><i></i></div>
+   <div class="mggrid"><div class="mg"><span class="mi"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M240,184h-8V57.9l9.67-2.08a8,8,0,1,0-3.35-15.64l-224,48A8,8,0,0,0,16,104a8.16,8.16,0,0,0,1.69-.18L24,102.47V184H16a8,8,0,0,0,0,16H240a8,8,0,0,0,0-16Zm-56,0H72V168H184Zm0-32H72V136H184Z"/></svg></span><span>Sanayi Tesisleri</span></div><div class="mg"><span class="mi"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M152,152H104V40a16,16,0,0,1,16-16h16a16,16,0,0,1,16,16Zm72,16H32a16,16,0,0,0-16,16v8a16,16,0,0,0,16,16H224a16,16,0,0,0,16-16v-8A16,16,0,0,0,224,168Zm0-20V136a96.44,96.44,0,0,0-50.11-84.31A4,4,0,0,0,168,55.22V152h52A4,4,0,0,0,224,148ZM36,152H88V55.22a4,4,0,0,0-5.89-3.53A96.44,96.44,0,0,0,32,136v12A4,4,0,0,0,36,152Z"/></svg></span><span>Müteahhitler</span></div><div class="mg"><span class="mi"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M248,208a8,8,0,0,1-8,8H16a8,8,0,0,1,0-16H240A8,8,0,0,1,248,208ZM16.3,98.18a8,8,0,0,1,3.51-9l104-64a8,8,0,0,1,8.38,0l104,64A8,8,0,0,1,232,104H208v64h16a8,8,0,0,1,0,16H32a8,8,0,0,1,0-16H48V104H24A8,8,0,0,1,16.3,98.18ZM144,160a8,8,0,0,0,16,0V112a8,8,0,0,0-16,0Zm-48,0a8,8,0,0,0,16,0V112a8,8,0,0,0-16,0Z"/></svg></span><span>Belediyeler</span></div><div class="mg"><span class="mi"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M232,208H213.69L153.42,34.75A16,16,0,0,0,138.31,24H117.69a16,16,0,0,0-15.11,10.74L42.31,208H24a8,8,0,0,0,0,16H232a8,8,0,0,0,0-16ZM95.43,104h65.14l16.7,48H78.73Z"/></svg></span><span>Asfalt Şantiyeleri</span></div><div class="mg"><span class="mi"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M216,72H32V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H240v32a8,8,0,0,0,16,0V112A40,40,0,0,0,216,72ZM32,88h72v72H32Z"/></svg></span><span>Oteller</span></div><div class="mg"><span class="mi"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M143.38,17.85a8,8,0,0,0-12.63,3.41l-22,60.41L84.59,58.26a8,8,0,0,0-11.93.89C51,87.53,40,116.08,40,144a88,88,0,0,0,176,0C216,84.55,165.21,36,143.38,17.85Zm40.51,135.49a57.6,57.6,0,0,1-46.56,46.55A7.65,7.65,0,0,1,136,200a8,8,0,0,1-1.32-15.89c16.57-2.79,30.63-16.85,33.44-33.45a8,8,0,0,1,15.78,2.68Z"/></svg></span><span>Gaz Şirketleri</span></div><div class="mg"><span class="mi"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M200,24H123.31A15.86,15.86,0,0,0,112,28.69L101.66,39,91.31,28.69a16,16,0,0,0-22.62,0l-24,24a16,16,0,0,0,0,22.62L55,85.66,44.69,96A15.86,15.86,0,0,0,40,107.31V216a16,16,0,0,0,16,16H200a16,16,0,0,0,16-16V40A16,16,0,0,0,200,24ZM56,64,80,40,90.34,50.34l-24,24ZM180.8,185.6a8,8,0,1,1-9.6,12.8L128,166,84.8,198.4a8,8,0,0,1-9.6-12.8L114.67,156,75.2,126.4a8,8,0,0,1,9.6-12.8L128,146l43.2-32.4a8,8,0,0,1,9.6,12.8L141.33,156ZM176,72H136a8,8,0,0,1,0-16h40a8,8,0,0,1,0,16Z"/></svg></span><span>Sınai Gaz Şirketleri</span></div><div class="mg"><span class="mi"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M216,40V224a8,8,0,0,1-16,0V176H152a8,8,0,0,1-8-8,268.75,268.75,0,0,1,7.22-56.88c9.78-40.49,28.32-67.63,53.63-78.47A8,8,0,0,1,216,40Zm-96.11-1.31a8,8,0,1,0-15.78,2.63L111.89,88H88V40a8,8,0,0,0-16,0V88H48.11l7.78-46.68a8,8,0,1,0-15.78-2.63l-8,48A8.17,8.17,0,0,0,32,88a48.07,48.07,0,0,0,40,47.32V224a8,8,0,0,0,16,0V135.32A48.07,48.07,0,0,0,128,88a8.17,8.17,0,0,0-.11-1.31Z"/></svg></span><span>Kafeteryalar</span></div><div class="mg"><span class="mi"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M240,208h-8V72a8,8,0,0,0-8-8H184V40a8,8,0,0,0-8-8H80a8,8,0,0,0-8,8V96H32a8,8,0,0,0-8,8V208H16a8,8,0,0,0,0,16H240a8,8,0,0,0,0-16ZM80,176H64a8,8,0,0,1,0-16H80a8,8,0,0,1,0,16Zm0-32H64a8,8,0,0,1,0-16H80a8,8,0,0,1,0,16Zm64,64H112V168h32Zm-8-64H120a8,8,0,0,1,0-16h16a8,8,0,0,1,0,16Zm0-32H120a8,8,0,0,1,0-16h16a8,8,0,0,1,0,16Zm0-32H120a8,8,0,0,1,0-16h16a8,8,0,0,1,0,16Zm56,96H176a8,8,0,0,1,0-16h16a8,8,0,0,1,0,16Zm0-32H176a8,8,0,0,1,0-16h16a8,8,0,0,1,0,16Zm0-32H176a8,8,0,0,1,0-16h16a8,8,0,0,1,0,16Z"/></svg></span><span>Apartmanlar</span></div><div class="mg"><span class="mi"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M232,208h-8V136c0-.05,0-.09,0-.14s0-.29,0-.43,0-.28,0-.41a.76.76,0,0,0,0-.15l-15-105.13A16.08,16.08,0,0,0,193.06,16H174.94A16.08,16.08,0,0,0,159.1,29.74l-11.56,80.91L108.8,81.6A8,8,0,0,0,96,88v32L44.8,81.6A8,8,0,0,0,32,88V208H24a8,8,0,0,0,0,16H232a8,8,0,0,0,0-16ZM108,184H80a8,8,0,0,1,0-16h28a8,8,0,0,1,0,16Zm68,0H148a8,8,0,0,1,0-16h28a8,8,0,0,1,0,16Zm-5.33-56-8.53-6.4L174.94,32h18.12l13.72,96Z"/></svg></span><span>Fabrikalar</span></div><div class="mg"><span class="mi"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M127.73,208H112V164a4,4,0,0,0-4-4H44a4,4,0,0,0-4,4v44H24.27A8.17,8.17,0,0,0,16,215.47,8,8,0,0,0,24,224H128a8,8,0,0,0,8-8.53A8.17,8.17,0,0,0,127.73,208Z"/><path d="M239.73,80H108.94L87.16,36.42A8,8,0,0,0,80,32H48a8,8,0,0,0-8,8V80H24.27A8.17,8.17,0,0,0,16,87.47,8,8,0,0,0,24,96H40v44a4,4,0,0,0,4,4h64a4,4,0,0,0,4-4V96h96v88H192v-7.73a8.18,8.18,0,0,0-7.47-8.25,8,8,0,0,0-8.53,8v8a16,16,0,0,0,16,16h16a16,16,0,0,0,16-16V96h16a8,8,0,0,0,8-8.53A8.17,8.17,0,0,0,239.73,80ZM56,80V48H75.06l16,32Z"/></svg></span><span>Tüm İnşaatlar</span></div><div class="mg"><span class="mi"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M80,172a12,12,0,1,1-12-12A12,12,0,0,1,80,172Zm40,0a52,52,0,1,1-52-52A52.06,52.06,0,0,1,120,172Zm-24,0a28,28,0,1,0-28,28A28,28,0,0,0,96,172Zm152,16a36,36,0,0,1-71.77,4H144a8,8,0,0,1-8-8V172a68.07,68.07,0,0,0-68-68H40a8,8,0,0,1,0-16h8V56H40a8,8,0,0,1,0-16H160a8,8,0,0,1,0,16h-8V97.88l24,6.5V72a8,8,0,0,1,16,0v36.71l36.39,9.86.21.06A15.89,15.89,0,0,1,240,134v31.46A35.8,35.8,0,0,1,248,188Zm-20,0a16,16,0,1,0-16,16A16,16,0,0,0,228,188Z"/></svg></span><span>Çiftçiler</span></div></div></div>
+  <div class="gap"></div>
+  <div class="blk"><div class="sec"><i></i><span>NEDEN GÜNSA GAZ MAKİNA?</span><i></i></div>
+   <div class="ndgrid"><div class="nd"><span class="ni" style="color:#8c1f1f"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M225.86,102.82c-3.77-3.94-7.67-8-9.14-11.57-1.36-3.27-1.44-8.69-1.52-13.94-.15-9.76-.31-20.82-8-28.51s-18.75-7.85-28.51-8c-5.25-.08-10.67-.16-13.94-1.52-3.56-1.47-7.63-5.37-11.57-9.14C146.28,23.51,138.44,16,128,16s-18.27,7.51-25.18,14.14c-3.94,3.77-8,7.67-11.57,9.14C88,40.64,82.56,40.72,77.31,40.8c-9.76.15-20.82.31-28.51,8S41,67.55,40.8,77.31c-.08,5.25-.16,10.67-1.52,13.94-1.47,3.56-5.37,7.63-9.14,11.57C23.51,109.72,16,117.56,16,128s7.51,18.27,14.14,25.18c3.77,3.94,7.67,8,9.14,11.57,1.36,3.27,1.44,8.69,1.52,13.94.15,9.76.31,20.82,8,28.51s18.75,7.85,28.51,8c5.25.08,10.67.16,13.94,1.52,3.56,1.47,7.63,5.37,11.57,9.14C109.72,232.49,117.56,240,128,240s18.27-7.51,25.18-14.14c3.94-3.77,8-7.67,11.57-9.14,3.27-1.36,8.69-1.44,13.94-1.52,9.76-.15,20.82-.31,28.51-8s7.85-18.75,8-28.51c.08-5.25.16-10.67,1.52-13.94,1.47-3.56,5.37-7.63,9.14-11.57C232.49,146.28,240,138.44,240,128S232.49,109.73,225.86,102.82Zm-52.2,6.84-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z"/></svg></span>
+<p>Deneyimli mühendis kadro</p></div><div class="nd"><span class="ni" style="color:#8c1f1f"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M216,96A88,88,0,1,0,72,163.83V240a8,8,0,0,0,11.58,7.16L128,225l44.43,22.21A8.07,8.07,0,0,0,176,248a8,8,0,0,0,8-8V163.83A87.85,87.85,0,0,0,216,96ZM56,96a72,72,0,1,1,72,72A72.08,72.08,0,0,1,56,96Zm16,0a56,56,0,1,1,56,56A56.06,56.06,0,0,1,72,96Z"/></svg></span>
+<p>Kaliteli malzeme ve kaliteli işçilik</p></div><div class="nd"><span class="ni" style="color:#8c1f1f"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M230.33,141.06a24.34,24.34,0,0,0-18.61-4.77C230.5,117.33,240,98.48,240,80c0-26.47-21.29-48-47.46-48A47.58,47.58,0,0,0,156,48.75,47.58,47.58,0,0,0,119.46,32C93.29,32,72,53.53,72,80c0,11,3.24,21.69,10.06,33a31.87,31.87,0,0,0-14.75,8.4L44.69,144H16A16,16,0,0,0,0,160v40a16,16,0,0,0,16,16H120a7.93,7.93,0,0,0,1.94-.24l64-16a6.94,6.94,0,0,0,1.19-.4L226,182.82l.44-.2a24.6,24.6,0,0,0,3.93-41.56Zm-10.9,27.15-38,16.18L119,200H56V155.31l22.63-22.62A15.86,15.86,0,0,1,89.94,128H140a12,12,0,0,1,0,24H112a8,8,0,0,0,0,16h32a8.32,8.32,0,0,0,1.79-.2l67-15.41.31-.08a8.6,8.6,0,0,1,6.3,15.9Z"/></svg></span>
+<p>Güvenlik ve verimlilik odaklı sistem çözümleri</p></div><div class="nd"><span class="ni" style="color:#8c1f1f"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M232,128v80a40,40,0,0,1-40,40H136a8,8,0,0,1,0-16h56a24,24,0,0,0,24-24H192a24,24,0,0,1-24-24V144a24,24,0,0,1,24-24h23.65A88,88,0,0,0,66,65.54,87.29,87.29,0,0,0,40.36,120H64a24,24,0,0,1,24,24v40a24,24,0,0,1-24,24H48a24,24,0,0,1-24-24V128A104.11,104.11,0,0,1,201.89,54.66,103.41,103.41,0,0,1,232,128Z"/></svg></span>
+<p>Proje, kurulum ve satış sonrası destek</p></div></div></div>
+  <div class="gap"></div>
+  <div class="blk"><div class="sec"><i></i><span>İLETİŞİM BİLGİLERİ</span><i></i></div>
+   <div class="contact"><div class="ci"><span class="cb"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M231.88,175.08A56.26,56.26,0,0,1,176,224C96.6,224,32,159.4,32,80A56.26,56.26,0,0,1,80.92,24.12a16,16,0,0,1,16.62,9.52l21.12,47.15,0,.12A16,16,0,0,1,117.39,96c-.18.27-.37.52-.57.77L96,121.45c7.49,15.22,23.41,31,38.83,38.51l24.34-20.71a8.12,8.12,0,0,1,.75-.56,16,16,0,0,1,15.17-1.4l.13.06,47.11,21.11A16,16,0,0,1,231.88,175.08Z"/></svg></span><b style="font-size:13.6px">0532 547 83 31</b></div><div class="ci"><span class="cb"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M128,24h0A104,104,0,1,0,232,128,104.12,104.12,0,0,0,128,24Zm87.62,96H175.79C174,83.49,159.94,57.67,148.41,42.4A88.19,88.19,0,0,1,215.63,120ZM96.23,136h63.54c-2.31,41.61-22.23,67.11-31.77,77C118.45,203.1,98.54,177.6,96.23,136Zm0-16C98.54,78.39,118.46,52.89,128,43c9.55,9.93,29.46,35.43,31.77,77Zm52.18,93.6c11.53-15.27,25.56-41.09,27.38-77.6h39.84A88.19,88.19,0,0,1,148.41,213.6Z"/></svg></span><b style="font-size:13.6px">gunsagaz.com.tr/1</b></div><div class="ci"><span class="cb"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48Zm-8,144H40V74.19l82.59,75.71a8,8,0,0,0,10.82,0L216,74.19V192Z"/></svg></span><b style="font-size:12.2px">info@gunsagaz.com.tr</b></div><div class="ci"><span class="cb"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M128,16a88.1,88.1,0,0,0-88,88c0,75.3,80,132.17,83.41,134.55a8,8,0,0,0,9.18,0C136,236.17,216,179.3,216,104A88.1,88.1,0,0,0,128,16Zm0,56a32,32,0,1,1-32,32A32,32,0,0,1,128,72Z"/></svg></span><b style="font-size:13.6px">Adana / Türkiye</b></div></div></div>
+  <div class="gap"></div>
+  <div class="foot"><span class="mid">İŞİNİN EN İYİSİ PLATFORMU ÜYESİDİR</span></div>
+ </div></div></div></body></html>
