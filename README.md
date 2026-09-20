@@ -42,13 +42,25 @@ rengi kurum kimliğiyle yarışıyordu; tek vurgu altın ve yalnız çizgi olara
 
 ## Yayınlama
 
-1. GitHub'da **`isinin-en-iyisi`** adıyla hesap/organizasyon aç.
-   (Kullanıcı adında alt çizgi kullanılamaz; yalnız harf, rakam ve tire.)
-2. `isinin-en-iyisi.github.io` adında **public** bir depo aç.
-3. Bu klasörün içeriğini deponun **köküne** kopyala (klasörün kendisini değil,
-   içindekileri) ve push'la.
-4. Settings → Pages → Source: `Deploy from a branch`, branch `main`, klasör `/ (root)`.
-5. Birkaç dakika sonra `https://isinin-en-iyisi.github.io/` yayında olur.
+Depo kuruldu ve site yayında: **https://isinin-en-iyisi.github.io/**
+(`github.com/isinin-en-iyisi/isinin-en-iyisi.github.io`, dal `main`, kök klasör, HTTPS zorunlu.)
+
+`08-site/` hem üretim çıktısı hem deponun çalışma kopyası. Güncellemek tek komut:
+
+```bash
+cd 06-uretici && ./publish.sh "ne değiştiyse"
+```
+
+Bu betik `site.py`'yi çalıştırır, değişen dosyaları commit'ler ve push'lar.
+GitHub Pages derlemesi 1-2 dakika sürer.
+
+> **Deponun adı neden `…​.github.io`?** Organizasyon kök sitesi ancak bu adla
+> çalışır. `isinin-en-iyisi/isinin-en-iyisi` olsaydı adres
+> `isinin-en-iyisi.github.io/isinin-en-iyisi/` olurdu — QR'lar uzar ve alt yol
+> yüzünden bağlantılar kırılırdı.
+
+> **`site.py` klasörü temizlerken `.git`, `.gitignore` ve `CNAME` dosyalarına
+> dokunmaz** (`site.py:temizle`). Bu koruma kaldırılırsa ilk üretimde depo silinir.
 
 ## Adresi değiştirmek
 
@@ -66,6 +78,10 @@ ve `taban_adres`i o adrese çevir — o zaman `github.io` adı hiç görünmez.
 
 ## Doğrulama
 
-Üretilen QR'lar rastgele kontrol edilmedi, **hepsi çözülerek** sınandı:
-38/38 PNG doğru adresi veriyor, 38/38 kartvizit QR'ı 300 dpi baskı
-görüntüsünden okunuyor (modül ≈ 0,58 mm; telefonla okuma sınırı ~0,40 mm).
+Üretilen QR'lar rastgele kontrol edilmedi, **hepsi uçtan uca** sınandı:
+
+- 38/38 PNG çözülüyor ve doğru adresi veriyor
+- 38/38 kod, **canlı sitede** üyenin sayfasını açıyor; sayfada firma adı
+  ve telefon bulunduğu ayrıca doğrulandı
+- 38/38 kartvizit QR'ı **300 dpi baskı görüntüsünden** okunuyor
+  (modül ≈ 0,58 mm; telefonla güvenli okuma sınırı ~0,40 mm)
