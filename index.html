@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="tr"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>İŞİNİN EN İYİSİ PLATFORMU — Üye Kütüğü</title>
+<meta name="description" content="İŞİNİN EN İYİSİ PLATFORMU üye kütüğü: 38 işletmenin faaliyet alanı, müşteri grubu ve iletişim bilgileri.">
+<meta property="og:title" content="İŞİNİN EN İYİSİ PLATFORMU — Üye Kütüğü">
+<meta property="og:description" content="İŞİNİN EN İYİSİ PLATFORMU üye kütüğü: 38 işletmenin faaliyet alanı, müşteri grubu ve iletişim bilgileri.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0d1b3e">
+<link rel="canonical" href="https://isinin-en-iyisi.github.io/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Spectral:wght@300;400;600&display=swap">
+<style>
+:root{
+  --murekkep:#0d1b3e; --murekkep-2:#22304f; --murekkep-3:#3d4a68;
+  --kagit:#ecedf0; --yuzey:#ffffff; --yuzey-2:#f5f6f8;
+  --altin:#c9a227; --altin-metin:#7e6212;
+  --soluk:#5c6780; --cizgi:#d3d6dd; --cizgi-koyu:#b9bec9;
+  --serif:"Spectral",Georgia,"Times New Roman",serif;
+  --grotesk:"Archivo",-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+  --olcu:1180px;
+  color-scheme:light;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--kagit);color:var(--murekkep);font-family:var(--grotesk);
+  font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--altin);outline-offset:3px}
+.kap{max-width:var(--olcu);margin:0 auto;padding-inline:20px}
+
+/* ---------------------------------------------------- künye çubuğu */
+.mast{background:var(--murekkep);color:var(--kagit);
+  border-bottom:1px solid rgba(201,162,39,.4)}
+.mast .kap{display:flex;align-items:center;justify-content:space-between;
+  gap:16px;padding-block:14px}
+.arma{display:flex;align-items:center;gap:12px;text-decoration:none}
+.arma .muhur{width:38px;flex:none}
+.arma .muhur svg{display:block;width:100%;height:auto}
+.arma .ad{font-family:var(--grotesk);font-size:12.5px;font-weight:600;
+  letter-spacing:.24em;line-height:1.25}
+.arma .ad em{display:block;font-style:normal;font-size:9.5px;font-weight:400;
+  letter-spacing:.3em;color:var(--altin);margin-top:3px}
+.mast .est{font-size:10px;letter-spacing:.26em;color:#8d97b0;white-space:nowrap}
+.mast a.geri{font-size:10.5px;letter-spacing:.2em;text-decoration:none;
+  color:#aeb7cc;border-bottom:1px solid transparent;padding-bottom:2px}
+.mast a.geri:hover{border-bottom-color:var(--altin);color:#fff}
+
+/* ---------------------------------------------------- ortak başlık */
+.ust-etiket{font-size:10px;font-weight:600;letter-spacing:.28em;
+  color:var(--altin-metin)}
+h2.bolum{font-family:var(--grotesk);font-size:10.5px;font-weight:600;
+  letter-spacing:.26em;color:var(--soluk);padding-bottom:9px;
+  border-bottom:1px solid var(--cizgi-koyu);margin-bottom:20px}
+h3.ray-baslik{font-family:var(--grotesk);font-size:9.5px;font-weight:600;
+  letter-spacing:.24em;color:var(--soluk);padding-bottom:7px;
+  border-bottom:1px solid var(--cizgi);margin-bottom:14px}
+
+/* ---------------------------------------------------- kütük (dizin) */
+.giris{background:var(--yuzey);border-bottom:1px solid var(--cizgi);
+  position:relative;overflow:hidden}
+.giris .hayalet{position:absolute;right:-70px;top:50%;width:420px;
+  transform:translateY(-50%);opacity:.05;pointer-events:none}
+.giris .hayalet svg{display:block;width:100%;height:auto}
+.giris .kap{position:relative;padding-block:64px 54px;max-width:var(--olcu)}
+.giris h1{font-family:var(--serif);font-weight:300;font-size:clamp(38px,7vw,64px);
+  line-height:1.04;letter-spacing:-.015em;margin:16px 0 0;text-wrap:balance;
+  max-width:15ch}
+.giris .lede{font-family:var(--serif);font-weight:300;font-size:18px;
+  line-height:1.62;color:var(--murekkep-2);max-width:56ch;margin-top:20px}
+.giris .rakam{display:flex;gap:40px;margin-top:34px;padding-top:22px;
+  border-top:1px solid var(--cizgi);max-width:560px;flex-wrap:wrap}
+.giris .rakam div{display:flex;flex-direction:column;gap:4px}
+.giris .rakam b{font-family:var(--serif);font-weight:300;font-size:34px;
+  line-height:1;font-variant-numeric:tabular-nums}
+.giris .rakam span{font-size:9.5px;letter-spacing:.2em;color:var(--soluk)}
+
+.arac{padding-block:22px 0}
+.arac input{width:100%;max-width:420px;font:inherit;font-size:15px;
+  padding:11px 2px;border:0;border-bottom:1px solid var(--cizgi-koyu);
+  background:transparent;color:var(--murekkep)}
+.arac input::placeholder{color:var(--soluk)}
+.arac input:focus{outline:0;border-bottom-color:var(--altin)}
+.sayac{font-size:10px;letter-spacing:.18em;color:var(--soluk);margin-top:10px;
+  font-variant-numeric:tabular-nums}
+
+.kutuk{list-style:none;margin:26px 0 0;border-top:1px solid var(--cizgi-koyu)}
+.kutuk .basliklar,.kutuk a{display:grid;
+  grid-template-columns:52px minmax(0,1.15fr) minmax(0,1fr) 92px;
+  gap:18px;align-items:baseline}
+.kutuk .basliklar{font-size:9px;letter-spacing:.2em;color:var(--soluk);
+  padding:9px 2px;border-bottom:1px solid var(--cizgi)}
+.kutuk li{border-bottom:1px solid var(--cizgi)}
+.kutuk a{text-decoration:none;padding:15px 2px;transition:background .12s}
+.kutuk a:hover{background:var(--yuzey)}
+.kutuk .no{font-variant-numeric:tabular-nums;font-size:12px;color:var(--soluk);
+  letter-spacing:.06em}
+.kutuk .ad{font-family:var(--serif);font-size:20px;font-weight:400;
+  line-height:1.2}
+.kutuk a:hover .ad{color:var(--altin-metin)}
+.kutuk .dal{font-size:13px;color:var(--soluk);line-height:1.35}
+.kutuk .yer{font-size:10.5px;letter-spacing:.14em;color:var(--soluk);
+  text-align:right}
+.bos{padding:40px 2px;color:var(--soluk);font-family:var(--serif);font-size:17px}
+
+/* ---------------------------------------------------- üye dosyası */
+.kunye{background:var(--yuzey);border-bottom:1px solid var(--cizgi)}
+.kunye .kap{padding-block:46px 34px}
+.kunye .logo{max-width:180px;max-height:60px;object-fit:contain;
+  object-position:left center;display:block;margin-bottom:22px}
+.kunye h1{font-family:var(--serif);font-weight:300;
+  font-size:clamp(34px,6.4vw,58px);line-height:1.03;letter-spacing:-.018em;
+  margin-top:14px;text-wrap:balance}
+.kunye .unvan{font-family:var(--serif);font-weight:300;font-size:16.5px;
+  color:var(--murekkep-2);margin-top:14px;max-width:62ch;line-height:1.5}
+.kunye dl{display:flex;flex-wrap:wrap;gap:0 46px;margin-top:30px;
+  padding-top:20px;border-top:1px solid var(--cizgi)}
+.kunye dl>div{display:flex;flex-direction:column;gap:5px;padding-block:6px}
+.kunye dt{font-size:9px;letter-spacing:.2em;color:var(--soluk)}
+.kunye dd{font-size:14.5px;font-weight:500}
+
+.ikili{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:56px;
+  padding-block:48px 64px;align-items:start}
+.ana>*+*{margin-top:46px}
+.lede{font-family:var(--serif);font-weight:300;font-size:21px;line-height:1.58;
+  color:var(--murekkep);max-width:64ch}
+
+/* faaliyet alanları — kenar boşluğunda numara, yanında tanım */
+.fa{display:grid;gap:0}
+.fa .oge{display:grid;grid-template-columns:34px minmax(0,1fr) 26px;gap:16px;
+  padding-block:17px;border-bottom:1px solid var(--cizgi);align-items:start}
+.fa .oge:first-child{border-top:1px solid var(--cizgi)}
+.fa .sira{font-variant-numeric:tabular-nums;font-size:11px;color:var(--soluk);
+  letter-spacing:.08em;padding-top:4px}
+.fa dt{font-size:12.5px;font-weight:600;letter-spacing:.1em;
+  color:var(--murekkep)}
+.fa dd{font-family:var(--serif);font-weight:300;font-size:16px;
+  color:var(--murekkep-2);margin-top:5px;line-height:1.5}
+.fa .im{width:22px;color:var(--soluk);opacity:.5;padding-top:2px}
+.fa .im svg{display:block;width:100%;height:auto}
+
+/* müşteri grubu — rozet değil, çizgiyle ayrılmış terim dizisi */
+.terimler{list-style:none;display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(168px,1fr));
+  column-gap:28px;border-top:1px solid var(--cizgi)}
+.terimler li{font-family:var(--serif);font-weight:300;font-size:16px;
+  padding:10px 0;color:var(--murekkep-2);border-bottom:1px solid var(--cizgi)}
+
+.neden{list-style:none;counter-reset:n}
+.neden li{counter-increment:n;display:grid;grid-template-columns:34px 1fr;
+  gap:16px;padding-block:15px;border-bottom:1px solid var(--cizgi);
+  font-family:var(--serif);font-weight:300;font-size:16.5px;
+  color:var(--murekkep-2);line-height:1.5}
+.neden li:first-child{border-top:1px solid var(--cizgi)}
+.neden li::before{content:counter(n,upper-roman);font-family:var(--grotesk);
+  font-size:10.5px;letter-spacing:.1em;color:var(--soluk);padding-top:5px}
+
+/* ---------------------------------------------------- yan ray */
+.ray{position:sticky;top:26px;display:flex;flex-direction:column;gap:34px}
+.eylem{display:flex;flex-direction:column;gap:0;border-top:1px solid var(--cizgi-koyu)}
+.eylem a{display:flex;align-items:center;gap:11px;text-decoration:none;
+  font-size:13px;font-weight:500;letter-spacing:.06em;padding:13px 2px;
+  border-bottom:1px solid var(--cizgi);color:var(--murekkep)}
+.eylem a svg{width:16px;height:16px;flex:none;color:var(--altin-metin)}
+.eylem a .ok{margin-left:auto;font-size:14px;color:var(--soluk)}
+.eylem a:hover{color:var(--altin-metin)}
+.eylem a:hover .ok{color:var(--altin-metin)}
+
+.ile{display:flex;flex-direction:column}
+.ile div{padding-block:11px;border-bottom:1px solid var(--cizgi)}
+.ile div:first-child{padding-top:0}
+.ile dt{font-size:9px;letter-spacing:.2em;color:var(--soluk);margin-bottom:4px}
+.ile dd{font-size:14.5px;font-weight:500;word-break:break-word}
+.ile dd a{text-decoration:none;border-bottom:1px solid var(--cizgi-koyu)}
+.ile dd a:hover{border-bottom-color:var(--altin)}
+
+.qr-blok{display:flex;flex-direction:column;gap:11px}
+.qr-blok .cerceve{background:#fff;border:1px solid var(--cizgi-koyu);
+  padding:10px;width:138px}
+.qr-blok svg{display:block;width:100%;height:auto}
+.qr-blok p{font-size:10.5px;color:var(--soluk);line-height:1.45;
+  word-break:break-all}
+
+/* ---------------------------------------------------- QR dizini */
+.qr-izgara{list-style:none;display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:1px;
+  background:var(--cizgi);border:1px solid var(--cizgi);margin-block:30px 60px}
+.qr-izgara li{background:var(--yuzey);padding:20px 18px;display:flex;
+  flex-direction:column;gap:12px}
+.qr-izgara .no{font-size:10px;letter-spacing:.2em;color:var(--soluk);
+  font-variant-numeric:tabular-nums}
+.qr-izgara .ad{font-family:var(--serif);font-size:17px;font-weight:400;
+  line-height:1.25}
+.qr-izgara .kod{background:#fff;border:1px solid var(--cizgi);padding:9px}
+.qr-izgara .kod svg{display:block;width:100%;height:auto}
+.qr-izgara a{font-size:10.5px;letter-spacing:.14em;color:var(--altin-metin);
+  text-decoration:none;border-bottom:1px solid var(--cizgi-koyu);
+  align-self:flex-start;padding-bottom:2px}
+
+/* ---------------------------------------------------- alt bilgi */
+.alt{border-top:1px solid var(--cizgi-koyu);margin-top:20px}
+.alt .kap{display:flex;flex-wrap:wrap;gap:14px 34px;align-items:baseline;
+  justify-content:space-between;padding-block:26px 40px}
+.alt .slogan{font-size:10px;letter-spacing:.22em;color:var(--soluk)}
+.alt a{font-size:11px;letter-spacing:.16em;color:var(--murekkep-2);
+  text-decoration:none;border-bottom:1px solid var(--cizgi-koyu);
+  padding-bottom:2px}
+.alt a:hover{border-bottom-color:var(--altin)}
+
+@media (max-width:920px){
+  .ikili{grid-template-columns:minmax(0,1fr);gap:42px;padding-block:36px 48px}
+  .ray{position:static}
+  .giris .hayalet{display:none}
+}
+@media (max-width:640px){
+  .kutuk .basliklar{display:none}
+  .kutuk a{grid-template-columns:44px minmax(0,1fr);gap:6px 14px;
+    padding-block:14px}
+  .kutuk .no{grid-row:1/3;padding-top:5px}
+  .kutuk .dal{grid-column:2}
+  .kutuk .yer{display:none}
+  .giris .kap{padding-block:44px 38px}
+  .kunye .kap{padding-block:34px 26px}
+  .kunye dl{gap:0 30px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+@media print{.arac,.eylem,.mast a.geri{display:none}body{background:#fff}}
+</style></head>
+<body><header class="mast"><div class="kap">
+ <a class="arma" href="./"><span class="muhur"><svg viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="94" fill="none" stroke="currentColor" stroke-width="7"/><circle cx="100" cy="100" r="76" fill="none" stroke="#c9a227" stroke-width="4"/><g transform="translate(39.00,57.39) scale(0.17388)" fill="currentColor"><path d="M232.94,156.71c0,65.1,52.77,117.87,117.87,117.87s117.87-52.77,117.87-117.87v-38.84C468.68,52.77,415.91,0,350.81,0s-117.87,52.77-117.87,117.87v38.84Z"/><path d="M575.59,412.56c-63.88,50.04-143.32,77.5-224.78,77.5-73.4,0-144.16-21.7-204.63-62.74-6.85-4.66-13.51-9.51-19.99-14.59,18.37-69.22,65.66-125.99,127.53-155.47,25.18,24.32,59.42,39.3,97.1,39.3s71.99-15,97.17-39.37c61.88,29.46,109.18,86.18,127.61,155.36Z"/><path d="M511.58,129.12c0,49.6,40.2,89.8,89.8,89.8s89.8-40.2,89.8-89.8v-29.59c0-49.6-40.2-89.8-89.8-89.8s-89.8,40.2-89.8,89.8v29.59Z"/><path d="M701.62,225.48c-18.69,65.66-55.67,125.2-107.62,171.68-19.42-63.42-61.47-117.09-117.95-149.95,14.76-15.31,32.14-27.92,51.36-37.08,19.18,18.52,45.25,29.94,73.97,29.94s54.83-11.45,74.03-30.01c9.18,4.37,17.95,9.53,26.21,15.42Z"/><path d="M190.04,129.12c0,49.6-40.2,89.8-89.8,89.8S10.44,178.71,10.44,129.12v-29.59c0-49.6,40.2-89.8,89.8-89.8,49.6,0,89.8,40.2,89.8,89.8v29.59Z"/><path d="M0,225.48c18.69,65.66,55.67,125.2,107.62,171.68,19.42-63.42,61.47-117.09,117.95-149.95-14.76-15.31-32.14-27.92-51.36-37.08-19.18,18.52-45.25,29.94-73.97,29.94-28.73,0-54.83-11.45-74.03-30.01-9.18,4.37-17.95,9.53-26.21,15.42Z"/></g></svg></span>
+  <span class="ad">İŞİNİN EN İYİSİ<em>PLATFORMU</em></span></a>
+ <span class="est">EST. 2011 · ADANA</span>
+</div></header>
+<section class="giris">
+ <div class="hayalet"><svg viewBox="0 0 200 200" style="width:420px;height:420px">
+<circle cx="100" cy="100" r="95" fill="#fdfdfa" stroke="#0d1b3e" stroke-width="3.2"/>
+<circle cx="100" cy="100" r="74" fill="none" stroke="#c9a227" stroke-width="1.3"/>
+<circle cx="100" cy="100" r="70" fill="none" stroke="#0d1b3e" stroke-width="3"/>
+<path id="thayalet" d="M100,100 m-79,0 a79,79 0 0,1 158,0" fill="none"/>
+<path id="bhayalet" d="M100,100 m-86,0 a86,86 0 0,0 172,0" fill="none"/>
+<text font-size="12" font-weight="600" fill="#0d1b3e" letter-spacing="3.6" font-family="Times New Roman, Times, serif">
+<textPath href="#thayalet" startOffset="50%" text-anchor="middle">SINCE 2011</textPath></text>
+<text font-size="9.4" font-weight="700" fill="#0d1b3e" letter-spacing="0.4">
+<textPath href="#bhayalet" startOffset="50%" text-anchor="middle">GÜÇLÜ İŞBİRLİĞİ, GÜÇLÜ GELECEK</textPath></text>
+<text x="100" y="59" text-anchor="middle" font-size="14" font-weight="700" fill="#0d1b3e" letter-spacing=".3">İŞİNİN EN</text>
+<path d="M56,71 h13 M131,71 h13" stroke="#c9a227" stroke-width="1.1" stroke-linecap="round"/>
+<text x="100" y="76" text-anchor="middle" font-size="14" font-weight="700" fill="#0d1b3e" letter-spacing=".3">İYİSİ</text>
+<g transform="translate(43.00,86.19) scale(0.16248)" fill="#0d1b3e"><path d="M232.94,156.71c0,65.1,52.77,117.87,117.87,117.87s117.87-52.77,117.87-117.87v-38.84C468.68,52.77,415.91,0,350.81,0s-117.87,52.77-117.87,117.87v38.84Z"/><path d="M575.59,412.56c-63.88,50.04-143.32,77.5-224.78,77.5-73.4,0-144.16-21.7-204.63-62.74-6.85-4.66-13.51-9.51-19.99-14.59,18.37-69.22,65.66-125.99,127.53-155.47,25.18,24.32,59.42,39.3,97.1,39.3s71.99-15,97.17-39.37c61.88,29.46,109.18,86.18,127.61,155.36Z"/><path d="M511.58,129.12c0,49.6,40.2,89.8,89.8,89.8s89.8-40.2,89.8-89.8v-29.59c0-49.6-40.2-89.8-89.8-89.8s-89.8,40.2-89.8,89.8v29.59Z"/><path d="M701.62,225.48c-18.69,65.66-55.67,125.2-107.62,171.68-19.42-63.42-61.47-117.09-117.95-149.95,14.76-15.31,32.14-27.92,51.36-37.08,19.18,18.52,45.25,29.94,73.97,29.94s54.83-11.45,74.03-30.01c9.18,4.37,17.95,9.53,26.21,15.42Z"/><path d="M190.04,129.12c0,49.6-40.2,89.8-89.8,89.8S10.44,178.71,10.44,129.12v-29.59c0-49.6,40.2-89.8,89.8-89.8,49.6,0,89.8,40.2,89.8,89.8v29.59Z"/><path d="M0,225.48c18.69,65.66,55.67,125.2,107.62,171.68,19.42-63.42,61.47-117.09,117.95-149.95-14.76-15.31-32.14-27.92-51.36-37.08-19.18,18.52-45.25,29.94-73.97,29.94-28.73,0-54.83-11.45-74.03-30.01-9.18,4.37-17.95,9.53-26.21,15.42Z"/></g>
+</svg></div>
+ <div class="kap">
+  <div class="ust-etiket">ÜYE KÜTÜĞÜ &nbsp;/&nbsp; 38 İŞLETME</div>
+  <h1>Birbirinin işini bilen işletmeler.</h1>
+  <p class="lede">İŞİNİN EN İYİSİ Platformu, 2011'den bu yana kendi alanında
+   yerleşmiş işletmeleri tek bir kütükte topluyor. Her üyenin faaliyet alanı,
+   müşteri grubu ve iletişim bilgisi doğrulanarak kaydedildi; satın alma
+   tarafındaki muhatap, aradığı işi kimin yaptığını tek sayfada görüyor.</p>
+  <div class="rakam">
+   <div><b>38</b><span>ÜYE İŞLETME</span></div>
+   <div><b>35</b><span>KURUMSAL TEDARİK</span></div>
+   <div><b>2011</b><span>KURULUŞ</span></div>
+  </div>
+ </div>
+</section>
+
+<main class="kap">
+ <div class="arac">
+  <input id="ara" type="search" autocomplete="off"
+   placeholder="İşletme, faaliyet dalı veya şehir ara" aria-label="Üye ara">
+  <div class="sayac" id="sayac">38 kayıt</div>
+ </div>
+ <ol class="kutuk" id="kutuk">
+  <li class="basliklar" aria-hidden="true"><span>NO</span><span>İŞLETME</span>
+   <span>FAALİYET DALI</span><span style="text-align:right">MERKEZ</span></li>
+  <li><a href="member/01-mazlum-mangtay-boru-sondaj/" data-ara="mazlum boru mazlum mangtay boru sondajcılık inş. tarım ürün. san. ve tic. a.ş. metal / çelik boru imalatı spiral kaynaklı çelik boru, sondaj ve kazık borusu adana altyapı &amp; yapı malzemesi (proje bazlı)"><span class="no">01</span><span class="ad">Mazlum Boru</span><span class="dal">Metal / Çelik Boru İmalatı</span><span class="yer">Adana</span></a></li><li><a href="member/02-krommetal/" data-ara="krom metal krommetal mühendislik metal imalat &amp; su sistemleri modüler su deposu, hidrofor, su filtresi, yakıt tankı, konteyner adana mekanik tesisat (proje bazlı)"><span class="no">02</span><span class="ad">Krom Metal</span><span class="dal">Metal İmalat &amp; Su Sistemleri</span><span class="yer">Adana</span></a></li><li><a href="member/03-kasar-mobilya/" data-ara="kasar mobilya kasar mobilya mobilya imalatı modüler mobilya, dolap, kontrat (horeca) mobilyası adana mobilya &amp; iç donanım"><span class="no">03</span><span class="ad">Kasar Mobilya</span><span class="dal">Mobilya İmalatı</span><span class="yer">Adana</span></a></li><li><a href="member/04-gunsa-gaz-makina/" data-ara="günsa gaz makina günsa gaz makine elektrik san. ve tic. ltd. şti. mekanik tesisat / doğalgaz endüstriyel doğalgaz, merkezi ısıtma, yangın tesisatı, makine imalatı adana mekanik tesisat &amp; taahhüt"><span class="no">04</span><span class="ad">Günsa Gaz Makina</span><span class="dal">Mekanik Tesisat / Doğalgaz</span><span class="yer">Adana</span></a></li><li><a href="member/05-akcinar-civata-hirdavat/" data-ara="akçınar cıvata hırdavat akçınar cıvata hırdavat el aletleri paz. san. ve tic. a.ş. bağlantı elemanları &amp; hırdavat cıvata, el aletleri, kaynak ekipmanı, endüstriyel sarf adana mro / sarf malzeme"><span class="no">05</span><span class="ad">Akçınar Cıvata Hırdavat</span><span class="dal">Bağlantı Elemanları &amp; Hırdavat</span><span class="yer">Adana</span></a></li><li><a href="member/06-net-bilisim-sistemleri/" data-ara="net bilişim net bilişim sistemleri bilişim / yazılım erp-muhasebe yazılımı, otomasyon, barkod, geçiş kontrol, web adana bt &amp; yazılım"><span class="no">06</span><span class="ad">Net Bilişim</span><span class="dal">Bilişim / Yazılım</span><span class="yer">Adana</span></a></li><li><a href="member/07-yusuf-aluminyum-pvc/" data-ara="yusuf alüminyum yusuf aluminyum pvc ticaret ltd. şti. yapı / alüminyum-pvc doğrama kapı-pencere, cam balkon, korkuluk ve küpeşte adana yapı malzemesi &amp; uygulama"><span class="no">07</span><span class="ad">Yusuf Alüminyum</span><span class="dal">Yapı / Alüminyum-PVC Doğrama</span><span class="yer">Adana</span></a></li><li><a href="member/08-sca-metal/" data-ara="sca metal sca metal metal / çelik servis &amp; yalıtım paneli soğuk oda paneli ve kapısı, çatı-cephe paneli, çelik servis merkezi adana yapı malzemesi &amp; çelik işleme hizmeti"><span class="no">08</span><span class="ad">SCA Metal</span><span class="dal">Metal / Çelik Servis &amp; Yalıtım Paneli</span><span class="yer">Adana</span></a></li><li><a href="member/09-feydas-makine/" data-ara="feydaş makina feydaş makine ve mühendislik ltd. şti. makine imalatı plastik geri dönüşüm makineleri ve anahtar teslim tesis adana makine &amp; ekipman yatırımı"><span class="no">09</span><span class="ad">Feydaş Makina</span><span class="dal">Makine İmalatı</span><span class="yer">Adana</span></a></li><li><a href="member/10-cetin-kardesler/" data-ara="çetin kardeşler çetin kardeşler mobilya ve inşaat inşaat &amp; mobilya konut müteahhitliği, proje ve otel mobilyası adana inşaat taahhüt + mobilya"><span class="no">10</span><span class="ad">Çetin Kardeşler</span><span class="dal">İnşaat &amp; Mobilya</span><span class="yer">Adana</span></a></li><li><a href="member/11-sukal/" data-ara="sukal sukal san. tic. ltd. şti. mekanik tesisat &amp; tank imalatı yakıt/su/paslanmaz tank, hidrofor, güneş enerjisi, çelik konstrüksiyon, iklimlendirme adana mekanik tesisat &amp; endüstriyel ekipman"><span class="no">11</span><span class="ad">SUKAL</span><span class="dal">Mekanik Tesisat &amp; Tank İmalatı</span><span class="yer">Adana</span></a></li><li><a href="member/12-dogan-endustriyel-kavi/" data-ara="doğan kavi / doğan endüstriyel doğan endüstriyel ltd. şti. madeni yağ &amp; filtre distribütörlüğü otomotiv ve endüstriyel yağ, metal işleme sıvıları, filtre adana mro / sarf &amp; yağ"><span class="no">12</span><span class="ad">Doğan Kavi / Doğan Endüstriyel</span><span class="dal">Madeni Yağ &amp; Filtre Distribütörlüğü</span><span class="yer">Adana</span></a></li><li><a href="member/13-zeka-muhendislik/" data-ara="zeka mühendislik zeka mühendislik ltd. şti. telekomünikasyon altyapı baz istasyonu ve şebeke kurulum/bakım işleri adana altyapı taahhüt hizmeti"><span class="no">13</span><span class="ad">Zeka Mühendislik</span><span class="dal">Telekomünikasyon Altyapı</span><span class="yer">Adana</span></a></li><li><a href="member/14-birol-sogutma/" data-ara="birol ticaret birol soğutma / birol ticaret iklimlendirme malzemeleri toptan/e-ticaret bakır boru, klima montaj malzemeleri, yedek parça adana mro / sarf &amp; yedek parça"><span class="no">14</span><span class="ad">Birol Ticaret</span><span class="dal">İklimlendirme Malzemeleri Toptan/E-ticaret</span><span class="yer">Adana</span></a></li><li><a href="member/15-cinar-gida/" data-ara="çınar gıda çınar gıda ltd. şti. gıda gıda üretimi ve toptan dağıtım adana gıda"><span class="no">15</span><span class="ad">Çınar Gıda</span><span class="dal">Gıda</span><span class="yer">Adana</span></a></li><li><a href="member/16-guven-altyapi/" data-ara="güven altyapı güven altyapı a.ş. altyapı inşaat altyapı taahhüt işleri adana altyapı taahhüt"><span class="no">16</span><span class="ad">Güven Altyapı</span><span class="dal">Altyapı İnşaat</span><span class="yer">Adana</span></a></li><li><a href="member/17-kare-firin/" data-ara="kare fırın kare fırın gıda / unlu mamuller fırın, ekmek ve pastane ürünleri adana gıda"><span class="no">17</span><span class="ad">Kare Fırın</span><span class="dal">Gıda / Unlu Mamuller</span><span class="yer">Adana</span></a></li><li><a href="member/18-mobtas/" data-ara="mobtaş mobtaş — dikilitaş orman ürünleri tic. ve san. a.ş. [teyit edilmeli] orman ürünleri &amp; ambalaj parke, şilte, plastik ambalaj, mobilya makinesi adana yapı malzemesi + ambalaj + makine"><span class="no">18</span><span class="ad">Mobtaş</span><span class="dal">Orman Ürünleri &amp; Ambalaj</span><span class="yer">Adana</span></a></li><li><a href="member/19-south-fidagro/" data-ara="south fidagro south fidagro sera ltd. şti. tarım / fide üretimi aşılı ve aşısız sebze ve çiçek fidesi, tohum, gübre adana tarımsal girdi"><span class="no">19</span><span class="ad">South Fidagro</span><span class="dal">Tarım / Fide Üretimi</span><span class="yer">Adana</span></a></li><li><a href="member/21-decorer-mimarlik/" data-ara="decorer mimarlık decorer mimarlık iç mimarlık &amp; dekorasyon iç mekân tasarım-uygulama, dekorasyon malzemesi ticareti adana tasarım hizmeti + yapı malzemesi"><span class="no">21</span><span class="ad">Decorer Mimarlık</span><span class="dal">İç Mimarlık &amp; Dekorasyon</span><span class="yer">Adana</span></a></li><li><a href="member/22-sun-psikoloji/" data-ara="sun psikoloji sun psikoloji merkezi sağlık / psikolojik danışmanlık bireysel psikoterapi, çift ve aile, çocuk-ergen, kurumsal danışmanlık adana hizmet / kurumsal danışmanlık"><span class="no">22</span><span class="ad">Sun Psikoloji</span><span class="dal">Sağlık / Psikolojik Danışmanlık</span><span class="yer">Adana</span></a></li><li><a href="member/23-hisar-gecis-sistemleri/" data-ara="hisar otomatik kapı hisar geçiş sistemleri imalat tic. ltd. şti. geçiş sistemleri imalatı otomatik kapı, kepenk, bariyer, seksiyonel kapı adana yapı ekipmanı &amp; bakım hizmeti"><span class="no">23</span><span class="ad">Hisar Otomatik Kapı</span><span class="dal">Geçiş Sistemleri İmalatı</span><span class="yer">Adana</span></a></li><li><a href="member/24-seday-yalitim/" data-ara="seday yalıtım seday yalıtım inşaat metal taah. gıda tarım san. ve tic. ltd. şti. yalıtım &amp; yapı malzemesi osb, taşyünü, sac ticareti; yalıtım ve çatı kaplama taahhüt adana yapı malzemesi"><span class="no">24</span><span class="ad">Seday Yalıtım</span><span class="dal">Yalıtım &amp; Yapı Malzemesi</span><span class="yer">Adana</span></a></li><li><a href="member/25-apaydin-rezistans/" data-ara="apaydın rezistans apaydın rezistans endüstriyel ısıtma / rezistans imalatı özel ölçü rezistans, termokupl, kontrol sistemleri, plastik kaynak ekipmanı adana makine &amp; ekipman + mro yedek"><span class="no">25</span><span class="ad">Apaydın Rezistans</span><span class="dal">Endüstriyel Isıtma / Rezistans İmalatı</span><span class="yer">Adana</span></a></li><li><a href="member/26-byc-muhendislik/" data-ara="byc mühendislik byc mühendislik ve danışmanlık ltd. şti. mühendislik danışmanlığı inşaat malzemesi, beton teknolojisi ve dayanıklılık danışmanlığı adana hizmet / teknik danışmanlık"><span class="no">26</span><span class="ad">BYC Mühendislik</span><span class="dal">Mühendislik Danışmanlığı</span><span class="yer">Adana</span></a></li><li><a href="member/27-cag-universitesi-fisunoglu/" data-ara="çağ üniversitesi çağ üniversitesi — finans profesörlüğü akademi / eğitim ekonomi, ekonometri ve finans mersin / adana bölgesi eğitim &amp; akademik danışmanlık"><span class="no">27</span><span class="ad">Çağ Üniversitesi</span><span class="dal">Akademi / Eğitim</span><span class="yer">Mersin / Adana bölgesi</span></a></li><li><a href="member/28-atu-onal/" data-ara="adana alparslan türkeş btü adana alparslan türkeş bilim ve teknoloji üniversitesi — finans profesörlüğü akademi / eğitim finans adana eğitim &amp; akademik danışmanlık"><span class="no">28</span><span class="ad">Adana Alparslan Türkeş BTÜ</span><span class="dal">Akademi / Eğitim</span><span class="yer">Adana</span></a></li><li><a href="member/29-sinmaz-muhendislik/" data-ara="sınmaz cephe sınmaz mühendislik alüminyum cephe ltd. şti. yapı / cephe sistemleri silikon ve kompozit cephe, alüminyum doğrama, ofis bölme, kepenk adana yapı malzemesi &amp; uygulama (proje bazlı)"><span class="no">29</span><span class="ad">Sınmaz Cephe</span><span class="dal">Yapı / Cephe Sistemleri</span><span class="yer">Adana</span></a></li><li><a href="member/30-bcn-premium-dis/" data-ara="bcn premium bcn premium ağız ve diş sağlığı hiz. tic. ltd. şti. sağlık / ağız ve diş sağlığı implant, ortodonti, estetik diş hekimliği, çene cerrahisi, sedasyon adana sağlık hizmeti (kurumsal anlaşma potansiyeli)"><span class="no">30</span><span class="ad">BCN Premium</span><span class="dal">Sağlık / Ağız ve Diş Sağlığı</span><span class="yer">Adana</span></a></li><li><a href="member/31-peka-peyzaj/" data-ara="peka peyzaj peka peyzaj mimarlık ve mühendislik peyzaj mimarlığı peyzaj proje ve uygulama, sulama sistemleri, park-bahçe, bakım adana hizmet + uygulama (kamu ihalesine uygun)"><span class="no">31</span><span class="ad">PEKA Peyzaj</span><span class="dal">Peyzaj Mimarlığı</span><span class="yer">Adana</span></a></li><li><a href="member/32-emr-muhendislik/" data-ara="emr mühendislik emr mühendislik inşaat mühendisliği &amp; müteahhitlik endüstriyel yapı ve konut inşaatı adana inşaat taahhüt"><span class="no">32</span><span class="ad">EMR Mühendislik</span><span class="dal">İnşaat Mühendisliği &amp; Müteahhitlik</span><span class="yer">Adana</span></a></li><li><a href="member/33-serametal/" data-ara="serametal serametal hazar hidrofor san. tic. ltd. şti. sera teknolojileri anahtar teslim sera, sulama-gübreleme, iklim kontrol, sera ekipmanı adana tarımsal yapı &amp; sistem (proje bazlı)"><span class="no">33</span><span class="ad">seraMetal</span><span class="dal">Sera Teknolojileri</span><span class="yer">Adana</span></a></li><li><a href="member/34-centrum-otel/" data-ara="centrum otel centrum otel turizm &amp; konaklama şehir oteli, toplantı ve etkinlik adana konaklama hizmeti"><span class="no">34</span><span class="ad">Centrum Otel</span><span class="dal">Turizm &amp; Konaklama</span><span class="yer">Adana</span></a></li><li><a href="member/35-eandl-enterprises-malta/" data-ara="e&amp;l enterprises eandlenterprises ltd. (malta) dış ticaret madeni yağ ve filtre ihracat/ithalat kolu malta dış ticaret / lojistik"><span class="no">35</span><span class="ad">E&amp;L Enterprises</span><span class="dal">Dış Ticaret</span><span class="yer">Malta</span></a></li><li><a href="member/36-ferah-ambalaj/" data-ara="ferah ferah a.ş. ambalaj pet şişe ve plastik ambalaj imalatı adana ambalaj"><span class="no">36</span><span class="ad">Ferah</span><span class="dal">Ambalaj</span><span class="yer">Adana</span></a></li><li><a href="member/37-kanal-a-tv-a/" data-ara="kanal a kanal a (tv a) medya &amp; yayıncılık televizyon yayıncılığı, reklam ve tanıtım adana medya / reklam hizmeti"><span class="no">37</span><span class="ad">Kanal A</span><span class="dal">Medya &amp; Yayıncılık</span><span class="yer">Adana</span></a></li><li><a href="member/38-trio-mimarlik/" data-ara="trio mimarlık trio mimarlık mimarlık &amp; çelik kapı mimari proje, özel tasarım çelik kapı imalatı adana tasarım hizmeti + yapı malzemesi"><span class="no">38</span><span class="ad">Trio Mimarlık</span><span class="dal">Mimarlık &amp; Çelik Kapı</span><span class="yer">Adana</span></a></li><li><a href="member/39-propan-panel/" data-ara="propan panel propan panel ltd. şti. panel imalatı eps ve taşyünü sandviç panel, soğuk oda, çatı ve cephe paneli adana yapı malzemesi"><span class="no">39</span><span class="ad">Propan Panel</span><span class="dal">Panel İmalatı</span><span class="yer">Adana</span></a></li>
+ </ol>
+ <div class="bos" id="bos" hidden>Aramanla eşleşen kayıt yok.</div>
+</main>
+<footer class="alt"><div class="kap">
+ <span class="slogan">GÜÇLÜ İŞBİRLİĞİ, GÜÇLÜ GELECEK</span>
+ <a href="qr/">QR KODLARI</a>
+</div></footer>
+<script>
+(function(){
+ var g=document.getElementById('ara'),l=document.getElementById('kutuk'),
+     s=document.getElementById('sayac'),b=document.getElementById('bos'),
+     k=[].slice.call(l.querySelectorAll('li:not(.basliklar)')), T=k.length;
+ // Türkçe küçültme: toLowerCase tek başına I→i yapar, doğrusu I→ı / İ→i
+ function kucult(t){return t.replace(/I/g,'ı').replace(/İ/g,'i').toLowerCase();}
+ g.addEventListener('input',function(){
+  var q=kucult(g.value.trim()), n=0;
+  k.forEach(function(e){
+   var v=!q||kucult(e.querySelector('a').getAttribute('data-ara')).indexOf(q)>=0;
+   e.hidden=!v; if(v)n++;
+  });
+  s.textContent = q ? n+' / '+T+' kayıt' : T+' kayıt';
+  b.hidden = n>0;
+ });
+})();
+</script></body></html>
