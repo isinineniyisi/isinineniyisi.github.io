@@ -25,11 +25,33 @@ sayfasındaki **"Rehbere ekle"** düğmesi `.vcf` dosyasını indirir.
 | `u/<no>/index.html` | QR'daki kısa adres; üye sayfasına yönlendirir |
 | `qr/<no>-<slug>.png` | baskıya hazır QR (≈1200 px) |
 | `qr/index.html` | bütün QR'lar tek sayfada + PNG indirme |
+| `member/<no>-<slug>/profil/` | A4 üye iş profili — HTML görünüm + `belge.html` + PDF |
+| `member/<no>-<slug>/kartvizit/` | kartvizit — HTML görünüm + `kart.html` + PDF |
 | `assets/logo/` | üyelerin kendi logoları (18 üyede var) |
+| `assets/logo-platform.png` | platform mührü (gerçek logodan hazırlandı) |
 | `.nojekyll` | alt çizgiyle başlayan yolları Jekyll'in yutmaması için |
 
 Tek harici bağımlılık **Google Fonts** (Spectral + Archivo). Font gelmezse sayfa
 Georgia / sistem groteskine düşer; düzen bozulmaz. Başka script, CDN veya izleyici yok.
+
+## Belgeler
+
+Her üye sayfasından A4 **üye iş profili** ve **kartvizit** açılır: ekranda HTML
+olarak görüntülenir (kap genişliğine göre ölçeklenir), "PDF indir" düğmesiyle
+baskı dosyası iner. Kaynak dosyalar `02-kartlar/`, `04-pdf/`, `09-cards/` ve
+`09-cards/pdf/` klasörlerinden kopyalanır — `site.py` çalışmadan önce onların
+üretilmiş olması gerekir, yoksa eksik olanları isim isim uyarır.
+
+HTML belgeler kendi kendine yeter: firma logoları data-URI olarak gömülü,
+ikonlar satır içi SVG. Bu yüzden başka bir klasöre kopyalanınca bozulmuyorlar.
+
+## Platform mührü
+
+`assets/logo-platform.png`, `logo.jpg`'den hazırlandı: daire dışı saydam, içi
+beyaz bırakıldı (beyazı topyekûn saydamlaştırmak lacivert yazıyı lacivert
+künye çubuğunda görünmez yapardı). Kaynak fotoğrafta mühür üstten ~48 px
+kesikti; dış halka aynı renk ve kalınlıkta tamamlandı. Yeniden üretmek
+gerekirse bu iki ayrıntıyı atlama.
 
 ## Tasarım
 
@@ -43,7 +65,7 @@ rengi kurum kimliğiyle yarışıyordu; tek vurgu altın ve yalnız çizgi olara
 ## Yayınlama
 
 Depo kuruldu ve site yayında: **https://isinineniyisi.github.io/**
-(`github.com/isinin-en-iyisi/isinin-en-iyisi.github.io`, dal `main`, kök klasör, HTTPS zorunlu.)
+(`github.com/isinineniyisi/isinineniyisi.github.io`, dal `main`, kök klasör, HTTPS zorunlu.)
 
 `08-site/` hem üretim çıktısı hem deponun çalışma kopyası. Güncellemek tek komut:
 
@@ -55,8 +77,8 @@ Bu betik `site.py`'yi çalıştırır, değişen dosyaları commit'ler ve push'l
 GitHub Pages derlemesi 1-2 dakika sürer.
 
 > **Deponun adı neden `…​.github.io`?** Organizasyon kök sitesi ancak bu adla
-> çalışır. `isinin-en-iyisi/isinin-en-iyisi` olsaydı adres
-> `isinin-en-iyisi.github.io/isinin-en-iyisi/` olurdu — QR'lar uzar ve alt yol
+> çalışır. `isinineniyisi/isinineniyisi` olsaydı adres
+> `isinineniyisi.github.io/isinineniyisi/` olurdu — QR'lar uzar ve alt yol
 > yüzünden bağlantılar kırılırdı.
 
 > **`site.py` klasörü temizlerken `.git`, `.gitignore` ve `CNAME` dosyalarına
