@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="tr"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>İŞİNİN EN İYİSİ PLATFORMU — Üye Kütüğü</title>
+<title>İşinin En İyisi Platformu — Üye Kütüğü</title>
 <meta name="description" content="İŞİNİN EN İYİSİ PLATFORMU üye kütüğü: 38 işletmenin faaliyet alanı, müşteri grubu ve iletişim bilgileri.">
-<meta property="og:title" content="İŞİNİN EN İYİSİ PLATFORMU — Üye Kütüğü">
+<meta property="og:title" content="İşinin En İyisi Platformu — Üye Kütüğü">
 <meta property="og:description" content="İŞİNİN EN İYİSİ PLATFORMU üye kütüğü: 38 işletmenin faaliyet alanı, müşteri grubu ve iletişim bilgileri.">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#0d1b3e">
 <link rel="canonical" href="https://isinineniyisi.github.io/">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&family=Public+Sans:wght@400;500;600&display=swap">
@@ -52,7 +55,7 @@ a{color:inherit}
   color:var(--altin-metin)}
 h2.bolum{font-family:var(--grotesk);font-size:10.5px;font-weight:600;
   letter-spacing:.26em;color:var(--soluk);padding-bottom:9px;
-  border-bottom:1px solid var(--cizgi-koyu);margin-bottom:20px}
+  border-bottom:1px solid var(--cizgi-koyu);margin-bottom:0}   /* listenin ilk çizgisi bu */
 h3.ray-baslik{font-family:var(--grotesk);font-size:9.5px;font-weight:600;
   letter-spacing:.24em;color:var(--soluk);padding-bottom:7px;
   border-bottom:1px solid var(--cizgi);margin-bottom:14px}
@@ -90,9 +93,9 @@ h3.ray-baslik{font-family:var(--grotesk);font-size:9.5px;font-weight:600;
   grid-template-columns:52px minmax(0,1.15fr) minmax(0,1fr) 92px;
   gap:18px;align-items:baseline}
 .kutuk .basliklar{font-size:9px;letter-spacing:.2em;color:var(--soluk);
-  padding:9px 2px;border-bottom:1px solid var(--cizgi)}
+  padding:9px 16px;border-bottom:1px solid var(--cizgi)}
 .kutuk li{border-bottom:1px solid var(--cizgi)}
-.kutuk a{text-decoration:none;padding:15px 2px;transition:background .12s}
+.kutuk a{text-decoration:none;padding:15px 16px;transition:background .12s}
 .kutuk a:hover{background:var(--yuzey)}
 .kutuk .no{font-variant-numeric:tabular-nums;font-size:12px;color:var(--soluk);
   letter-spacing:.06em}
@@ -130,7 +133,6 @@ h3.ray-baslik{font-family:var(--grotesk);font-size:9.5px;font-weight:600;
 .fa{display:grid;gap:0}
 .fa .oge{display:grid;grid-template-columns:34px minmax(0,1fr) 26px;gap:16px;
   padding-block:17px;border-bottom:1px solid var(--cizgi);align-items:start}
-.fa .oge:first-child{border-top:1px solid var(--cizgi)}
 .fa .sira{font-variant-numeric:tabular-nums;font-size:11px;color:var(--soluk);
   letter-spacing:.08em;padding-top:4px}
 .fa dt{font-size:12.5px;font-weight:600;letter-spacing:.1em;
@@ -143,7 +145,7 @@ h3.ray-baslik{font-family:var(--grotesk);font-size:9.5px;font-weight:600;
 /* müşteri grubu — rozet değil, çizgiyle ayrılmış terim dizisi */
 .terimler{list-style:none;display:grid;
   grid-template-columns:repeat(auto-fill,minmax(168px,1fr));
-  column-gap:28px;border-top:1px solid var(--cizgi)}
+  column-gap:28px}
 .terimler li{font-family:var(--serif);font-weight:400;font-size:17.5px;
   padding:10px 0;color:var(--murekkep-2);border-bottom:1px solid var(--cizgi)}
 
@@ -152,13 +154,13 @@ h3.ray-baslik{font-family:var(--grotesk);font-size:9.5px;font-weight:600;
   gap:16px;padding-block:15px;border-bottom:1px solid var(--cizgi);
   font-family:var(--serif);font-weight:400;font-size:18px;
   color:var(--murekkep-2);line-height:1.5}
-.neden li:first-child{border-top:1px solid var(--cizgi)}
 .neden li::before{content:counter(n,upper-roman);font-family:var(--grotesk);
   font-size:10.5px;letter-spacing:.1em;color:var(--soluk);padding-top:5px}
 
 /* ---------------------------------------------------- yan ray */
 .ray{position:sticky;top:26px;display:flex;flex-direction:column;gap:34px}
 .eylem{display:flex;flex-direction:column;gap:0;border-top:1px solid var(--cizgi-koyu)}
+.ray .eylem{border-top:0}   /* üstündeki ray başlığının çizgisi yeterli: çift çizgi olmasın */
 .eylem a{display:flex;align-items:center;gap:11px;text-decoration:none;
   font-size:13px;font-weight:500;letter-spacing:.06em;padding:13px 2px;
   border-bottom:1px solid var(--cizgi);color:var(--murekkep)}
@@ -187,7 +189,7 @@ h3.ray-baslik{font-family:var(--grotesk);font-size:9.5px;font-weight:600;
   border-bottom:1px solid var(--cizgi-koyu);margin-top:24px}
 .eylem.yatay a{border-bottom:0;padding:12px 0}
 
-/* A4 belge ve kartvizit kendi sabit ölçüsünde çizilir; kap genişliğine göre
+/* A4 belge kendi sabit ölçüsünde çizilir; kap genişliğine göre
    ölçeklenir. Yükseklik en-boy oranından gelir, satır içi JS yalnız ölçeği yazar. */
 .kagit{position:relative;width:100%;
   max-width:calc(var(--en) * var(--kat, 1) * 1px);
@@ -226,6 +228,8 @@ h3.ray-baslik{font-family:var(--grotesk);font-size:9.5px;font-weight:600;
   padding-bottom:2px}
 .alt a:hover{border-bottom-color:var(--altin)}
 
+.kunye .eylem.yatay{margin-top:26px;border-top:1px solid var(--cizgi-koyu)}
+
 @media (max-width:920px){
   .ikili{grid-template-columns:minmax(0,1fr);gap:42px;padding-block:36px 48px}
   .ray{position:static}
@@ -247,7 +251,7 @@ h3.ray-baslik{font-family:var(--grotesk);font-size:9.5px;font-weight:600;
 </style></head>
 <body><header class="mast"><div class="kap">
  <a class="arma" href="./"><span class="muhur"><img src="./assets/logo-platform.png"
-   alt="İŞİNİN EN İYİSİ Platformu mührü" width="640" height="640"></span>
+   alt="İşinin En İyisi Platformu mührü" width="1000" height="1000"></span>
   <span class="ad">İŞİNİN EN İYİSİ<em>PLATFORMU</em></span></a>
  <span class="est">EST. 2011 · ADANA</span>
 </div></header>

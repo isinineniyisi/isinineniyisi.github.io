@@ -26,7 +26,6 @@ sayfasındaki **"Rehbere ekle"** düğmesi `.vcf` dosyasını indirir.
 | `qr/<no>-<slug>.png` | baskıya hazır QR (≈1200 px) |
 | `qr/index.html` | bütün QR'lar tek sayfada + PNG indirme |
 | `member/<no>-<slug>/profil/` | A4 üye iş profili — HTML görünüm + `belge.html` + PDF |
-| `member/<no>-<slug>/kartvizit/` | kartvizit — HTML görünüm + `kart.html` + PDF |
 | `assets/logo/` | üyelerin kendi logoları (18 üyede var) |
 | `assets/logo-platform.png` | platform mührü (gerçek logodan hazırlandı) |
 | `.nojekyll` | alt çizgiyle başlayan yolları Jekyll'in yutmaması için |
@@ -36,10 +35,10 @@ Georgia / sistem groteskine düşer; düzen bozulmaz. Başka script, CDN veya iz
 
 ## Belgeler
 
-Her üye sayfasından A4 **üye iş profili** ve **kartvizit** açılır: ekranda HTML
+Her üye sayfasının künyesinden A4 **üye iş profili** açılır: ekranda HTML
 olarak görüntülenir (kap genişliğine göre ölçeklenir), "PDF indir" düğmesiyle
-baskı dosyası iner. Kaynak dosyalar `02-kartlar/`, `04-pdf/`, `09-cards/` ve
-`09-cards/pdf/` klasörlerinden kopyalanır — `site.py` çalışmadan önce onların
+baskı dosyası iner. Kaynak dosyalar `02-kartlar/` ve `04-pdf/`
+klasörlerinden kopyalanır — `site.py` çalışmadan önce onların
 üretilmiş olması gerekir, yoksa eksik olanları isim isim uyarır.
 
 HTML belgeler kendi kendine yeter: firma logoları data-URI olarak gömülü,
