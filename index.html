@@ -27,6 +27,7 @@
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{-webkit-text-size-adjust:100%}
+html,body{overflow-x:hidden}
 body{background:var(--kagit);color:var(--murekkep);font-family:var(--grotesk);
   font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
 a{color:inherit}
@@ -72,6 +73,7 @@ h3.ray-baslik{font-family:var(--grotesk);font-size:9.5px;font-weight:600;
   max-width:15ch}
 .giris .lede{font-family:var(--serif);font-weight:400;font-size:19.5px;
   line-height:1.6;color:var(--murekkep-2);max-width:56ch;margin-top:20px}
+.giris .lede.ikinci{color:var(--murekkep-2);font-size:18px;margin-top:14px}
 .giris .rakam{display:flex;gap:40px;margin-top:34px;padding-top:22px;
   border-top:1px solid var(--cizgi);max-width:560px;flex-wrap:wrap}
 .giris .rakam div{display:flex;flex-direction:column;gap:4px}
@@ -241,6 +243,21 @@ h3.ray-baslik{font-family:var(--grotesk);font-size:9.5px;font-weight:600;
   .giris .hayalet{display:none}
 }
 @media (max-width:640px){
+  /* Arma iki satıra bölünüyordu ("İŞİNİN EN / İYİSİ"); mühür küçülüp
+     yazı tek satıra sabitleniyor. */
+  .arma .muhur{width:36px}
+  .arma .ad{font-size:11px;letter-spacing:.12em;white-space:nowrap}
+  .arma .ad em{font-size:8.5px}
+  /* "EST. 2011 · ADANA" ile arma yan yana sığmıyor ve ikisi de tek satıra
+     sabit olduğu için sayfayı ekrandan geniş yapıyordu: yazı 390 px'e değil
+     o geniş kaba göre sarıyor, satır sonları ekranın dışında kalıyordu.
+     Telefonda kuruluş bilgisi künyede zaten var, buradan düşüyor. */
+  .mast .est{display:none}
+  .mast .kap{gap:10px}
+  /* Üç rakam yan yana sığmıyor, sonuncusu alta düşüyordu. */
+  .giris .rakam{gap:26px;flex-wrap:wrap}
+  .giris .rakam b{font-size:30px}
+  .giris .lede{font-size:17.5px}
   .kutuk .basliklar{display:none}
   .kutuk a{grid-template-columns:44px minmax(0,1fr);gap:6px 14px;
     padding-block:14px}
@@ -266,13 +283,14 @@ h3.ray-baslik{font-family:var(--grotesk);font-size:9.5px;font-weight:600;
  <div class="kap">
   <div class="ust-etiket">ÜYE KÜTÜĞÜ &nbsp;/&nbsp; 38 İŞLETME</div>
   <h1>Birbirinin işini bilen işletmeler.</h1>
-  <p class="lede">İŞİNİN EN İYİSİ Platformu, 2011'den bu yana kendi alanında
-   yerleşmiş işletmeleri tek bir kütükte topluyor. Her üyenin faaliyet alanı,
-   müşteri grubu ve iletişim bilgisi doğrulanarak kaydedildi; satın alma
-   tarafındaki muhatap, aradığı işi kimin yaptığını tek sayfada görüyor.</p>
+  <p class="lede">2011'den bu yana Adana'da kendi alanında yerleşmiş
+   38 işletme tek çatı altında. Her üyenin faaliyet alanı, müşteri grubu ve
+   iletişim bilgisi tek tek doğrulandı.</p>
+  <p class="lede ikinci">Satın alma birimi aradığı işi kimin yaptığını tek
+   sayfada görür, doğrudan yetkilisine ulaşır.</p>
   <div class="rakam">
    <div><b>38</b><span>ÜYE İŞLETME</span></div>
-   <div><b>35</b><span>KURUMSAL TEDARİK</span></div>
+   <div><b>35</b><span>KURUMSAL TEDARİKÇİ</span></div>
    <div><b>2011</b><span>KURULUŞ</span></div>
   </div>
  </div>
