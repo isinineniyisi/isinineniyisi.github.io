@@ -1,0 +1,15 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Fıtık;Kenan;;;
+FN:Kenan Fıtık
+ORG:SUKAL San. Tic. Ltd. Şti.
+ROLE:Mekanik Tesisat & Tank İmalatı
+TEL;TYPE=CELL,VOICE:+905323226341
+TEL;TYPE=WORK,VOICE:+903224537663
+EMAIL;TYPE=INTERNET,WORK:info@sukal.com.tr
+URL:https://sukal.com.tr
+ADR;TYPE=WORK:;;;Adana;;;Türkiye
+item1.URL:https://isinineniyisi.github.io/member/sukal/
+item1.X-ABLabel:İşinin En İyisi profili
+NOTE:İŞİNİN EN İYİSİ PLATFORMU üyesi — No 11
+END:VCARD
