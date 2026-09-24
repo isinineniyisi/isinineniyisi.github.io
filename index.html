@@ -64,26 +64,29 @@ h3.ray-baslik{font-family:var(--grotesk);font-size:9.5px;font-weight:600;
 /* ---------------------------------------------------- kütük (dizin) */
 .giris{background:var(--yuzey);border-bottom:1px solid var(--cizgi);
   position:relative;overflow:hidden}
-.giris .hayalet{position:absolute;right:-80px;top:50%;width:430px;
-  transform:translateY(-50%);opacity:.055;pointer-events:none}
-.giris .hayalet img{display:block;width:100%;height:auto}
 .giris .kap{position:relative;padding-block:64px 54px;max-width:var(--olcu)}
+/* Geniş ekranda sağ yarı boş kalıyordu: mühür, başkan ve rakamlar sağ sütunda */
+.giris .izgara{display:grid;grid-template-columns:minmax(0,1fr) 340px;
+  gap:72px;align-items:center}
+.giris .sag{padding-left:48px;border-left:1px solid var(--cizgi);
+  display:flex;flex-direction:column;align-items:flex-start}
+.giris .muhur-buyuk{display:block;width:200px;height:auto;margin:0 auto 34px}
 .giris h1{font-family:var(--serif);font-weight:500;font-size:clamp(40px,7.4vw,68px);
   line-height:1.04;letter-spacing:-.015em;margin:16px 0 0;text-wrap:balance;
   max-width:15ch}
 .giris .lede{font-family:var(--serif);font-weight:400;font-size:19.5px;
   line-height:1.6;color:var(--murekkep-2);max-width:56ch;margin-top:20px}
 .giris .lede.ikinci{color:var(--murekkep-2);font-size:18px;margin-top:14px}
-.giris .imza{display:flex;flex-direction:column;gap:5px;margin-top:26px;
+.giris .imza{display:flex;flex-direction:column;gap:5px;
   padding-left:14px;border-left:2px solid var(--altin-metin)}
 .giris .imza span{font-size:9.5px;letter-spacing:.2em;color:var(--soluk)}
 .giris .imza b{font-family:var(--serif);font-weight:500;font-size:21px}
-.giris .rakam{display:flex;gap:40px;margin-top:34px;padding-top:22px;
-  border-top:1px solid var(--cizgi);max-width:560px;flex-wrap:wrap}
+.giris .rakam{display:grid;grid-template-columns:repeat(3,auto);gap:12px 28px;
+  margin-top:30px;padding-top:22px;border-top:1px solid var(--cizgi);width:100%}
 .giris .rakam div{display:flex;flex-direction:column;gap:4px}
 .giris .rakam b{font-family:var(--serif);font-weight:500;font-size:36px;
   line-height:1;font-variant-numeric:tabular-nums}
-.giris .rakam span{font-size:9.5px;letter-spacing:.2em;color:var(--soluk)}
+.giris .rakam span{font-size:9.5px;letter-spacing:.2em;color:var(--soluk);line-height:1.5}
 
 .arac{padding-block:22px 0}
 .arac input{width:100%;max-width:420px;font:inherit;font-size:15px;
@@ -242,7 +245,11 @@ h3.ray-baslik{font-family:var(--grotesk);font-size:9.5px;font-weight:600;
 @media (max-width:920px){
   .ikili{grid-template-columns:minmax(0,1fr);gap:42px;padding-block:36px 48px}
   .ray{position:static}
-  .giris .hayalet{display:none}
+  .giris .izgara{grid-template-columns:minmax(0,1fr);gap:36px}
+  .giris .sag{padding-left:0;border-left:0}
+  .giris .muhur-buyuk{display:none}
+  .giris .imza{margin-top:4px}
+  .giris .rakam{width:auto;max-width:560px;justify-content:start;gap:12px 40px}
 }
 @media (max-width:640px){
   /* Arma iki satıra bölünüyordu ("İŞİNİN EN / İYİSİ"); mühür küçülüp
@@ -257,7 +264,7 @@ h3.ray-baslik{font-family:var(--grotesk);font-size:9.5px;font-weight:600;
   .mast .est{display:none}
   .mast .kap{gap:10px}
   /* Üç rakam yan yana sığmıyor, sonuncusu alta düşüyordu. */
-  .giris .rakam{gap:26px;flex-wrap:wrap}
+  .giris .rakam{gap:12px 22px}
   .giris .rakam b{font-size:30px}
   .giris .lede{font-size:17.5px}
   .kutuk .basliklar{display:none}
@@ -279,9 +286,8 @@ h3.ray-baslik{font-family:var(--grotesk);font-size:9.5px;font-weight:600;
  <span class="est">EST. 2011 · ADANA</span>
 </div></header>
 <section class="giris">
- <div class="hayalet"><img src="assets/logo-platform.png" alt=""
-  width="640" height="640"></div>
- <div class="kap">
+ <div class="kap izgara">
+ <div class="sol">
   <div class="ust-etiket">ÜYE LİSTEMİZ &nbsp;/&nbsp; 38 İŞLETME</div>
   <h1>Doğru firma. Doğru bağlantı. Doğru iş.</h1>
   <p class="lede">İşinin En İyisi Platformu, 2011'den bu yana farklı sektörlerde
@@ -291,12 +297,17 @@ h3.ray-baslik{font-family:var(--grotesk);font-size:9.5px;font-weight:600;
   <p class="lede ikinci">Sanayiden inşaata, mühendislikten teknolojiye, üretimden
    hizmete kadar farklı alanlardaki üyelerimizin uzmanlıklarını görünür kılıyoruz.
    Aradığınız işi kimin yaptığını bu sayfada bulur, doğrudan yetkilisine ulaşırsınız.</p>
-  <div class="imza"><span>PLATFORM BAŞKANI</span><b>Ali Fethi APAYDIN</b></div>
-  <div class="rakam">
+  </div>
+  <aside class="sag">
+   <img class="muhur-buyuk" src="assets/logo-platform.png" alt="İşinin En İyisi Platformu mührü"
+    width="640" height="640">
+   <div class="imza"><span>PLATFORM BAŞKANI</span><b>Ali Fethi APAYDIN</b></div>
+   <div class="rakam">
    <div><b>38</b><span>ÜYE İŞLETME</span></div>
    <div><b>35</b><span>KURUMSAL TEDARİKÇİ</span></div>
    <div><b>2011</b><span>KURULUŞ</span></div>
-  </div>
+   </div>
+  </aside>
  </div>
 </section>
 
